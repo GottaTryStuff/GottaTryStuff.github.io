@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Writing vertex and fragment shaders</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SL-ShaderPrograms.html">English</a></li>
+<li><a href="/cn/current/Manual/SL-ShaderPrograms.html">中文</a></li>
+<li><a href="/ja/current/Manual/SL-ShaderPrograms.html">日本語</a></li>
+<li><a href="/es/current/Manual/SL-ShaderPrograms.html">Español</a></li>
+<li><a href="/kr/current/Manual/SL-ShaderPrograms.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SL-ShaderPrograms.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/SL-ShaderPrograms.html">English</a></li>
+<li><a href="/cn/current/Manual/SL-ShaderPrograms.html">中文</a></li>
+<li><a href="/ja/current/Manual/SL-ShaderPrograms.html">日本語</a></li>
+<li><a href="/es/current/Manual/SL-ShaderPrograms.html">Español</a></li>
+<li><a href="/kr/current/Manual/SL-ShaderPrograms.html">한국어</a></li>
+<li><a href="/ru/current/Manual/SL-ShaderPrograms.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="Shaders.html">Meshes, Materials, Shaders and Textures</a></li>
+<li><a href="ShadersOverview.html">Writing Shaders</a></li>
+<li><a href="SL-Reference.html"> Shader Reference</a></li>
+<li>Writing vertex and fragment shaders</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-SurfaceShaderTessellation.html"></a></span><div class="tip">Surface Shaders with DX11 / OpenGL Core Tessellation</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-VertexFragmentShaderExamples.html"></a></span><div class="tip"> Vertex and fragment shader examples</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Writing vertex and fragment shaders</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p><span class="tooltip"><strong>ShaderLab</strong><span class="tooltiptext">Unity’s declarative language for writing shaders. <a class="tooltipMoreInfoLink" href="SL-Shader.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#ShaderLab">Glossary</a></span></span></span> <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> describe properties that the Material <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> displays, contain multiple shader implementations for different graphics hardware, and configure fixed function hardware states. Programmable <strong>shaders</strong> like vertex and fragment programs, are just a part <strong>ShaderLab</strong>’s shader concept. For more information and an introduction on <strong>shaders</strong>, see the <a href="ShaderTut2.html">shader tutorial</a>. This page outlines the low-level hardware shaders <strong>shader programs</strong>.</p>
+
+<p>If you want to write shaders that interact with lighting, see the <span class="tooltip"><a class="tooltipMoreInfoLink" href="SL-SurfaceShaders.html">Surface Shaders</a><span class="tooltiptext">Unity’s code generation approach that makes it much easier to write lit shaders than using low level vertex/pixel shader programs. <a href="SL-SurfaceShaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#surfaceshader">Glossary</a></span></span></span> documentation. For some examples, see the <a href="SL-VertexFragmentShaderExamples.html"><strong>Vertex and Fragment Shader Examples</strong></a>. The rest of this page assumes shaders do not interact with Unity lights like special effects and <a href="PostProcessingOverview.html">post-processed effects</a>.</p>
+
+<p>Shader programs are written in <a href="SL-ShadingLanguage.html">HLSL language</a>, by embedding snippets in the shader text, inside the <a href="SL-Pass.html">Pass</a> command. They usually look like this:</p>
+
+<pre><code>  Pass {
+      // ... the usual pass state setup ...
+      
+      CGPROGRAM
+      // compilation directives for this snippet, e.g.:
+      #pragma vertex vert
+      #pragma fragment frag
+      
+      // the Cg/HLSL code itself
+      
+      ENDCG
+      // ... the rest of pass setup ...
+  }
+</code></pre>
+
+<h2>HLSL snippets</h2>
+
+<p>HLSL program snippets are written between <code>CGPROGRAM</code> and <code>ENDCG</code> keywords, or alternatively between <code>HLSLPROGRAM</code> and <code>ENDHLSL</code>. The latter form does not automatically include HLSLSupport and UnityShaderVariables <a href="SL-BuiltinIncludes.html">built-in header files</a>.</p>
+
+<p>At the start of the snippet, compilation directives can be given as <code>#pragma</code> statements. The following table outlines directives that indicate which shader functions to compile:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Statement</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>#pragma vertex name</code></td>
+	<td style="text-align:left;">Compile function <code>name</code> as the <strong>vertex shader</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma fragment name</code></td>
+	<td style="text-align:left;">Compile function <code>name</code> as the <span class="tooltip"><strong>fragment shader</strong><span class="tooltiptext">The “per-pixel” part of shader code, performed every pixel that an object occupies on-screen. The fragment shader part is usually used to calculate and output the color of each pixel. <a class="tooltipMoreInfoLink" href="ShaderTut2.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#fragmentshader">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma geometry name</code></td>
+	<td style="text-align:left;">Compile function <code>name</code> as DX10 geometry shader. This option automatically turns on <code>#pragma target 4.0</code> as described in the table below.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma hull name</code></td>
+	<td style="text-align:left;">Compile function <code>name</code> as DX11 hull shader. This option automatically turns on <code>#pragma target 5.0</code>, as described in the table below.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma domain name</code></td>
+	<td style="text-align:left;">Compile function <code>name</code> as DX11 domain shader. This option automatically turns on <code>#pragma target 5.0</code>, as described in the table below.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Other compilation directives:</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Statement</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>#pragma target name</code></td>
+	<td style="text-align:left;">Set which shader target to compile to. For more information, see the <a href="SL-ShaderCompileTargets.html">Shader Compilation Targets</a> documentation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma require feature ...</code></td>
+	<td style="text-align:left;">A fine grain control on which GPU features a shader needs. For more information, see <a href="SL-ShaderCompileTargets.html">Shader Compilation Targets</a> documentation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma only_renderers space separated names</code></td>
+	<td style="text-align:left;">Compile shader only for given renderers. By default shaders are compiled for all renderers.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma exclude_renderers space separated names</code></td>
+	<td style="text-align:left;">Does not compile shader for given renderers. By default the system compiles shaders for all renderers.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma multi_compile ...</code></td>
+	<td style="text-align:left;">Use if you are working with <a href="SL-MultipleProgramVariants.html">multiple shader variants</a>. Unused variants of <code>multi_compile</code> shaders are included in the game build.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma multi_compile_local ...</code></td>
+	<td style="text-align:left;">This statement is similar to <code>multi_compile</code>, but enumerated keywords are local. See the <a href="SL-MultipleProgramVariants.html">Making multiple shader program variants: Keyword limits</a> documentation for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma shader_feature ...</code></td>
+	<td style="text-align:left;">Use if you are working with <a href="SL-MultipleProgramVariants.html">multiple shader variants</a>. Unused variants of <code>shader_feature</code> shaders are not included in the game build.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma shader_feature_local ...</code></td>
+	<td style="text-align:left;">This statement is similar to <code>shader_feature</code>, but enumerated keywords are local. See the <a href="SL-MultipleProgramVariants.html">Making multiple shader program variants: Keyword limits</a> documentation for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma enable_d3d11_debug_symbols</code></td>
+	<td style="text-align:left;">Generate debug information for shaders compiled for DirectX 11. This allows you to debug shaders via the Visual Studio 2012 (or higher) Graphics debugger.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma hardware_tier_variants renderer name</code></td>
+	<td style="text-align:left;">Generate <a href="SL-MultipleProgramVariants.html">multiple shader hardware variants</a> of each shader the system compiles for each hardware tier that can run the selected renderer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma hlslcc_bytecode_disassembly</code></td>
+	<td style="text-align:left;">Embed disassembled HLSLcc bytecode into a translated shader.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma disable_fastmath</code></td>
+	<td style="text-align:left;">Enable precise IEEE 754 rules involving NaN handling. This currently only affects the Metal platform.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma glsl_es2</code></td>
+	<td style="text-align:left;">Set in a GLSL shader to generate a GLSL ES 1.0(OpenGL ES 2.0), even when the shader target is OpenGL ES 3.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma editor_sync_compilation</code></td>
+	<td style="text-align:left;">Force synchronous compilation. This affects the Unity Editor only.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#pragma enable_cbuffer</code></td>
+	<td style="text-align:left;">Emit <code>cbuffer(name)</code> when using <code>CBUFFER_START(name)</code> and <code>CBUFFER_END</code> macros from HLSLSupport even if the current platform does not support constant buffers.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Each snippet must contain at least a vertex program and a fragment program, so <code>#pragma vertex</code> and <code>#pragma fragment</code> directives are required.</p>
+
+<p>The following compilation directives don’t do anything and can be safely removed: </p>
+
+<ul>
+<li><code>#pragma glsl</code></li>
+<li><code>#pragma glsl_no_auto_normalization</code></li>
+<li><code>#pragma profileoption</code></li>
+<li>
+<code>#pragma fragmentoption</code>.</li>
+</ul>
+
+<p>Unity only supports <code>#pragma</code> directives in the shader files, and not in the includes.</p>
+
+<p><a name="shader-rendering-platforms"></a></p>
+
+<h2>Rendering platforms</h2>
+
+<p>Unity supports several <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a class="tooltipMoreInfoLink" href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> APIs, like Direct3D 11 and OpenGL, and by default Unity compiles all shader programs into all supported renderers. You can indicate which renderers to compile by using <code>#pragma only_renderers</code> or <code>#pragma exclude_renderers</code> directives. This is useful in cases when you use some shader language features that you aren’t possible on some platforms. Supported renderer names are:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Statement</strong></th>
+	<th style="text-align:left;"><strong>Renderer</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>d3d11</code></td>
+	<td style="text-align:left;">Direct3D 11/12</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>glcore</code></td>
+	<td style="text-align:left;">OpenGL 3.x/4.x</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>gles</code></td>
+	<td style="text-align:left;">OpenGL ES 2.0</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>gles3</code></td>
+	<td style="text-align:left;">OpenGL ES 3.x</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>metal</code></td>
+	<td style="text-align:left;"><span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a class="tooltipMoreInfoLink" href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span>/Mac Metal</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>vulkan</code></td>
+	<td style="text-align:left;">Vulkan</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>d3d11_9x</code></td>
+	<td style="text-align:left;">Direct3D 11 9.x feature level, as commonly used on WSA platforms</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>xboxone</code></td>
+	<td style="text-align:left;"><span class="tooltip"><strong>Xbox One</strong><span class="tooltiptext">Microsoft’s eighth generation video game console.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#XboxOne">Glossary</a></span></span></span></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>ps4</code></td>
+	<td style="text-align:left;"><span class="tooltip"><strong>PlayStation 4</strong><span class="tooltiptext">Sony’s eighth generation video game console.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayStation4">Glossary</a></span></span></span></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>n3ds</code></td>
+	<td style="text-align:left;">Nintendo 3DS</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>wiiu</code></td>
+	<td style="text-align:left;">Nintendo <span class="tooltip"><strong>Wii U</strong><span class="tooltiptext">Nintendo’s eighth generation video game console.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#WiiU">Glossary</a></span></span></span></td>
+</tr>
+</tbody>
+</table>
+
+<p>In the example below, this line would only compile a shader into D3D11 mode:</p>
+
+<pre><code>#pragma only_renderers d3d11
+</code></pre>
+
+<h2>See Also</h2>
+
+<ul>
+<li>
+<a href="SL-PropertiesInPrograms.html">Accessing Material Properties</a>.</li>
+<li>
+<a href="SL-MultipleProgramVariants.html">Writing Multiple Shader Program Variants</a>.</li>
+<li>
+<a href="SL-ShaderCompileTargets.html">Shader Compilation Targets</a>.</li>
+<li>
+<a href="SL-ShadingLanguage.html">Shading Language Details</a>.</li>
+<li>
+<a href="SL-BuiltinMacros.html">Shader Preprocessor Macros</a>.</li>
+<li>
+<a href="SL-PlatformDifferences.html">Platform Specific Rendering Differences</a>.</li>
+</ul>
+
+<hr>
+
+<ul>
+<li><span class="page-edit">2019–05–17 Page amended
+</span></li>
+<li><span class="page-history">Shader #pragma directives added in Unity 2018.1</span></li>
+</ul>
+<!-- area:graphics -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-SurfaceShaderTessellation.html"></a></span><div class="tip">Surface Shaders with DX11 / OpenGL Core Tessellation</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="SL-VertexFragmentShaderExamples.html"></a></span><div class="tip"> Vertex and fragment shader examples</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

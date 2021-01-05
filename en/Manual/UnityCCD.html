@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Unity Cloud Content Delivery</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityCCD.html">English</a></li>
+<li><a href="/cn/current/Manual/UnityCCD.html">中文</a></li>
+<li><a href="/ja/current/Manual/UnityCCD.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityCCD.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityCCD.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityCCD.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityCCD.html">English</a></li>
+<li><a href="/cn/current/Manual/UnityCCD.html">中文</a></li>
+<li><a href="/ja/current/Manual/UnityCCD.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityCCD.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityCCD.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityCCD.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li> Unity Cloud Content Delivery</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCloudBuildRestAPI.html"></a></span><div class="tip"> Cloud Build REST API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCCDInterfaces.html"></a></span><div class="tip"> Cloud Content Delivery interfaces</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Unity Cloud Content Delivery</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Cloud Content Delivery (CCD) is a managed cloud service that hosts and delivers content to your application’s users worldwide without having to reinstall a new version of the application. The service is fully integrated into the Unity development platform, saving you months of building and maintaining your own similar service. CCD is most valuable for content-rich, live games or applications that require content updates on a regular basis.</p>
+
+<p>In CCD, you organize your content into buckets to create a clear workflow for your project. A typical workflow example could be having separate buckets per platform (for example, an iOS bucket and an Android bucket). Within a given bucket, you group specific versions of each asset to create a release. As these versions change, or you add and remove entries, you designate new releases as required.</p>
+
+<p>A release can also have a unique identifier associated with it, called a badge. Give this badge a meaningful name, then use it to query content, and move it between releases to add flexibility to your workflow.</p>
+
+<h2>Buckets</h2>
+
+<p>Using Cloud Content Delivery, you organize your content into buckets to create a clear workflow for your project. A bucket is a single context for publishing content, such as the platform or environment. A typical workflow example could be having separate buckets for development, staging and production builds, with names such as <code>ios_staging</code> and <code>ios_production</code>.</p>
+
+<p>
+<img src="../uploads/Main/CCD_buckets.png" alt=""><br>
+A. The details of a bucket as it appears in CCD, including bucket ID and description.<br>
+B. The details for a <a href="#release">release</a> within that bucket.</p>
+
+<h2>Entry</h2>
+
+<p>An entry is a single unit of content within a bucket. Entries support labels and metadata. Creating a <a href="#release">release</a> captures the current state of all the entries in the bucket, similar to a versioning process.</p>
+
+<p>
+<img src="../uploads/Main/CCD_entries.png" alt=""><br>
+A. The details of the currently selected release.<br>
+B. An asset within this release, and its details.</p>
+
+<p>The simplest way to push files into your bucket is to use the CLI’s <code>sync</code> command. This pushes a local folder’s contents to the remote bucket, which automatically adds, updates and deletes contents in the bucket, as necessary.</p>
+
+<h2>Release<a name="release"></a>
+</h2>
+
+<p>When you create a release, CCD takes a snapshot of all the entries (at their current versions) contained in a bucket at that specific point in time. To remove, update, or add entries, you must create a new release in order to deliver the new or changed entries.</p>
+
+<h2>Badge</h2>
+
+<p>Badges enable you to select which release your application uses. You can assign a unique badge to a release, and request that content using that badge’s name.</p>
+
+<p>
+<img src="../uploads/Main/CCD_releases.png" alt=""><br>
+A. A row showing a release in a bucket’s <strong>Releases</strong> tab.<br>
+B. The badges, if any, associated with this release.</p>
+
+<p>You can move this badge between releases, adding more flexibility to content workflows. Moving a badge removes it from the previous release that it was associated with. You can only assign a badge to a single release at a time, but you can associate multiple badges to a release.</p>
+
+<p>By default, an automatically generated badge named <code>latest</code> is assigned to the latest release.</p>
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCloudBuildRestAPI.html"></a></span><div class="tip"> Cloud Build REST API</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCCDInterfaces.html"></a></span><div class="tip"> Cloud Content Delivery interfaces</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Git dependencies</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/upm-git.html">English</a></li>
+<li><a href="/cn/current/Manual/upm-git.html">中文</a></li>
+<li><a href="/ja/current/Manual/upm-git.html">日本語</a></li>
+<li><a href="/es/current/Manual/upm-git.html">Español</a></li>
+<li><a href="/kr/current/Manual/upm-git.html">한국어</a></li>
+<li><a href="/ru/current/Manual/upm-git.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/upm-git.html">English</a></li>
+<li><a href="/cn/current/Manual/upm-git.html">中文</a></li>
+<li><a href="/ja/current/Manual/upm-git.html">日本語</a></li>
+<li><a href="/es/current/Manual/upm-git.html">Español</a></li>
+<li><a href="/kr/current/Manual/upm-git.html">한국어</a></li>
+<li><a href="/ru/current/Manual/upm-git.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="PackagesList.html"> Packages</a></li>
+<li><a href="Packages.html"> Unity's Package Manager</a></li>
+<li><a href="upm-manifestPrj.html"> Project manifest</a></li>
+<li> Git dependencies</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-embed.html"></a></span><div class="tip"> Embedded dependencies</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-localpath.html"></a></span><div class="tip"> Local folder or tarball paths</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Git dependencies</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>When the Package Manager fetches a package from a Git repository, it adds the package locally to your project. This allows you to easily test unpublished changes, but you cannot use it to contribute to that Git repository. To set up an existing local Git repository as a <span class="tooltip"><strong>dependency</strong><span class="tooltiptext"><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Dependency">Glossary</a></span></span></span> in your project, use a <a href="upm-localpath.html">path to your local Git repository</a> instead.</p>
+
+<p>You cannot specify <span class="tooltip"><strong>Git dependencies</strong><span class="tooltiptext">The Package Manager retrieves Git dependencies from a Git repository directly rather than from a package registry. Git dependencies use a Git URL reference instead of a version, and there’s no guarantee about the package quality, stability, validity, or even whether the version stated in its <code>package.json</code> file respects Semantic Versioning rules with regards to officially published releases of this package. <a class="tooltipMoreInfoLink" href="upm-concepts.html#Git">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Gitdependency">Glossary</a></span></span></span> in a <a href="upm-manifestPkg.html">package.json</a> file because the Package Manager does not support Git dependencies between packages. It only supports Git dependencies for projects, so you can only declare Git dependencies in the project’s <a href="upm-manifestPrj.html">manifest.json</a> file.</p>
+
+<p>This section includes the following topics:</p>
+
+<ul>
+<li><p><a href="#req">Requirements</a></p></li>
+<li>
+<a href="#syntax">Git URLs and extended syntax</a>
+
+<ul>
+<li><p><a href="#Git-HTTPS">Using the HTTP/HTTPS protocol</a></p></li>
+<li><p><a href="#Git-SSH">Using the SSH protocol</a></p></li>
+<li><p><a href="#Git-FILE">Using the FILE protocol</a></p></li>
+<li><p><a href="#Git-GIT">Using the GIT protocol</a></p></li>
+<li><p><a href="#revision">Targeting a specific revision</a></p></li>
+<li><p><a href="#subfolder">Specifying a package in a subfolder</a></p></li>
+</ul>
+</li>
+<li><p><a href="#git-locks">Locked Git dependencies</a></p></li>
+<li><p><a href="#git-lfs">Git LFS Support</a></p></li>
+</ul>
+
+<p><a name="req"></a></p>
+
+<h2>Requirements</h2>
+
+<p>To use Git dependencies in a project, make sure the <a href="https://git-scm.com/">Git client</a> is installed on your machine and that you have added the Git executable path to the PATH system environment variable.</p>
+
+<p>If the repository tracks files with <a href="https://git-lfs.github.com/">Git LFS</a>, make sure the Git LFS client is also installed on your machine. If it is not installed, the Package Manager can’t retrieve the files stored on the LFS server and instead checks out the LFS pointer files without any error or warning messages.</p>
+
+<p>You can use the Package Manager window to install a package directly from a Git repository. For more information, see <a href="upm-ui-giturl.html">Installing from a Git URL</a>.</p>
+
+<p><a name="syntax"></a></p>
+
+<h2>Git URLs and extended syntax</h2>
+
+<p>The Package Manager supports all <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols">Git protocols</a>, with the exception of direct file paths. To specify a Git URL as a dependency, add the name of the package to add with a Git URL instead of the version number or local file path. For example, this demonstrates how to specify a remote Git using different protocols:</p>
+
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage1&quot;: &quot;https://github.example.com/myuser/myrepository1.git&quot;,
+    &quot;com.mycompany.mypackage2&quot;: &quot;ssh://git@github.example.com/myuser/myrepository2.git&quot;,
+    &quot;com.mycompany.mypackage3&quot;: &quot;file://localhost/github.example.com/myuser/myrepository3.git&quot;,
+    &quot;com.mycompany.mypackage4&quot;: &quot;git://github.example.com/myuser/myrepository4.git&quot;,
+    etc.
+  }
+}
+</code></pre>
+
+<p>The Package Manager recognizes that a dependency formatted as a URL is a Git URL by looking for the <code>.git</code> file extension at the end of the repository path. Some Git repository hosting services do not support URLs with this extension while others enforce it. For this reason, the Git dependency syntax allows you to omit the extension if you use the <a href="Git-GIT">GIT protocol</a>, or if you add a special <code>git+</code> prefix to the <a href="#Git-HTTPS">HTTP/HTTPS</a>, <a href="#Git-SSH">SSH</a>, or <a href="#Git-FILE">FILE</a> URL.</p>
+
+<p>
+<strong>Note:</strong> The <code>git+</code> prefix is a special marker in the <code>manifest.json</code> file that indicates that the dependency is Git-based. The Package Manages does not pass it to Git when cloning the repository.</p>
+
+<p>For more information about the format of Git-supported URLs, see the documentation for the git <a href="https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a">clone</a> command and <a href="https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols">Git server protocols</a>.</p>
+
+<p>In addition, Git dependencies use an extended syntax:</p>
+
+<ul>
+<li>
+<p>If the package you want is not at the root of the repository, you can specify a path to a subfolder in the repository where the package is located. This is only necessary if the package you want is not at the root of the repository. For example, the string <code>?path=/folder1/folder2</code> in:</p>
+
+<p>
+<code>&quot;https://github.example.com/myuser/myrepository.git?path=/folder1/folder2&quot;</code>.</p>
+
+<p>For more information, see <a href="#subfolder">Specifying a package in a subfolder</a>.</p>
+</li>
+<li>
+<p>You can specify a Git revision, which can be a tag, branch name, or a specific commit hash to lock onto. This ensures that the Package Manager always loads that exact revision. If you don’t specify a revision, the Package Manager clones the repository at the default branch and latest commit. For example, the string <code>#v2.0.0</code> in:</p>
+
+<p><code>&quot;https://github.example.com/myuser/myrepository.git#v2.0.0&quot;</code></p>
+
+<p>For more information, see <a href="#revision">Targeting a specific revision</a>.</p>
+</li>
+</ul>
+
+<p><a name="Git-HTTPS"></a></p>
+
+<h3>Using the HTTP/HTTPS protocol</h3>
+
+<p>You can use the HTTPS protocol with the full URL:</p>
+
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage&quot;: &quot;https://github.example.com/myuser/myrepository.git&quot;
+  }
+}
+</code></pre>
+
+<p>If your Git server does not support the <code>.git</code> extension, you can add the special <code>git+</code> prefix, with or without the extension:</p>
+
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage1&quot;: &quot;git+https://github.example.com/myuser/myrepository1.git&quot;,
+    &quot;com.mycompany.mypackage2&quot;: &quot;git+https://github.example.com/myuser/myrepository2&quot;
+  }
+}
+</code></pre>
+
+<p>
+<strong>Note</strong>: Alternatively, you can use the GIT protocol instead of the <code>git+</code> prefix. For more information, see <a href="#Git-GIT">Using the GIT protocol</a>.</p>
+
+<p>If the repository is publicly accessible, HTTPS is the recommended scheme for sharing Git URLs with users because you can copy and paste the URL directly from the Git repository hosting service web page.</p>
+
+<figure>
+<img src="../uploads/Main/upm-git-cloning.png" alt="Copy the URL from the package repository">
+<figcaption>Copy the URL from the package repository</figcaption>
+</figure>
+
+<p>If the repository is not publicly accessible and you are using HTTPS, the repository server fails to authenticate you because you can’t interact with the server to provide your credentials. To work around this, choose one of the following solutions:</p>
+
+<ul>
+<li><p>Authenticate beforehand using a <a href="https://git-scm.com/docs/gitcredentials">Git credentials helper</a>.</p></li>
+<li>
+<p>Include your username and password directly in the Git URL.</p>
+
+<p>
+<strong>Warning</strong>: This option is not recommended because it is not secure.</p>
+</li>
+<li><p>Use the <a href="#Git-SSH">SSH protocol</a> instead. If you set up and configure an SSH key pair with the Git repository hosting service, the Package Manager can authenticate the request seamlessly on your behalf.</p></li>
+</ul>
+
+<p><a name="Git-SSH"></a></p>
+
+<h3>Using the SSH protocol</h3>
+
+<p>You can use the SSH protocol with the full URL:</p>
+
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage&quot;: &quot;ssh://git@mycompany.github.com/gitproject/com.mycompany.mypackage.git&quot;
+  }
+}
+</code></pre>
+
+<p>If your Git server does not support the <code>.git</code> extension, you can add the special <code>git+</code> prefix, with or without the extension:</p>
+
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage1&quot;: &quot;git+ssh://git@github.example.com/myuser/myrepository1.git&quot;,
+    &quot;com.mycompany.mypackage2&quot;: &quot;git+ssh://git@github.example.com/myuser/myrepository2&quot;
+  }
+}
+</code></pre>
+
+<p>
+<strong>Note</strong>: Alternatively, you can use the GIT protocol instead of the <code>git+</code> prefix. For more information, see <a href="#Git-GIT">Using the GIT protocol</a>.</p>
+
+<p>You can also use the SCP-like shorthand, which the Package Manager always recognizes as a Git dependency:</p>
+
+<pre><code class="json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage&quot;: &quot;git@mycompany.github.com:gitproject/com.mycompany.mypackage.git&quot;
+  }
+}
+</code></pre>
+
+<h4>Using PuTTY on Windows</h4>
+
+<p>Git uses the keys at the default location when you use SSH to authenticate. However, if you are using <a href="https://www.putty.org/">PuTTY</a> as the SSH client on Windows, you need to configure the <code>GIT_SSH</code> environment variable to make it point to <code>plink.exe</code>.</p>
+
+<h4>Authenticating with SSH</h4>
+
+<p>If you want to use the SSH protocol, you need to set up SSH keys outside of Unity. For more information on setting up authentication for a specific host, see the help pages for <a href="https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/">Bitbucket</a>, <a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html">GitLab</a>, and <a href="https://github.com/settings/tokens">GitHub</a>.</p>
+
+<p>
+<strong>Note</strong>: If you encrypted your SSH key with a passphrase, the Package Manager can’t retrieve the package, because it doesn’t provide a way to enter the passphrase in a terminal or command line. In this case, you can either use the <a href="#protocols">HTTPS protocol with a Git credential helper</a> or use Git’s built-in SSH authentication <a href="https://www.ssh.com/ssh/agent">ssh-agent</a>. On Windows, if you are using PuTTY, you can use its <a href="https://www.ssh.com/ssh/putty/putty-manuals/0.68/Chapter9.html">Pageant</a> authentication helper.</p>
+
+<p>If you don’t have proper access, the Editor notifies you that authentication failed. For more information, see <a href="upm-errors.html#ssh-add">Authentication issues with Git URLs</a>.</p>
+
+<p><a name="Git-FILE"></a></p>
+
+<h3>Using the FILE protocol</h3>
+
+<p>The Package Manager does not recognize Git URLs with the <code>file:</code> prefix as Git dependencies unless they are properly formatted. This means you must use either the <code>git+file:</code> protocol, or the <code>.git</code> suffix with the <code>file:</code> protocol:</p>
+
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage1&quot;: &quot;git+file://github.example.com/myuser/myrepository1&quot;,
+    &quot;com.mycompany.mypackage2&quot;: &quot;git+file:///github.example.com/myuser/myrepository2&quot;,
+    &quot;com.mycompany.mypackage3&quot;: &quot;file:///github.example.com/myuser/myrepository3.git&quot;
+  }
+}
+</code></pre>
+
+<p>
+<strong>Note</strong>: Alternatively, you can use the GIT protocol instead of the <code>git+</code> prefix. For more information, see <a href="#Git-GIT">Using the GIT protocol</a>.</p>
+
+<p>The Package Manager interprets any other syntax as a <a href="upm-localpath.html">local path</a> instead.</p>
+
+<p><a name="Git-GIT"></a></p>
+
+<h3>Using the GIT protocol</h3>
+
+<p>The Package Manager recognizes the <code>git:</code> protocol, with or without the <code>.git</code> path suffix:</p>
+
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage1&quot;: &quot;git://github.example.com/myuser/myrepository1.git&quot;,
+    &quot;com.mycompany.mypackage2&quot;: &quot;git://github.example.com/myuser/myrepository2&quot;
+  }
+}
+</code></pre>
+
+<p>The GIT protocol doesn’t need or support the <code>git+</code> prefix.</p>
+
+<p><a name="revision"></a></p>
+
+<h3>Targeting a specific revision</h3>
+
+<p>To declare a specific revision that you want the Package Manager to clone, add the revision prefixed by the number sign (<code>#</code>) at the end of the URL:</p>
+
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage1&quot;: &quot;https://github.example.com/myuser/myrepository1.git#revision&quot;,
+    &quot;com.mycompany.mypackage2&quot;: &quot;git+https://github.example.com/myuser/myrepository2#revision&quot;
+  }
+}
+</code></pre>
+
+<p>The revision can be any tag, branch or commit hash. This table shows examples for specifying revisions:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Syntax:</strong></th>
+	<th style="text-align:left;"><strong>URL example</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Latest default branch</td>
+	<td style="text-align:left;"><code>&quot;https://github.example.com/myuser/myrepository.git&quot;</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Specific branch</td>
+	<td style="text-align:left;"><code>&quot;https://github.example.com/myuser/myrepository.git#my-branch&quot;</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Specific version</td>
+	<td style="text-align:left;"><code>&quot;https://github.example.com/myuser/myrepository.git#v2.0.0&quot;</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Commit hash</td>
+	<td style="text-align:left;"><code>&quot;https://github.example.com/myuser/myrepository.git#9e72f9d5a6a3dadc38d813d8399e1b0e86781a49&quot;</code></td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="subfolder"></a></p>
+
+<h3>Specifying a package in a subfolder of the repository</h3>
+
+<p>If you specify a repository using the Git URL syntax, the Package Manager assumes that the package must be at the root of the repository. However, some packages are not located at the root level of their repository, and some repositories contain more than one package.</p>
+
+<p>You can use the <code>path</code> query parameter in the Git URL to notify the Package Manager where to find the package. The path you specify must be relative to the root of the repository, and the subfolder you specify must contain the <span class="tooltip"><strong>package manifest</strong><span class="tooltiptext">Each package has a <em>manifest</em>, which provides information about the package to the Package Manager. The manifest contains information such as the name of the package, its version, a description for users, dependencies on other packages (if any), and other details. <a class="tooltipMoreInfoLink" href="upm-manifestPkg.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Packagemanifest">Glossary</a></span></span></span> (<code>package.json</code> file).</p>
+
+<p>To specify a repository subfolder for a Git dependency, use the <code>path</code> query parameter:</p>
+
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage&quot;: &quot;https://github.example.com/myuser/myrepository.git?path=/subfolder&quot;
+  }
+}
+</code></pre>
+
+<p>In this case, the Package Manager only registers the package located in the specified repository subfolder and disregards the rest of the repository.</p>
+
+<p>Sometimes a repository contains several related packages. If you want to add more than one package from the same repository, you must add two separate entries to your <span class="tooltip"><strong>project manifest</strong><span class="tooltiptext">Each Unity project has a <em>project manifest</em>, which acts as an entry point for the Package Manager. This file must be available in the <code>&lt;project&gt;/Packages</code> directory. The Package Manager uses it to configure many things, including a list of dependencies for that project, as well as any package repository to query for packages. <a class="tooltipMoreInfoLink" href="upm-manifestPrj.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Projectmanifest">Glossary</a></span></span></span>:</p>
+
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage1&quot;: &quot;https://github.example.com/myuser/myrepository.git?path=/subfolder1&quot;,
+    &quot;com.mycompany.mypackage3&quot;: &quot;https://github.example.com/myuser/myrepository.git?path=/subfolder2/subfolder3&quot;
+  }
+}
+</code></pre>
+
+<p>
+<strong>Note</strong>: If you specify the same repository multiple times, the Package Manager clones the same repository multiple times, which leads to reduced performance and additional network usage.</p>
+
+<h4>Revisions</h4>
+
+<p>The <code>path</code> query parameter always precedes the revision anchor. The reverse order fails. This is an example of the correct order to use:</p>
+
+<pre><code class="lang-json">{
+  &quot;dependencies&quot;: {
+    &quot;com.mycompany.mypackage&quot;: &quot;https://github.example.com/myuser/myrepository.git?path=/example/folder#v1.2.3&quot;
+  }
+}
+</code></pre>
+
+<p><a name="git-locks"></a></p>
+
+<h2>Locked Git dependencies</h2>
+
+<p>One of the core principles of the Package Manager is determinism. If you share your project with other users, the Package Manager should install the same set of package dependencies and versions, and that includes packages that it fetchs from Git. To achieve this, the Package Manager uses a <a href="upm-conflicts-auto.html">lock file</a>, which tracks which commit hashes of Git dependencies are used. For example, here is an entry in the lock file for a Git dependency:</p>
+
+<pre><code class="lang-json">&quot;com.mycompany.mypackage&quot;: {
+  &quot;version&quot;: &quot;git@github.example.com/myuser/myrepository.git&quot;,
+  &quot;depth&quot;: 0,
+  &quot;source&quot;: &quot;git&quot;,
+  &quot;dependencies&quot;: {
+    &quot;com.unity.package-validation-suite&quot;: &quot;0.10.0-preview&quot;,
+    &quot;com.unity.nuget.newtonsoft-json&quot;: &quot;2.0.0-preview&quot;
+  },
+  &quot;hash&quot;: &quot;6758e2800ac87cb37a9a8179610f92844a85cf7b&quot;
+},
+    etc.
+</code></pre>
+
+<h3>Updating a locked version</h3>
+
+<p>When you add a Git dependency with a revision set to a branch or a tag, the Package Manager fetches the corresponding commit hash to store in the lock file. Over time, branches and tags can point to different commits on the Git repository. For example, a branch can have newer commits added to it.</p>
+
+<p>To force the Package Manager to update the package to the new commit that a branch or tag points to, use one of these methods:</p>
+
+<ul>
+<li>Manually remove the corresponding package section from the <code>packages-lock.json</code> file. The next time you trigger a package resolution process (for example, when Unity regains application focus), the Package Manager fetches the branch head or tag and then adds it to the lock file.</li>
+<li>Create a script with the <a href="../ScriptReference/PackageManager.Client.Add.html">Client.Add</a> C# API method with the same Git dependency.</li>
+</ul>
+
+<p><a name="git-lfs"></a></p>
+
+<h2>Git LFS Support</h2>
+
+<p>The Package Manager supports Git dependencies with repositories using Git LFS. Since Git LFS has been designed to work with minimal configuration overhead, it supports both HTTPS and SSH <a href="#authentication">authentication</a>. Retrieval of files stored on the LFS server fails if users need to be authenticated and do not have valid credentials with permission to access the remote repository.</p>
+
+<p>Package authors can help the Git LFS client locate the LFS Server by providing it with the URL in the <code>.lfsconfig</code> configuration file in the repository. There are two ways to do this:</p>
+
+<pre><code class="lang-json"># Option 1: global setting
+[lfs]
+  url = ssh://git@HOSTNAME/path/to/repo.git
+
+# Option 2: per-remote setting
+[remote &quot;origin&quot;]
+  lfsurl = ssh://git@HOSTNAME/path/to/repo.git
+</code></pre>
+
+<p>If the repository contains a <code>.lfsconfig</code> file, make sure you include it in the <code>.npmignore</code> file to avoid including it in published releases of the package.</p>
+
+<p><br></p>
+
+<hr>
+
+<p><br></p>
+
+<ul>
+<li><span class="page-history">Lock files added in Unity <a href="https://docs.unity3d.com/2019.4/Documentation/Manual/30_search.html?q=newin20194">2019.4</a> <span class="search-words">NewIn20194</span></span></li>
+<li><span class="page-history">Adding Git dependencies in subfolders added in Unity <a href="https://docs.unity3d.com/2019.4/Documentation/Manual/30_search.html?q=newin20194">2019.4</a> <span class="search-words">NewIn20194</span></span></li>
+</ul>
+
+<p><br></p>
+<!-- area:authoring -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-embed.html"></a></span><div class="tip"> Embedded dependencies</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-localpath.html"></a></span><div class="tip"> Local folder or tarball paths</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

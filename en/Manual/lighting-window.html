@@ -1,0 +1,571 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  The Lighting window</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/lighting-window.html">English</a></li>
+<li><a href="/cn/current/Manual/lighting-window.html">中文</a></li>
+<li><a href="/ja/current/Manual/lighting-window.html">日本語</a></li>
+<li><a href="/es/current/Manual/lighting-window.html">Español</a></li>
+<li><a href="/kr/current/Manual/lighting-window.html">한국어</a></li>
+<li><a href="/ru/current/Manual/lighting-window.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/lighting-window.html">English</a></li>
+<li><a href="/cn/current/Manual/lighting-window.html">中文</a></li>
+<li><a href="/ja/current/Manual/lighting-window.html">日本語</a></li>
+<li><a href="/es/current/Manual/lighting-window.html">Español</a></li>
+<li><a href="/kr/current/Manual/lighting-window.html">한국어</a></li>
+<li><a href="/ru/current/Manual/lighting-window.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="LightingOverview.html"> Lighting</a></li>
+<li> The Lighting window</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ShadowPerformance.html"></a></span><div class="tip"> Shadow troubleshooting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="lighting-mode.html"></a></span><div class="tip"> Lighting Mode</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>The Lighting window</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Lighting window (menu: <strong>Window</strong> &gt; <span class="tooltip"><strong>Rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a class="tooltipMoreInfoLink" href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> &gt; <strong>Lighting Settings</strong>) is the main control point for Unity’s lighting features. You can use the Lighting window to configure lighting for your Scene, to adjust settings related to precomputing lighting data, and to optimise your lighting for quality, speed and storage space.</p>
+
+<p>The options available in the Lighting window vary depending on which render pipeline your Project uses.</p>
+
+<p>The Lighting window contains 3 tabs:</p>
+
+<ul>
+<li>The <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> tab</li>
+<li>The <strong>Realtime Lightmaps</strong> tab, which is visible only if your Project uses the Built-in Render Pipeline</li>
+<li>The <strong>Baked Lightmaps</strong> tab</li>
+</ul>
+
+<p>You can perform many of the functions available in this window via <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>, using the <a href="../ScriptReference/LightmapEditorSettings.html">LightmapEditorSettings</a> and <a href="../ScriptReference/Lightmapping.html">Lightmapping</a> APIs.</p>
+
+<h2>Scene tab</h2>
+
+<p>The <strong>Scene</strong> tab contains lighting-related settings and controls that apply to the current Scene.</p>
+
+<p><a name="Environment"> </a></p>
+
+<h3>Environment</h3>
+
+<p>This section contains settings for the Skybox, diffuse lighting and reflections.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Skybox Material</strong></td>
+	<td style="text-align:left;">A <a href="class-Skybox.html">Skybox</a> is a Material that appears behind everything else in the Scene to simulate the sky or other distant background. Use this property to choose the Skybox you want to use for the Scene. The default value is the built-in Default Skybox.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Sun Source</strong></td>
+	<td style="text-align:left;">When the <strong>Skybox Material</strong> is a Procedural Skybox, use this setting to specify a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> with a directional Light component to indicate the direction of the sun (or whatever large, distant light source is illuminating your Scene). If this is set to <strong>None</strong>, the brightest directional light in the Scene is assumed to represent the sun. Lights with <a href="class-Light.md">Render Mode</a> property set to <strong>Not Important</strong> do not affect the Skybox. The default value is <strong>None</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Environment Lighting</strong></td>
+	<td style="text-align:left;">This section contains settings that affect <a href="lighting-ambient-light.html">ambient light</a> in the current Scene.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Source</strong></td>
+	<td style="text-align:left;">Use this to define a source color for ambient light in the Scene. The default value is <span class="tooltip"><strong>Skybox</strong><span class="tooltiptext">A special type of Material used to represent skies. Usually six-sided. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Skybox">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Skybox</strong></td>
+	<td style="text-align:left;">Use the colors of the Skybox set in <strong>Skybox Material</strong> to determine the ambient light coming from different angles. This allows for more precise effects than <strong>Gradient</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Gradient</strong></td>
+	<td style="text-align:left;">Choose separate colors for ambient light from the sky, horizon and ground, and blend smoothly between them.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Color</strong></td>
+	<td style="text-align:left;">Use a flat color for all ambient light.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Intensity Multiplier</strong></td>
+	<td style="text-align:left;">Use this to set the brightness of the ambient light in the Scene, defined as a value between 0 and 8. The default value is 1.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Ambient Mode</strong></td>
+	<td style="text-align:left;">In the Built-in Render Pipeline, use this to specify which <span class="tooltip"><strong>Global Illumination</strong><span class="tooltiptext">A group of techniques that model both direct and indirect lighting to provide realistic lighting results. Unity has two global illumination systems that combine direct and indirect lighting.: Baked Global Illumination, and Realtime Global Illumination (deprecated).<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#globalillumination">Glossary</a></span></span></span> mode should be used to determine ambient light in the Scene. This property is only available when both <strong>Realtime <strong>Global Illumination</strong></strong> and <strong>Baked <strong>Global Illumination</strong></strong> are enabled in the Scene.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Realtime</td>
+	<td style="text-align:left;">Calculate and update ambient light in real-time, using Realtime Global Illumination (deprecated).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Baked</td>
+	<td style="text-align:left;">Precompute the ambient light in the Editor, and then apply it at runtime.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Environment Reflections</strong></td>
+	<td style="text-align:left;">This section contains global settings for <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-ReflectionProbe.html">Reflection Probe</a><span class="tooltiptext">A rendering component that captures a spherical view of its surroundings in all directions, rather like a camera. The captured image is then stored as a Cubemap that can be used by objects with reflective materials. <a href="class-ReflectionProbe.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span> baking, and settings that affect global reflections.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Source</strong></td>
+	<td style="text-align:left;">Use this setting to specify whether you want to use the Skybox for reflection effects, or a cubemap of your choice. The default value is <strong>Skybox</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Skybox</strong></td>
+	<td style="text-align:left;">Select this to use the Skybox as the reflection source.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Custom</strong></td>
+	<td style="text-align:left;">Select this to use a cubemap for reflections.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Resolution</strong></td>
+	<td style="text-align:left;">Use this to set the resolution of the Skybox for reflection purposes. This property is visible only when <strong>Source</strong> is set to <strong>Skybox</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Cubemap</strong><span class="tooltiptext">A collection of six square textures that can represent the reflections in an environment or the skybox drawn behind your geometry. The six squares form the faces of an imaginary cube that surrounds an object; each face represents the view along the directions of the world axes (up, down, left, right, forward and back). <a class="tooltipMoreInfoLink" href="class-Cubemap.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Cubemap">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Use this to specify the cubemap to use for reflection purposes. This property is visible only when <strong>Source</strong> is set to <strong>Cubemap</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><span class="tooltip"><strong>Compression</strong><span class="tooltiptext">A method of storing data that reduces the amount of storage space it requires. See <a href="class-TextureImporterOverride.html">Texture Compression</a>, <a href="class-AnimationClip.html#AssetProperties">Animation Compression</a>, <a href="class-AudioClip.html">Audio Compression</a>, <a href="ReducingFilesize.html">Build Compression</a>.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#compression">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Use this to define whether or not reflection textures are compressed. The default setting is <strong>Auto</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Auto</strong></td>
+	<td style="text-align:left;">The reflection texture is compressed if the compression format is suitable.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Uncompressed</strong></td>
+	<td style="text-align:left;">The reflection texture is stored in memory uncompressed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Compressed</strong></td>
+	<td style="text-align:left;">The texture is compressed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Intensity Multiplier</strong></td>
+	<td style="text-align:left;">The degree to which the reflection source is visible in reflective objects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Bounces</strong></td>
+	<td style="text-align:left;">A reflection bounce occurs when a reflection from one object is then reflected by another object. Use this property to set how many times the Reflection Probes evaluate bounces back and forth between objects. If this is set to 1, then Unity only takes the initial reflection (from the skybox or cube map specified in the <strong>Reflection Source</strong> property) into account.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="RealtimeLighting"> </a></p>
+
+<h3>Realtime Lighting</h3>
+
+<p>This section is visible only when using the Built-in Render Pipeline. It contains settings related to <a href="realtim-gi-using-enlighten">Realtime Global Illumination using Enlighten (deprecated)</a>.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Realtime Global Illumination (deprecated)</strong></td>
+	<td style="text-align:left;">If this checkbox is ticked, Unity enables Realtime Global Illumination using Enlighten.<br><br>Note that Enlighten is deprecated, and will soon be removed.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="MixedLighting"> </a></p>
+
+<h3>Mixed Lighting</h3>
+
+<p>This section contains settings that affect the behavior of <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightMode-Baked.html">Baked Lights</a><span class="tooltiptext">Light components whose Mode property is set to Baked. Unity pre-calculates the illumination from Baked Lights before runtime, and does not include them in any runtime lighting calculations. <a href="LightMode-Baked.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#BakedLights">Glossary</a></span></span></span> and <span class="tooltip"><a href="LightMode-Mixed.html">Mixed Lights</a><span class="tooltiptext">Light components whose Mode property is set to Mixed. Some calculations for Mixed Lights are performed in advance, and some calculations for Mixed Lights are performed at runtime. The behavior of all Mixed Lights in a Scene is determined by the Scene’s Lighting Mode. <a href="LightMode-Mixed.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MixedLights">Glossary</a></span></span></span> in your Scene.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2">Property:</th>
+	<th style="text-align:left;">Function:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Baked Global Illumination</strong></td>
+	<td style="text-align:left;">When this setting is enabled, Baked lights in the Scene are used for lightmapping only, and Mixed lights behave according to the <strong>Lighting Mode</strong> setting. When this setting is disabled, Unity forces all Baked and Mixed lights in the Scene to act as though they were <span class="tooltip"><strong>Realtime Lights</strong><span class="tooltiptext">Light components whose Mode property is set to Realtime. Unity calculates and updates the lighting of Realtime Lights every frame at runtime. No Realtime Lights are precomputed. <a class="tooltipMoreInfoLink" href="LightMode-Realtime.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RealtimeLights">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Lighting Mode</strong></td>
+	<td style="text-align:left;">Specifies which <a href="lighting-mode.html">Lighting Mode</a> will be used for all Mixed Lights in the Scene.<br><br>When you change the Lighting Mode, you need to re-bake the Scene. If <strong>Auto Generate</strong> is enabled in the Lighting window, this happens automatically. If <strong>Auto Generate</strong> is not enabled, click <strong>Generate Lighting</strong> to see the updated lighting effect.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Baked Indirect</strong></td>
+	<td style="text-align:left;">Use <a href="LightMode-Mixed-BakedIndirect.html">Baked Indirect Lighting Mode</a> for all Mixed Lights in the current Scene.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Subtractive</strong></td>
+	<td style="text-align:left;">Use <a href="LightMode-Mixed-Subtractive.html">Subtractive Lighting Mode</a> for all Mixed Lights in the current Scene. Subtractive Lighting Mode is not supported in the High Definition Render Pipeline (HDRP).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Shadowmask</strong></td>
+	<td style="text-align:left;">Use <a href="LightMode-Mixed-Shadowmask.html">Shadowmask Lighting Mode</a> for all Mixed Lights in the current Scene. Shadowmask Lighting Mode is not supported in the Universal Render Pipeline (URP).</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Realtime Shadow Color</strong></td>
+	<td style="text-align:left;">Define the color that Unity uses to render real-time shadows in Subtractive Lighting Mode. This setting is visible only when the <strong>Lighting Mode</strong> is set to <strong>Subtractive</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="LightmappingSettings"> </a></p>
+
+<h3>Lightmapping Settings</h3>
+
+<p>This section contains settings related to <a href="Lightmappers.html">lightmapping</a>.</p>
+
+<p>Lightmapping settings are specific to each lightmapper backend. To see the settings for a lightmapper, see the documentation on the <a href="progressive-lightmapper.html">Progressive CPU Lightmapper</a>, the <a href="GPUProgressiveLightmapper.html">Progressive GPU Lightmapper (preview)</a>, and <a href="GI-Enlighten.html">Enlighten (deprecated)</a>.</p>
+
+<p><a name="OtherSettings"> </a></p>
+
+<h3>Other Settings</h3>
+
+<p>The Other Settings section contains settings for fog, <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Halo.html">Halos</a><span class="tooltiptext">The glowing light areas around light sources, used to give the impression of small dust particles in the air. <a href="class-Halo.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Halo">Glossary</a></span></span></span>, <span class="tooltip"><a href="class-Flare.html">Flares</a><span class="tooltiptext">The source asset used by Lens Flare Components. The Flare itself is a combination of a texture file and specific information that determines how the Flare behaves. <a href="class-Flare.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Flare">Glossary</a></span></span></span> and <a href="Cookies.html">Cookies</a>. </p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="3"></th>
+	<th style="text-align:left;">Property:</th>
+	<th style="text-align:left;">Function:</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="4"><span class="tooltip"><strong>Fog</strong><span class="tooltiptext">A post-processing effect that overlays a color onto objects depending on the distance from the camera. Use this to simulate fog or mist in outdoor environments, or to hide clipping of objects near the camera’s far clip plane. <a class="tooltipMoreInfoLink" href="PostProcessing-Fog.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Fog">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Enables or disables fog in the Scene. Note that fog is not available with the <a href="RenderingPaths.html">Deferred rendering path</a>. For deferred rendering, the <a href="PostProcessing-Fog.html">Post-processing fog effect</a> effect might be suitable.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="3">Color</td>
+	<td style="text-align:left;">Use the color picker to set the color Unity uses to draw fog in the Scene.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;" colspan="3">Mode</td>
+	<td style="text-align:left;">Define the way in which the fogging accumulates with distance from the <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;" colspan="2"><strong>Linear</strong></td>
+	<td style="text-align:left;">Fog density increases linearly with distance.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;">Start</td>
+	<td style="text-align:left;">Set the distance from the Camera at which the fog starts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;">End</td>
+	<td style="text-align:left;">Set the distance from the Camera at which the fog completely obscures Scene GameObjects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;" colspan="2"><strong>Exponential</strong></td>
+	<td style="text-align:left;">Fog density increases exponentially with distance.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;">Density</td>
+	<td style="text-align:left;">Use this to control the density of the fog. The fog appears more dense as the <strong>Density</strong> increases.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"></td>
+	<td style="text-align:left;" colspan="2"><strong>Exponential Squared</strong></td>
+	<td style="text-align:left;">Fog density increases faster with distance (exponentially and squared).</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="3"></td>
+	<td style="text-align:left;">Density</td>
+	<td style="text-align:left;">Use this to control the density of the fog. The fog appears more dense as the <strong>Density</strong> increases.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"><strong>Halo Texture</strong></td>
+	<td style="text-align:left;">Set the Texture you want to use for drawing a <a href="class-Halo.html">Halo</a> around lights.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"><strong>Halo Strength</strong></td>
+	<td style="text-align:left;">Define the visibility of Halos around Lights, from a value between 0 and 1.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"><span class="tooltip"><strong>Flare Fade Speed</strong><span class="tooltiptext">A Lighting window property that allows you to set the time (in seconds) over which lens flares fade from view after initially appearing. <a class="tooltipMoreInfoLink" href="class-LensFlare.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#FlareFadeSpeed">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">Define the time (in seconds) over which <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-LensFlare.html">lens flares</a><span class="tooltiptext">A component that simulates the effect of lights refracting inside a camera lens. Use a Lens Flare to represent very bright lights or add atmosphere to your scene. <a href="class-LensFlare.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LensFlare">Glossary</a></span></span></span> fade from view after initially appearing. This is set to 3 by default.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"><strong>Flare Strength</strong></td>
+	<td style="text-align:left;">Define the visibility of lens flares from lights, from a value between 0 and 1.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="4"><strong>Spot Cookie</strong></td>
+	<td style="text-align:left;">Set the <a href="HOWTO-LightCookie">Cookie</a> texture you want to use for <a href="Lighting.html">spot lights</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<a name="LightmappingControls"></a>
+At the bottom of the Scene tab are the <strong>Auto Generate</strong> checkbox and the <strong>Generate Lighting</strong> button.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Auto Generate</strong></td>
+	<td style="text-align:left;">If <strong>Auto Generate</strong> is enabled, Unity updates <span class="tooltip"><strong>lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> data automatically as you edit the Scene. Unity usually updates the <strong>lightmap</strong> data a few seconds after you make a change to the Scene. If <strong>Auto Generate</strong> is disabled, you must manually update <strong>lightmap</strong> data.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate Lighting</strong></td>
+	<td style="text-align:left;">Use the <strong>Generate Lighting</strong> button to manually update the lightmap data. Use the <strong>Generate Lighting</strong> button if you want to clear the baked data from the Scene without clearing the <span class="tooltip"><a class="tooltipMoreInfoLink" href="GICache.html">GI Cache</a><span class="tooltiptext">The cached intermediate files used when Unity precomputes lighting data. Unity keeps this cache to speed up computation. <a href="GICache.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GICache">Glossary</a></span></span></span>. This button is enabled only if <strong>Auto Generate</strong> is disabled.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="DebugSettings"> </a></p>
+
+<h3>Debug settings</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>Property:</strong></th>
+	<th style="text-align:left;"><strong>Function:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Debug Settings</strong></td>
+	<td style="text-align:left;">Settings that help you debug your Scene.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Light Probe Visualization</strong></td>
+	<td style="text-align:left;">Use this to filter which <span class="tooltip"><a class="tooltipMoreInfoLink" href="LightProbes.html">Light Probes</a><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#LightProbe">Glossary</a></span></span></span> are visualized in the <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span>. The default value is <strong>Only Probes Used By Selection</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">Only Probes Used By Selection</td>
+	<td style="text-align:left;">Only Light Probes that affect the current selection are visualized in the Scene view.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">All Probes No Cells</td>
+	<td style="text-align:left;">All Light Probes are visualized in the Scene view.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">All Probes With Cells</td>
+	<td style="text-align:left;">All Light Probes are visualized in the Scene view, and the tetrahedrons that are used for interpolation of Light Probe data are also displayed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">None</td>
+	<td style="text-align:left;">No Light Probes are visualized in the Scene view.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Display Weights</strong></td>
+	<td style="text-align:left;">When enabled, Unity draws a line from the Light Probe used for the active selection to the positions on the tetrahedra used for interpolation. This is a way to debug probe interpolation and placement problems.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Display Occlusion</strong></td>
+	<td style="text-align:left;">When enabled, Unity displays occlusion data for Light Probes if the <strong>Lighting Mode</strong> is set to <span class="tooltip"><strong>Shadowmask</strong><span class="tooltiptext">A Texture that shares the same UV layout and resolution with its corresponding lightmap. <a class="tooltipMoreInfoLink" href="LightMode-Mixed-Shadowmask.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shadowmask">Glossary</a></span></span></span>.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Realtime Lightmaps tab</h2>
+
+<p>This tab shows a list of all lightmaps generated by Realtime Global Illumination using <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">A lighting system by Geomerics used in Unity for lightmapping and for Realtime Global Illumination. <a class="tooltipMoreInfoLink" href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Enlighten">Glossary</a></span></span></span> (deprecated) in the current Scene.</p>
+
+<p>If Realtime Global Illumination is not enabled in your Project, this tab will be empty</p>
+
+<h2>Baked Lightmaps tab</h2>
+
+<p>This tab shows a list of all lightmaps generated by <span class="tooltip"><a class="tooltipMoreInfoLink" href="Lightmappers.html">lightmapper</a><span class="tooltiptext">A tool in Unity that bakes lightmaps according to the arrangement of lights and geometry in your scene. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span> for for the current Scene, along with the Lighting Data Asset. If Baked Global Illumination is not enabled in your Project, this tab will be empty.</p>
+
+<hr>
+
+<p><span class="search-words">NewIn20181</span></p>
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="ShadowPerformance.html"></a></span><div class="tip"> Shadow troubleshooting</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="lighting-mode.html"></a></span><div class="tip"> Lighting Mode</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

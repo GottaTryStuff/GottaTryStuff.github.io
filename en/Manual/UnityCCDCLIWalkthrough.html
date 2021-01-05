@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Using CCD via the command-line interface</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityCCDCLIWalkthrough.html">English</a></li>
+<li><a href="/cn/current/Manual/UnityCCDCLIWalkthrough.html">中文</a></li>
+<li><a href="/ja/current/Manual/UnityCCDCLIWalkthrough.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityCCDCLIWalkthrough.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityCCDCLIWalkthrough.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityCCDCLIWalkthrough.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityCCDCLIWalkthrough.html">English</a></li>
+<li><a href="/cn/current/Manual/UnityCCDCLIWalkthrough.html">中文</a></li>
+<li><a href="/ja/current/Manual/UnityCCDCLIWalkthrough.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityCCDCLIWalkthrough.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityCCDCLIWalkthrough.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityCCDCLIWalkthrough.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityCCD.html"> Unity Cloud Content Delivery</a></li>
+<li> Using CCD via the command-line interface</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCCDDashboard.html"></a></span><div class="tip"> Unity CCD Develop Dashboard</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAP.html"></a></span><div class="tip">﻿Unity IAP</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Using CCD via the command-line interface</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This section contains a full example of how to use Cloud Content Delivery (CCD) via the command-line interface (CLI), including the following topics:</p>
+
+<ul>
+<li><a href="#authentication">Authentication</a></li>
+<li><a href="#creating-a-bucket">Creating a bucket</a></li>
+<li><a href="#creating-entries-in-the-bucket">Creating entries from a set of local files</a></li>
+<li><a href="#creating-a-release">Creating a release</a></li>
+<li><a href="#managing-badges">Managing badges</a></li>
+</ul>
+
+<h2>Authentication<a name="authentication"></a>
+</h2>
+
+<p>Log into the service using your API key. See the <a href="UnityCCDCLI.html#getting-started">Getting started</a> section if you need help locating your API key.</p>
+
+<pre><code>$ ucd auth login XXXXXXXXXXXX
+Login successful.
+</code></pre>
+
+<p>Verify whether you are logged in with the <code>auth info</code> command.</p>
+
+<pre><code>$ ucd auth info
+Current user: Joe Smith
+</code></pre>
+
+<h2>Creating a bucket<a name="creating-a-bucket"></a>
+</h2>
+
+<p>Create your first bucket. Buckets are associated with a single project. The Project ID for this example is <code>e1942cea-12df-4220-aa6d-f8c9c3ab7526</code>, but you need to use one of your actual Project IDs. See the <a href="UnityCCDCLI.html#getting-started">Getting started</a> section if you need help locating your Project ID.</p>
+
+<p>List the buckets (which should be empty at this point) for this project.</p>
+
+<pre><code>$ ucd buckets list e1942cea-12df-4220-aa6d-f8c9c3ab7526
+No buckets found for project.
+</code></pre>
+
+<p>Create a bucket called <code>example_bucket</code> for this project:</p>
+
+<pre><code>$ ucd buckets create e1942cea-12df-4220-aa6d-f8c9c3ab7526 example_bucket
+Created bucket: example_bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf)
+</code></pre>
+
+<p>Bucket and entry names are case sensitive.</p>
+
+<p>To see the newly-created buckets, list the buckets again for this project:</p>
+
+<pre><code>$ ucd buckets list e1942cea-12df-4220-aa6d-f8c9c3ab7526
+Buckets for project (e1942cea-12df-4220-aa6d-f8c9c3ab7526):
+- example_bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf)
+</code></pre>
+
+<p>To make it easier to work with creating entries and releases, save the newly-created bucket to the local configuration (don’t provide it as a parameter to the CLI for every operation). Copy the bucket’s GUID (not its name) from the bucket creation message above (<code>aee9ee5f-fa01-46d3-a293-731d15f066cf</code> in this example):</p>
+
+<pre><code>$ ucd config set bucket aee9ee5f-fa01-46d3-a293-731d15f066cf
+Successfully switched to bucket aee9ee5f-fa01-46d3-a293-731d15f066cf.
+Currently active project: e1942cea-12df-4220-aa6d-f8c9c3ab7526.
+Currently active bucket: aee9ee5f-fa01-46d3-a293-731d15f066cf (example_bucket).
+</code></pre>
+
+<p>CCD automatically performs any commands relating to entries and releases on the bucket you specified.</p>
+
+<h2>Creating entries in the bucket<a name="creating-entries-in-the-bucket"></a>
+</h2>
+
+<p>List entries in this newly-created bucket (it should be empty):</p>
+
+<pre><code>$ ucd entries list
+No Entries found for current bucket.
+</code></pre>
+
+<p>Synchronize all the files in a local folder that contains generated AssetBundles:</p>
+
+<pre><code>$ ucd entries sync ./ServerData/StandaloneOSX
+Calculating...
+Added Entry: catalog_2019.07.30.18.24.34.hash
+Added Entry: catalog_2019.07.30.18.24.34.json
+Added Entry: remotedemodata_green.bundle
+Added Entry: remotedemodata_mat1.bundle
+Added Entry: remotedemodata_sphere.bundle
+Added Entry: remotedemodata_unitylogo.bundle
+Added Entry: remotedemodata_unitylogoprefab.bundle
+Added Entry: remotedemodata_scenes_scene2.bundle
+Added Entry: remotedemodata_scenes_scene.bundle
+Added Entry: spaceshooterdata_done_asteroid01.bundle
+Added Entry: spaceshooterdata_done_asteroid02.bundle
+Added Entry: spaceshooterdata_done_asteroid03.bundle
+Added Entry: spaceshooterdata_done_bolt-enemy.bundle
+Added Entry: spaceshooterdata_done_bolt.bundle
+Added Entry: spaceshooterdata_done_enemyship.bundle
+Added Entry: spaceshooterdata_done_player.bundle
+Added Entry: spaceshooterdata_engines_enemy.bundle
+Added Entry: spaceshooterdata_engines_player.bundle
+Added Entry: spaceshooterdata_explosion_asteroid.bundle
+Added Entry: spaceshooterdata_explosion_enemy.bundle
+Added Entry: spaceshooterdata_explosion_player.bundle
+Added Entry: spaceshooterdata_starfield.bundle
+Complete! Bytes uploaded: 5346781
+</code></pre>
+
+<p>This adds the files as entries to the bucket. You can list the bucket’s contents and see some basic information about each entry:</p>
+
+<pre><code>$ ucd entries list
+22 entries for current bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf):
+2019-08-21 14:27:03       167915 spaceshooterdata_starfield.bundle
+2019-08-21 14:27:00       573539 spaceshooterdata_explosion_player.bundle
+2019-08-21 14:26:56       412235 spaceshooterdata_explosion_enemy.bundle
+2019-08-21 14:26:52       382630 spaceshooterdata_explosion_asteroid.bundle
+2019-08-21 14:26:49       177018 spaceshooterdata_engines_player.bundle
+2019-08-21 14:26:45       157215 spaceshooterdata_engines_enemy.bundle
+2019-08-21 14:26:42      1085518 spaceshooterdata_done_player.bundle
+2019-08-21 14:26:38      1070297 spaceshooterdata_done_enemyship.bundle
+2019-08-21 14:26:34        27178 spaceshooterdata_done_bolt.bundle
+2019-08-21 14:26:31        28362 spaceshooterdata_done_bolt-enemy.bundle
+2019-08-21 14:26:28       231658 spaceshooterdata_done_asteroid03.bundle
+2019-08-21 14:26:24       221450 spaceshooterdata_done_asteroid02.bundle
+2019-08-21 14:26:20       227842 spaceshooterdata_done_asteroid01.bundle
+2019-08-21 14:26:17        23016 remotedemodata_scenes_scene.bundle
+2019-08-21 14:26:13        23064 remotedemodata_scenes_scene2.bundle
+2019-08-21 14:26:10        10568 remotedemodata_unitylogoprefab.bundle
+2019-08-21 14:26:07       462522 remotedemodata_unitylogo.bundle
+2019-08-21 14:26:03         7864 remotedemodata_sphere.bundle
+2019-08-21 14:26:00         6320 remotedemodata_mat1.bundle
+2019-08-21 14:25:57         6320 remotedemodata_green.bundle
+2019-08-21 14:25:53        44218 catalog_2019.07.30.18.24.34.json
+2019-08-21 14:25:50           32 catalog_2019.07.30.18.24.34.hash
+</code></pre>
+
+<p>To get more detailed information about a specific entry, use the <code>entries info</code> command with the path of the entry:</p>
+
+<pre><code>$ ucd entries info spaceshooterdata_starfield.bundle`
+
+Entry Info:
+Path: spaceshooterdata_starfield.bundle
+Id: 8ac46783-be01-4a47-b23e-74233fc7cc09
+Last Modified: 2019-08-21 14:27:03
+  Content Size: 167915
+  Content Hash: 4a3ad5b69bd489699d1909e8868a7cb1
+  Content Type: application/octet-stream
+  Content Link: …
+  Labels:
+  Metadata:
+  Current Version: aa0304db-fd9f-4772-9549-dfeb44cc6d6f
+</code></pre>
+
+<p>Your game client can now request content for an individual file in the bucket using the path associated with the entry. Make all game client requests to your project-specific subdomain at <code>&lt;project_guid&gt;.client-api.unity3dusercontent.com</code>. The URLs all begin with /client_api/v1/ in the request path. None of these client requests require authentication.</p>
+
+<p>To get the content of an entry, such as <code>spaceshooterdata_starfield.bundle</code>, by path, enter: </p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p>
+
+<p>Or to get the content of an entry by Entry ID, enter:</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/entries/8ac46783-be01-4a47-b23e-74233fc7cc09/content/</code></p>
+
+<h2>Creating a release <a name="creating-a-release"></a>
+</h2>
+
+<p>Create a release from the current state of your entries:</p>
+
+<pre><code>$ ucd releases create
+Created release (#1) in bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf).
+  Id: 80653663-eb39-45e7-9323-e34b23df0d75
+  Created: 2019-08-21 14:27:30
+  ...
+</code></pre>
+
+<p>This allows you to use these exact versions of those entries when requesting content, even if you update or remove those entries later.</p>
+
+<p>To get more detailed information about a release, use the <code>releases info</code> command and provide the ID of the release that you just created:</p>
+
+<pre><code>$ ucd releases info 80653663-eb39-45e7-9323-e34b23df0d75
+
+Release #1:
+  Id: 80653663-eb39-45e7-9323-e34b23df0d75
+  Created: 2019-08-21 14:27:30
+  Content Size: 123456
+  Content Hash: b62343cb3582a7de1286dd3cf23c3592
+  Notes:
+  Metadata: 
+  Entries:
+  - remotedemodata_scenes_scene2.bundle  (version: d7c69bc0-5c0b-4625-8a7d-94a4972aa236)
+  - remotedemodata_unitylogo.bundle  (version: 97d3659f-0b74-403a-be67-02641ce2dc91)
+  - spaceshooterdata_done_enemyship.bundle  (version: edcedc81-80b6-4006-9732-0444898fcffa)
+  - remotedemodata_unitylogoprefab.bundle  (version: 4edfa2be-7fae-44c9-bb45-f601cc1130db)
+  - spaceshooterdata_done_bolt-enemy.bundle  (version: ef36bfa8-8b24-4b81-a329-b3fad0a0939b)
+  ...
+</code></pre>
+
+<p>To get a list of all releases you generated in this bucket, enter:</p>
+
+<pre><code>$ ucd releases list
+Releases for current bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf): 
+  2019-08-21 14:27:30  #1 (80653663-eb39-45e7-9323-e34b23df0d75)
+</code></pre>
+
+<p>You can now directly reference the content contained within this release. This ensures you get the exact set of content that CCD uses to generate the release even if you change the entries later in the bucket.</p>
+
+<p>To get the content of an entry, such as <code>spaceshooterdata_starfield.bundle</code>, by path, enter:</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/releases/80653663-eb39-45e7-9323-e34b23df0d75/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p>
+
+<p>Or to get the content of an entry by Entry ID, enter: </p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/releases/80653663-eb39-45e7-9323-e34b23df0d75/entries/8ac46783-be01-4a47-b23e-74233fc7cc09/content/</code></p>
+
+<p>You can also request the content that corresponds to the latest release in the bucket, so the client does not need to change each time CCD generates a new release. To do this, update the request to use the <code>release_by_badge</code> route and specify a badge name of <code>latest</code> (see <a href="#managing-badges">Managing badges</a>). For example:</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/release_by_badge/latest/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p>
+
+<h2>Managing badges <a name="managing-badges"></a>
+</h2>
+
+<p>After generating a release, you can apply a badge that uniquely identifies the release. A badge can only ever point to a single release within a bucket, but you can move badges between releases. At runtime, you can query content using the badge name rather than a specific release ID, allowing for more flexibility in workflows.</p>
+
+<p>For example, you might apply a badge called <code>qa_latest</code> to the latest release for your QA team to use, and move that badge to each new release as part of a process (manual or automated). </p>
+
+<p>To add a badge named <code>my_first_badge</code> to the release you generated in <a href="#creating-a-release">Creating a release</a>, enter:</p>
+
+<pre><code>$ ucd badges add my_first_badge 80653663-eb39-45e7-9323-e34b23df0d75
+Added badge 'my_first_badge' to release (80653663-eb39-45e7-9323-e34b23df0d75).
+</code></pre>
+
+<p>To list all the badges you applied in this bucket:</p>
+
+<pre><code>$ ucd badges list
+Badges for current bucket (aee9ee5f-fa01-46d3-a293-731d15f066cf): 
+  2020-01-07 12:55:41  my_first_badge  (80653663-eb39-45e7-9323-e34b23df0d75)
+</code></pre>
+
+<p>The content associated with the release that the badge references is ready for download. You can do this in a similar way to downloading content directly by Entry ID.</p>
+
+<p>To get the content for an entry, such as <code>spaceshooterdata_starfield.bundle</code>, by path, enter:</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/release_by_badge/my_first_badge/entry_by_path/content/?path=spaceshooterdata_starfield.bundle</code></p>
+
+<p>Or to get the content of an entry by Entry ID, enter:</p>
+
+<p><code>https://&lt;project_guid&gt;.client-api.unity3dusercontent.com/client_api/v1/buckets/aee9ee5f-fa01-46d3-a293-731d15f066cf/release_by_badge/my_first_badge/entries/8ac46783-be01-4a47-b23e-74233fc7cc09/content/</code></p>
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCCDDashboard.html"></a></span><div class="tip"> Unity CCD Develop Dashboard</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityIAP.html"></a></span><div class="tip">﻿Unity IAP</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

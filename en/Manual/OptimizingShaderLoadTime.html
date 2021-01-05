@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Optimizing shader variants</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/OptimizingShaderLoadTime.html">English</a></li>
+<li><a href="/cn/current/Manual/OptimizingShaderLoadTime.html">中文</a></li>
+<li><a href="/ja/current/Manual/OptimizingShaderLoadTime.html">日本語</a></li>
+<li><a href="/es/current/Manual/OptimizingShaderLoadTime.html">Español</a></li>
+<li><a href="/kr/current/Manual/OptimizingShaderLoadTime.html">한국어</a></li>
+<li><a href="/ru/current/Manual/OptimizingShaderLoadTime.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/OptimizingShaderLoadTime.html">English</a></li>
+<li><a href="/cn/current/Manual/OptimizingShaderLoadTime.html">中文</a></li>
+<li><a href="/ja/current/Manual/OptimizingShaderLoadTime.html">日本語</a></li>
+<li><a href="/es/current/Manual/OptimizingShaderLoadTime.html">Español</a></li>
+<li><a href="/kr/current/Manual/OptimizingShaderLoadTime.html">한국어</a></li>
+<li><a href="/ru/current/Manual/OptimizingShaderLoadTime.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="Shaders.html">Meshes, Materials, Shaders and Textures</a></li>
+<li><a href="ShadersOverview.html">Writing Shaders</a></li>
+<li><a href="SL-Reference.html"> Shader Reference</a></li>
+<li><a href="SL-AdvancedTopics.html">Advanced ShaderLab topics</a></li>
+<li> Optimizing shader variants</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-AdvancedTopics.html"></a></span><div class="tip">Advanced ShaderLab topics</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AsynchronousShaderCompilation.html"></a></span><div class="tip"> Asynchronous Shader compilation</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Optimizing shader variants</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Shaders are small programs that execute on the GPU, and loading them can take some time. Each individual GPU program typically does not take much time to load, but shaders often have a lot of “variants” internally.</p>
+
+<p>For example, the <span class="tooltip"><a class="tooltipMoreInfoLink" href="shader-StandardShader.html">Standard shader</a><span class="tooltiptext">A built-in shader for rendering real-world objects such as stone, wood, glass, plastic and metal. Supports a wide range of shader types and combinations. <a href="shader-StandardShader.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#StandardShader">Glossary</a></span></span></span>, if fully compiled, ends up being many thousands of slightly different GPU programs. This creates two potential problems:</p>
+
+<ul>
+<li>Large numbers of these shader variants increase game build time, and game data size.</li>
+<li>Loading large numbers of shader variants at runtime is slow and takes up memory.</li>
+</ul>
+
+<h2>Build time stripping</h2>
+
+<p>While building the game, Unity can detect that some of the internal shader variants are not used by the game, and exclude (“strip”) them from build data. Build-time stripping is done for:</p>
+
+<ul>
+<li>For shaders that use <code>#pragma shader_feature</code>, Unity automatically checks whether variants are used. If none of the Materials in a build use a variant, that variant it is not included into the build. See <a href="SL-MultipleProgramVariants.html">internal shader variants</a> documentation. The <a href="shader-StandardShader.html">Standard shader</a> uses this.</li>
+<li>Shader variants to handle Fog and Lightmapping modes not used by any of the <span class="tooltip"><strong>scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> are not included into the game data. See the <a href="class-GraphicsSettings.html">Graphics</a> window if you want to override this behavior.</li>
+<li>You can also manually identify variants and tell Unity to exclude them from a build using using the <a href="../ScriptReference/IPreprocessShaders.OnProcessShader.html">OnProcessShader</a> API.</li>
+</ul>
+
+<p>Combination of the above often substantially cuts down on shader data size. For example, a fully compiled Standard shader would take several hundred megabytes, but in typical projects it often ends up taking just a couple megabytes (and is often compressed further by the application packaging process).</p>
+
+<h2>Default Unity shader loading behavior</h2>
+
+<p>Under all default settings, Unity loads the <a href="SL-Shader.html">shaderlab Shader</a> object into memory at runtime, but does not create the <a href="SL-MultipleProgramVariants.html">internal shader variants</a> until they are actually needed.</p>
+
+<p>This means that all shader variants that are included in the build can still potentially be used, but there’s no memory or load time cost paid until they are needed. For example, a shader might always include a variant to handle point lights with shadows, but if you never end up using a point light with shadows in your game, then there’s no point in loading this particular variant.</p>
+
+<p>One downside of this default behavior, however, is a possible hiccup for when a shader variant is needed for the first time - since a new GPU program code has to be loaded into the graphics driver. This is often undesirable during gameplay, so Unity has <strong>ShaderVariantCollection</strong> assets to help solve that.</p>
+
+<h3>Shader Variant Collections</h3>
+
+<p>ShaderVariantCollection is an asset that is basically a list of <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-Shader.html">Shaders</a><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shader">Glossary</a></span></span></span>, and for each of them, a list of Pass types and shader keyword combinations to load in advance, rather than wait until they are needed.</p>
+
+<figure>
+<img src="../uploads/Main/ShaderVariantCollection.png" alt="Shader variant collection inspector">
+<figcaption>Shader variant collection inspector</figcaption>
+</figure>
+
+<p>To help with creating these assets based on actually used shaders and their variants, the editor can track which shaders and their variants are actually used. In the <a href="class-GraphicsSettings.html">Graphics</a> window, there is a button to create a new ShaderVariantCollection out of currently tracked shaders, or to clear the currently tracked shader list.</p>
+
+<figure>
+<img src="../uploads/Main/GraphicsSettings-NewVariantCollection.svg" alt="Creating ShaderVariantCollection from Shaders used by editor">
+<figcaption>Creating ShaderVariantCollection from Shaders used by editor</figcaption>
+</figure>
+
+<p>Once you have some ShaderVariantCollection assets, you can set for these variants to be automatically preloaded while loading the application (under Preloaded Shaders list on the <a href="class-GraphicsSettings.html">Graphics</a> window), or you can preload an individual shader variant collection from a script. </p>
+
+<p>The Preloaded Shaders list is intended for frequently used shaders. Shader variants that are listed there the are loaded into memory for entire lifetime of the application. This may use significant amount of memory for ShaderVariantCollections assets that include large number of variants. To avoid that, ShaderVariantCollection assets should be created at smaller granularity and loaded from a script. One strategy is to record used shader variants for each scene, save them into separate ShaderVariantCollections assets and load them on scene startup.</p>
+
+<p>See <a href="../ScriptReference/ShaderVariantCollection.html">ShaderVariantCollection</a> scripting class.</p>
+
+<h2>See Also</h2>
+
+<ul>
+<li><a href="OptimizingGraphicsPerformance.html">Optimizing Graphics Performance</a></li>
+<li>
+<a href="class-GraphicsSettings.html">Graphics</a> settings</li>
+<li><a href="SL-Shader.html">Shaders reference</a></li>
+</ul>
+<!-- area:graphics -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="SL-AdvancedTopics.html"></a></span><div class="tip">Advanced ShaderLab topics</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AsynchronousShaderCompilation.html"></a></span><div class="tip"> Asynchronous Shader compilation</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,614 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Upgrading to Unity 2018 LTS</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide2018LTS.html">English</a></li>
+<li><a href="/cn/current/Manual/UpgradeGuide2018LTS.html">中文</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide2018LTS.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide2018LTS.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide2018LTS.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide2018LTS.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide2018LTS.html">English</a></li>
+<li><a href="/cn/current/Manual/UpgradeGuide2018LTS.html">中文</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide2018LTS.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide2018LTS.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide2018LTS.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide2018LTS.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html"> Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrading Unity</a></li>
+<li>Upgrading to Unity 2018 LTS</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide2019LTS.html"></a></span><div class="tip">Upgrading to Unity 2019 LTS</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuideLegacy.html"></a></span><div class="tip">Legacy Upgrade Guides</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Upgrading to Unity 2018 LTS</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>
+<a name="TopOfPage"></a>
+This page lists changes in Unity 2018 LTS which might affect existing projects when you upgrade from a Unity 2017 version.</p>
+
+<p>Note that <strong>2018 LTS</strong> is also known as <strong>2018.4</strong>.</p>
+
+<h3>Page outline</h3>
+
+<ul>
+<li><a href="#PackageManager">UnityPackageManager directory renamed to Packages</a></li>
+<li><a href="#ImprovedPrefabs">Improved Prefabs</a></li>
+<li><a href="#USSFlex">USS flex shorthand expansion now follows CSS standard</a></li>
+<li><a href="#LogExceptions">Support for logging unhandled exceptions in managed user threads</a></li>
+<li><a href="#VFACE">The VFACE shader variable is now inverted in DirectX (11 &amp; 12)</a></li>
+<li><a href="#PhysX">Upgraded PhysX from 3.3.1 to 3.4.2</a></li>
+<li><a href="#AssetBundleProp">The AssetBundle.mainAsset property has been marked Obsolete</a></li>
+<li><a href="#NavMesh">Upgrading Projects that use NavMesh components</a></li>
+<li><a href="#ParticleBug">Particle System bug fixes</a></li>
+<li><a href="#Roslyn">C# compiler upgrade to Roslyn</a></li>
+<li><a href="#JSBoo">The UnityScript and Boo scripts compiler has been removed</a></li>
+<li><a href="#RootMotion">Animator Root Motion playback has changed</a></li>
+<li><a href="#UIElements">UIElements.ContextualMenu changes</a></li>
+<li><a href="#RakNet">Multiplayer: The deprecated legacy networking APIs have been removed (RakNet based)</a></li>
+<li><a href="#PSD">Photoshop Data file (PSD) import using transparency</a></li>
+<li><a href="#Coroutines">Coroutines returned from a MonoBehaviour while its GameObject is being disabled or destroyed are no longer started</a></li>
+<li><a href="#BuildPipelineReport">BuildPipeline APIs now return a BuildReport object instead of a string</a></li>
+<li><a href="#QuitNotif">Player Quit notifications have changed from messages to Events</a></li>
+<li><a href="#Avatar">Deprecating AvatarBuilder.BuildHumanAvatar on .NET platform</a></li>
+<li><a href="#TouchScreenKeyboard">TouchScreenKeyboard.wasCanceled and TouchScreenKeyboard.done have been made obsolete</a></li>
+<li><a href="#MonoDevelop">MonoDevelop 5.9.6 removed from Unity Installers and support for it has been deprecated in Unity</a></li>
+<li><a href="#BuildPipeline">BuildPipeline callback interfaces now take a BuildReport object</a></li>
+<li><a href="#SpecialImport">Assets located in plugin folders will no longer be imported via specialized importers</a></li>
+<li><a href="#ParticlePivot">Particle System Mesh particles applied the Pivot Offset value incorrectly</a></li>
+<li><a href="#GPUGI">GPU Instancing supports Global Illumination</a></li>
+<li><a href="#ComplexHandles">Handle Draw and Size Function Defaults</a></li>
+<li><a href="#UnsafeC">Compiling unsafe C# code in the Unity Editor now requires enabling of option</a></li>
+</ul>
+
+<hr>
+
+<p><a name="PackageManager"></a></p>
+
+<h3>‘UnityPackageManager’ directory renamed to ‘Packages’</h3>
+
+<p>In 2017.2 and 2017.3, the Unity Package Manager introduced the <strong>UnityPackageManager </strong>directory, which was used to store a file named <strong>manifest.json</strong>. Package content could be accessed by <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Scripts">Glossary</a></span></span></span> using virtual relative paths starting with <span class="tooltip"><strong>Packages</strong><span class="tooltiptext">Packages are collections of assets to be shared and re-used in Unity. The <a href="upm-ui.html">Unity Package Manager</a> (UPM) can display, add, and remove packages from your project. These packages are native to the Unity Package Manager and provide a fundamental method of delivering Unity functionality. However, the Unity Package Manager can also display <a href="AssetPackages.html">Asset packages</a> that you downloaded from the Asset Store. <a href="Packages.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Packages">Glossary</a></span></span></span>.</p>
+
+<p>In 2018.1, the <strong>UnityPackageManager </strong>directory has been renamed to <strong>Packages</strong> for consistency with the virtual relative paths of packaged assets. The <strong>manifest.json</strong> file should automatically be moved to the new directory.</p>
+
+<p>As a result:</p>
+
+<ul>
+<li><p>If your project uses a <span class="tooltip"><strong>Version Control</strong><span class="tooltiptext">A system for managing file changes. You can use Unity in conjunction with most common version control tools, including Perforce, Git, Mercurial and PlasticSCM. <a class="tooltipMoreInfoLink" href="VersionControl.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#VersionControl">Glossary</a></span></span></span> System (VCS) such as <span class="tooltip"><strong>Perforce</strong><span class="tooltiptext">A version control system for file change management. <a href="perForceIntegration.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Perforce">Glossary</a></span></span></span> or Git, it may be necessary to update its configuration to track the <strong>Packages </strong>directory instead of the <strong>UnityPackageManager</strong> directory.</p></li>
+<li>
+<p>If your project uses Nuget (or any external package manager) in a way that makes it use the <strong>Packages</strong> directory, its configuration should be changed to use a different directory. This is recommended to eliminate the small chance that a package be picked up by the Unity Package Manager, which could result in hard-to-debug issues like compilation errors or import errors.</p>
+
+<ul>
+<li>To configure Nuget to use a different directory to store its packages, please refer to <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior">the official Microsoft documentation</a>.</li>
+</ul>
+</li>
+<li><p>After migrating to the new directory, the <strong>UnityPackageManager</strong> directory can safely be deleted.</p></li>
+</ul>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="ImprovedPrefabs"></a></p>
+
+<h3>Improved Prefabs</h3>
+
+<ul>
+<li><span class="tooltip"><strong>Prefabs</strong><span class="tooltiptext">An asset type that allows you to store a GameObject complete with components and properties. The prefab acts as a template from which you can create new object instances in the scene. <a class="tooltipMoreInfoLink" href="Prefabs.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Prefab">Glossary</a></span></span></span> automatically upgrade to the <a href="https://unity3d.com/prefabs">new Prefabs system</a>.</li>
+<li>To support prefab nesting, the prefab workflow has changed. To edit Prefabs, you now need to open them in Prefab Mode. You can no longer edit Prefabs in the Project Browser.</li>
+<li>You also make structural changes in Prefab Mode, such as deleting <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>, reparenting <strong>GameObjects</strong>, or replacing a Transform with a RectTransform. Alternatively, you can unpack a Prefab instance if you want to entirely remove its link to its Prefab Asset and thus be able to restructure the resulting plain <strong>GameObjects</strong> as necessary. You can no longer disconnect a Prefab instance.</li>
+<li>The Editor tooling that creates GameObjects should use <a class="tooltipMoreInfoLink" href="../ScriptReference/ObjectFactory.CreateGameObject.html">ObjectFactory.CreateGameObject</a> to make sure that the GameObject ends up in the Prefab <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> if a Prefab Asset is currently being edited in Prefab Mode.</li>
+<li>As a safety precaution, scripts with the [ExecuteInEditMode] attribute cause the Editor to exit Prefab Mode when going into Play Mode, if any script on the open Prefab has that attribute. For details on how to make such scripts compatible with Prefab Mode, see the Scripting Reference pages for <a href="../ScriptReference/ExecuteInEditMode.html">ExecuteInEditMode</a> and the new <a href="../ScriptReference/ExecuteAlways.html">ExecuteAlways</a> attribute.</li>
+<li>It’s no longer possible to make arbitrary modifications to Prefab Assets from scripts because Prefabs are now imported assets. Instead you need to use <a href="../ScriptReference/PrefabUtility.LoadPrefabContents.html">PrefabUtility.LoadPrefabContents</a>, <a href="../ScriptReference/PrefabUtility.SaveAsPrefabAsset.html">PrefabUtility.SaveAsPrefabAsset</a> and <a href="../ScriptReference/PrefabUtility.UnloadPrefabContents.html">PrefabUtility.UnloadPrefabContents</a>.</li>
+<li>If you use <a href="../ScriptReference/AssetDatabase.AddObjectToAsset.html">AssetDatabase.AddObjectToAsset</a> to add additional assets to Prefabs, you must now call <a href="../ScriptReference/PrefabUtility.SavePrefabAsset.html">PrefabUtility.SavePrefabAsset</a> after adding the requisite objects.</li>
+</ul>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="USSFlex"></a></p>
+
+<h3>USS flex shorthand expansion now follows CSS standard</h3>
+
+<ul>
+<li>The USS flex directive now accepts up to three parameters representing <code>flex-grow</code>, <code>flex-shrink</code> and <code>flex-basis</code>. The flex-shrink and flex-basis parameters are optional. If omitted, flex-basis defaults to 0 and flex-shrink defaults to 1.</li>
+<li>Before 2018.3, <code>flex: N</code> was equivalent to <code>flex N 0 auto</code>. This now follows the CSS standard by making it equivalent to <code>flex: N 1 0</code>. To preserve the old semantic, you should replace all <code>flex: N</code> directives with <code>flex: N 0 auto</code> in your USS files.</li>
+</ul>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="LogExceptions"></a></p>
+
+<h3>Support for logging unhandled exceptions in managed user threads</h3>
+
+<ul>
+<li>Before 2018.3, the Unity Editor did not log unhandled exceptions thrown in managed user threads. From 2018.3 onwards, unhandled exceptions thrown in managed user threads are logged on the Unity Editor console.</li>
+<li>Because logging now includes all managed user threads, you may see exceptions that have always been thrown in your Projects, but were never emitted to the console until now.</li>
+</ul>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="VFACE"></a></p>
+
+<h3>The VFACE shader variable is now inverted in DirectX (11 &amp; 12)</h3>
+
+<ul>
+<li>The VFACE <span class="tooltip"><strong>shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Shader">Glossary</a></span></span></span> variable was not coherent between DirectX and other graphics APIs when <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Rendering">Glossary</a></span></span></span> to a <span class="tooltip"><strong>cubemap</strong><span class="tooltiptext">A collection of six square textures that can represent the reflections in an environment or the skybox drawn behind your geometry. The six squares form the faces of an imaginary cube that surrounds an object; each face represents the view along the directions of the world axes (up, down, left, right, forward and back). <a href="class-Cubemap.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Cubemap">Glossary</a></span></span></span>. Now it has the same behavior.</li>
+<li>If you are using a VFACE bool shader variable in a DirectX shader to render a cubemap, then you have to flip the logic in your code.</li>
+<li>See <a href="https://issuetracker.unity3d.com/issues/the-vface-variable-is-incorrect-in-shaders-when-rendered-from-a-reflection-probe">Issue ID 1027670</a>.</li>
+</ul>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="PhysX"></a></p>
+
+<h3>Upgraded PhysX from 3.3.1 to 3.4.2</h3>
+
+<p>Physics behaviour has changed and some Projects may behave differently with the new version. In particular:</p>
+
+<ul>
+<li>The contact patches now contain up to 6 contacts in the <strong>Persistent Contact Manifold</strong> mode. This is an increase from 5 contacts per patch in previous versions. There is new code that merges patches in the manifold, and new code that selects contacts. <span class="tooltip"><strong>Collisions</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a Rigidbody component and is in motion. <a class="tooltipMoreInfoLink" href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> appear to be a lot more accurate than before. You may need to work on Projects that rely on a particular arrangement of contacts to make them compatible with the new code. You are most likely to notice this when convex bodies collide with meshes and primitives.</li>
+<li>A new algorithm is now used to compute <strong>contacts with terrains</strong>. It used to be special-cased, but now it’s the same mesh-primitive code that is used with MeshColliders. It’s robust, more accurate and performs well. However, it doesn’t support TerrainData.thickness, which means the tunneling effect with terrains is now possible. To avoid this, you need to enable <span class="tooltip"><strong>continuous collision detection</strong><span class="tooltiptext">A collision detection method that calculates and resolves collisions over the entire physics simulation step. This can prevent fast-moving objects from tunnelling through walls during a simulation step. <a class="tooltipMoreInfoLink" href="ContinuousCollisionDetection.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#continuouscollisiondetection">Glossary</a></span></span></span> on the fast moving objects. Before that, if a body was discovered to be no deeper than TerrainData.thickness under the <span class="tooltip"><strong>terrain</strong><span class="tooltiptext">The landscape in your scene. A Terrain GameObject adds a large flat plane to your scene and you can use the Terrain’s Inspector window to create a detailed landscape. <a href="terrain-UsingTerrains.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Terrain">Glossary</a></span></span></span>, it was popped up automatically, but the normals were never correct. To get the old behaviour, uncheck the <strong>Enable Unified Heightmaps</strong> option in the Physics settings.</li>
+<li>
+<strong>Negative <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Mesh">Glossary</a></span></span></span> scaling</strong> no longer leads directly to <strong>mesh</strong> baking in all the cases. Concave meshes are not baked any more. However, Convex meshes still need to have scaling to be baked. With this change, negative scaling inverts the <strong>mesh</strong> normals when scale.x * scale.y * scale.z &lt; 0. Additionally, non-trivial scaling like skew and shear still have to be baked, as before.</li>
+<li>
+<strong>Convex mesh inflation</strong> is deprecated because it doesn’t seem to be needed with the new convex hull computation algorithm (Quickhull) that is more tolerant towards all sorts of imperfections in the input mesh.</li>
+</ul>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="AssetBundleProp"></a></p>
+
+<h3>The AssetBundle.mainAsset property has been marked Obsolete</h3>
+
+<ul>
+<li>In Unity versions prior to 5.0, users had to build asset bundles using the AssetBundleBuildAssetBundle API which required providing an Object that would be returned when loaded using the AssetBundle’s mainAsset property.</li>
+<li>The AssetBundle.BuildAssetBundle API was marked obsolete in Unity 5.0 and was replaced by AssetBundle.BuildAssetBundles, which changed how you get Assets from an AssetBundle.</li>
+<li>You now need to get the Asset’s name, or path with the AssetBundle.LoadAsset API to get content from the AssetBundle. See documentation on Building AssetBundles, Using AssetBundles Natively, and the AssetBundle Scripting API.</li>
+</ul>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="NavMesh"></a></p>
+
+<h3>Upgrading Projects that use NavMesh components</h3>
+
+<ul>
+<li>If you are moving a Project from 2018.2 or earlier to 2018.3b and it uses <span class="tooltip"><strong>NavMesh</strong><span class="tooltiptext">A mesh that Unity generates to approximate the walkable areas and obstacles in your environment for path finding and AI-controlled navigation. <a class="tooltipMoreInfoLink" href="nav-BuildingNavMesh.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#NavMesh">Glossary</a></span></span></span> components obtained from Unity’s GitHub repository, you now need to use this <a href="https://github.com/Unity-Technologies/NavMeshComponents/tree/2018.3">branch</a>.</li>
+</ul>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="ParticleBug"></a></p>
+
+<h3>Particle System bug fixes</h3>
+
+<p>Unity 2018.3 includes some particle bugs fixes and this can affect your projects that were created in a previous version.</p>
+
+<ul>
+<li>When using non-uniform Transform scale on <span class="tooltip"><strong>billboard</strong><span class="tooltiptext">A textured 2D object that rotates as it, or the Camera, moves so that it always faces the Camera. <a class="tooltipMoreInfoLink" href="class-BillboardRenderer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Billboard">Glossary</a></span></span></span> particles, the Y and Z axes were inverted. This has now been fixed.</li>
+<li>When using non-uniform Transform scale on mesh particles, rotation was applied after scaling. This was a regression in 2017.x. It behaved correctly in 5.6 and earlier, but was broken in the 2017 cycle. Fixing this bug corrects content created in 5.6 and earlier, but changes content created in 2017.x.</li>
+<li>Spherical wind zones had the opposite effect on particles compared to trees. This has been corrected so the spherical wind zones now repel particles instead of attracting them. You can restore the previous behavior by negating the External Forces Multiplier, or the <span class="tooltip"><strong>Wind Zone</strong><span class="tooltiptext">A GameObject that adds the effect of wind to your terrain. For instance, Trees within a wind zone will bend in a realistic animated fashion and the wind itself will move in pulses to create natural patterns of movement among the tree. <a class="tooltipMoreInfoLink" href="terrain-WindZones">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#windzone">Glossary</a></span></span></span> strength. Unity can’t change this automatically as Scenes with trees or directional wind zones could be incorrectly affected.</li>
+</ul>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="Roslyn"></a></p>
+
+<h3>C# compiler upgrade to Roslyn</h3>
+
+<p>Before 2018.3, the Unity Editor used the mono C# compiler (mcs) when compiling C# files in a project. From 2018.3 onwards, the Roslyn C# compiler (csc) is used for projects targeting the new scripting runtime (.NET 4.x Equivalent). Different behavior may be noticed from the switch to Roslyn:</p>
+
+<ul>
+<li>C# 7.3 is the supported</li>
+<li>Additional warnings may be reported</li>
+<li>Response files for the Roslyn compiler should be named <code>csc.rsp</code>. See <a href="PlatformDependentCompilation.html">PlatformDependentCompilation</a>.</li>
+</ul>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="JSBoo"></a></p>
+
+<h3>The UnityScript and Boo scripts compiler has been removed</h3>
+
+<p>UnityScript (.js) and Boo (.boo) script files can no longer be compiled in the Editor.</p>
+
+<p>For more information see this <a href="https://blogs.unity3d.com/2017/08/11/unityscripts-long-ride-off-into-the-sunset/">blog post</a> from August 2017 and you can use the <a href="https://github.com/Unity-Technologies/unityscript2csharp">unityscript2csharp</a> tool to convert UnityScript to C#.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="RootMotion"></a></p>
+
+<h3>Animator Root Motion playback has changed</h3>
+
+<p>Animator <span class="tooltip"><strong>Root Motion</strong><span class="tooltiptext">Motion of character’s root node, whether it’s controlled by the animation itself or externally. <a class="tooltipMoreInfoLink" href="RootMotion.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RootMotion">Glossary</a></span></span></span> playback has changed slighly to correct some inconsistencies when authoring <strong>Root Motion</strong> Animations in the Animation Window.</p>
+
+<ul>
+<li>Root Motion curves do not need to be generated for AnimationClips anymore. The application of Root Motion now depends solely on the <a href="../ScriptReference/Animator-applyRootMotion.html">Animator.applyRootMotion</a>.</li>
+</ul>
+
+<h4>2018.2 to 2018.4 equivalencies</h4>
+
+<table>
+<colgroup>
+<col style="text-align:center;">
+<col style="text-align:center;">
+<col style="text-align:center;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:center;">Case</th>
+	<th style="text-align:center;">Generated Root Motion</th>
+	<th style="text-align:center;">Animator.applyRootMotion</th>
+	<th style="text-align:left;">2018.2</th>
+	<th style="text-align:left;">2018.3 &amp; 2018.4 (LTS)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:center;">A</td>
+	<td style="text-align:center;">yes</td>
+	<td style="text-align:center;">yes</td>
+	<td style="text-align:left;">Apply Root Motion cumulatively on <span class="tooltip"><strong>Root Transform</strong><span class="tooltiptext">The Transform at the top of a hierarchy of Transforms. In a Prefab, the Root Transform is the topmost Transform in the Prefab. In an animated humanoid character, the Root Transform is a projection on the Y plane of the Body Transform and is computed at run time. At every frame, a change in the Root Transform is computed, and then this is applied to the GameObject to make it move. <a class="tooltipMoreInfoLink" href="RootMotion.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RootTransform">Glossary</a></span></span></span>.</td>
+	<td style="text-align:left;">Same as 2018.2</td>
+</tr>
+<tr>
+	<td style="text-align:center;">B</td>
+	<td style="text-align:center;">no</td>
+	<td style="text-align:center;">no</td>
+	<td style="text-align:left;">Apply Position, Rotation and Scale curves as authored in the AnimationClip.</td>
+	<td style="text-align:left;">Same as 2018.2</td>
+</tr>
+<tr>
+	<td style="text-align:center;">C*</td>
+	<td style="text-align:center;">yes</td>
+	<td style="text-align:center;">no</td>
+	<td style="text-align:left;">No root transform movement</td>
+	<td style="text-align:left;">Apply Position, Rotation and Scale as authored in the AnimationClip.</td>
+</tr>
+<tr>
+	<td style="text-align:center;">D*</td>
+	<td style="text-align:center;">no</td>
+	<td style="text-align:center;">yes</td>
+	<td style="text-align:left;">No root transform movement</td>
+	<td style="text-align:left;">Apply Root Motion cumulatively on Root.</td>
+</tr>
+</tbody>
+</table>
+
+<p>For cases C and D, to achieve the same result in 2018.3, you need to implement <a href="../ScriptReference/MonoBehaviour.OnAnimatorMove.html">OnAnimatorMove</a>, then discard <code>Animator.deltaPosition</code> and <code>Animator.deltaRotation</code> in cases where you don’t want to apply Root Motion.</p>
+
+<p>If your Project uses <code>applyRootMotion</code> to “mute” Position, Rotation and Scale Animation on your Root Transform, then you need to override the Root Transform properties manually.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="UIElements"></a></p>
+
+<h3>UIElements.ContextualMenu changes</h3>
+
+<p>The <code>UIElements.ContextualMenu</code> menu action callbacks now takes a <code>ContextualMenu.MenuAction</code> parameter instead of an <code>EventBase</code> parameter.</p>
+
+<p>
+<code>ContextualMenu.InsertSeparator</code> takes an additional <code>string</code> parameter.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="RakNet"></a></p>
+
+<h3>Multiplayer: The deprecated legacy networking APIs have been removed (RakNet based)</h3>
+
+<p>This feature was deprecated in Unity 5.1 and has now been removed. You can no longer use it in your projects in Unity 2018.2.</p>
+
+<p>See the <a class="tooltipMoreInfoLink" href="UNet.html">Multiplayer and Networking</a> section for more information on <span class="tooltip"><strong>networking</strong><span class="tooltiptext">The Unity system that enables multiplayer gaming across a computer network. <a href="UNetOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Networking">Glossary</a></span></span></span> in Unity.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="PSD"></a></p>
+
+<h3>Photoshop Data file (PSD) import using transparency</h3>
+
+<p>When having actual transparency, Photoshop will tweak <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a class="tooltipMoreInfoLink" href="LightPerformance">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span> colors to blend them with matte (background) color. The process of preparing alpha channels properly is described in our <a href="https://docs.unity3d.com/Manual/HOWTO-alphamaps.html">how to prepare alpha channels</a> documentation.</p>
+
+<p>You can ignore dilation in this document, the important part is the note that states that you want to have an “opaque” image with a separate alpha channel/mask (instead of having transparency). Unity tweaked colors to “remove” matte, but this has ceased as of 2018.2. If you had PSD with transparency you might start seeing white color on the edges. To fix this, consult the manual link above and make an actual alpha channel (instead of transparency).</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="Coroutines"></a></p>
+
+<h3>Coroutines returned from a MonoBehaviour while its GameObject is being disabled or destroyed are no longer started.</h3>
+
+<p>Historically, when a GameObject is disabled or destroyed, it stops all running coroutines on its children MonoBehaviours. In certain cases, however, coroutines started from methods called during these times (for example, <code>OnBecameInvisible()</code>) were previously allowed to start. This led to component order-specific behavior and, in some cases, crashes.</p>
+
+<p>In Unity 2018.1, coroutines returned during GameObject disable or destroy are no longer started.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="BuildPipelineReport"></a></p>
+
+<h3>BuildPipeline APIs now return a BuildReport object instead of a string</h3>
+
+<p>The BuildPipeline APIs, such as <code>BuildPipeline.BuildPlayer</code>, and <code>BuildPipeline.BuildAssetBundles</code>, previously returned a string. This was empty if the build succeeded and contained an error message if the build failed.</p>
+
+<p>In 2018.1, this has been replaced with the new BuildReport object, which contains much richer information about the build process.</p>
+
+<p>To check whether the build succeeded, retrieve the <code>summary</code> property of the report object, and check its <em>result</em> property - it will be <code>BuildResult.Succeeded</code> for a successful build. For example:</p>
+
+<pre><code>var report = BuildPipeline.BuildPlayer(...);
+
+if (report.summary.result != BuildResult.Succeeded)
+{
+    throw new Exception(&quot;Build failed&quot;);
+}
+</code></pre>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="QuitNotif"></a></p>
+
+<h3>Player Quit notifications have changed from messages to Events</h3>
+
+<p>Previously, to be notified when the Unity standalone player was quitting, you would implement the <code>OnApplicationQuit</code> method on a MonoBehaviour and to abort the player from quitting you would call <code>Application.CancelQuit</code>.</p>
+
+<p>Two new events have been introduced. These are <code>Application.wantsToQuit</code> and <code>Application.quitting</code>. You can listen to these events to get notified when the Unity standalone player is quitting. <code>Application.wantsToQuit</code> is called when the player is intending to quit, the listener for <code>wantsToQuit</code> must return true or false. Return true if you want the player to continue quitting or false to abort the quit. The <code>Application.quitting</code> event is called when the player is guaranteed to quit and cannot be aborted.</p>
+
+<p>
+<code>Application.CancelQuit</code> has been deprecated, please use the <code>Application.wantsToQuit</code> instead.</p>
+
+<pre><code>using UnityEngine;
+
+public class PlayerQuitExample
+
+{
+
+    static bool WantsToQuit()
+
+    {
+
+        // Do you want the editor to quit?
+
+        return true;
+
+    }
+
+    static void Quit()
+
+    {
+
+        Debug.Log(&quot;Quitting the Player&quot;);
+
+    }
+
+    [RuntimeInitializeOnLoadMethod]
+
+    static void RunOnStart()
+
+    {
+
+        Application.wantsToQuit += WantsToQuit;
+
+        Application.quit += Quit;
+
+    }
+
+}
+</code></pre>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="Avatar"></a></p>
+
+<h3>Deprecating AvatarBuilder.BuildHumanAvatar on .NET platform</h3>
+
+<p>This change affect the following runtime platform: WSAPlayerX86, WSAPlayerX64, and WSAPlayerARM.</p>
+
+<p>There is no replacement for now.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="TouchScreenKeyboard"></a></p>
+
+<h3>TouchScreenKeyboard.wasCanceled and TouchScreenKeyboard.done have been made obsolete</h3>
+
+<p>There is a new TouchScreenKeyboard.status that can be queried to cover the deprecated states and more states.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="MonoDevelop"></a></p>
+
+<h3>MonoDevelop 5.9.6 removed from Unity Installers and support for it has been deprecated in Unity.</h3>
+
+<p>MonoDevelop 5.9.6 has been replaced by Visual Studio for Mac on macOS as the bundle C# script editor in the macOS installer. Visual Studio 2017 Community is now the only C# script editor installed with Unity on Windows.</p>
+
+<p>When it is installed in the default location next to the Unity executable, Unity no longer recognises <span class="tooltip"><strong>MonoDevelop</strong><span class="tooltiptext">An integrated development environment (IDE) supplied with Unity 2017.3 and previous versions. From Unity 2018.1 onwards, MonoDevelop is replaced by Visual Studio. <a class="tooltipMoreInfoLink" href="https://www.monodevelop.com/">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#MonoDevelop">Glossary</a></span></span></span> as the “<strong>MonoDevelop</strong> (built-in)” external script editor in preferences. When no C# code editor is installed and selected in preferences, Unity uses the system default application for opening C# (.cs) scripts.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="BuildPipeline"></a></p>
+
+<h3>BuildPipeline callback interfaces now take a BuildReport object</h3>
+
+<p>The BuildPipeline callback interfaces: <code>IPreprocessBuild</code>, <code>IPostprocessBuild</code> and <code>IProcessScene</code> have been changed so that they now require you to pass in a <code>BuildReport</code> object. This replaces the previous parameters for build path / target platform; you will need to change your code if you are implementing these interfaces.</p>
+
+<p>Both the build path and the target platform can be accessed via the <code>BuildReport</code> object. The build path is now <code>report.summary.outputPath</code> and the target platform is <code>report.summary.platform</code>.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="SpecialImport"></a></p>
+
+<h3>Assets located in plugin folders will no longer be imported via specialized importers</h3>
+
+<p>Previously, assets located in plugin folders (for example, in directories with the extension .bundle, .plugin, or .folder) were imported using specialized importers. Textures were imported via texture importers, AudioClips via the audio importer, etc. Now all those assets will be imported using default importer, that means you won’t be able to reference those assets like you did before, because they no longer have a specialized type (Texture, AudioClip, etc). Plugin folders are contained packages, thus assets inside shouldn’t be accessible externally, except through plugin accessing techniques.</p>
+
+<p>To continue using those assets, you’ll need to move them outside of your plugin folders.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="ParticlePivot"></a></p>
+
+<h3>Particle System Mesh particles applied the Pivot Offset value incorrectly</h3>
+
+<p>The mathematical formula used for applying pivot offsets to Meshes was incorrect, and was inconsistent with how it worked for Billboard particles. To achieve the correct scale, the Pivot Offset should be multiplied by the size of the particle, so a Pivot Offset of 1 is equal to one full width of the particle.</p>
+
+<p>For Meshes, the size was being multiplied twice, meaning the pivot amount was based on the squared particle size. This made it impossible to get consistent results in systems containing varying sized particles.</p>
+
+<p>For systems using particles of equal size, the formula can be reverse-engineered to decide how much to adjust the pivot offset by, to compensate for this change in behavior:</p>
+
+<p>Old formula: <strong>offset = size * size * pivot</strong>
+</p>
+
+<p>New formula: <strong>offset = size * pivot</strong>
+</p>
+
+<p>Therefore, if all particles are of equal size:</p>
+
+<p><strong>newOffset = pivot / size</strong></p>
+
+<p>In systems where the size varies between particles, a visual reassessment of the systems in question will be necessary.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="GPUGI"></a></p>
+
+<h3>GPU Instancing supports Global Illumination</h3>
+
+<p>From 2018.1, <span class="tooltip"><strong>Global Illumination</strong><span class="tooltiptext">A group of techniques that model both direct and indirect lighting to provide realistic lighting results. Unity has two global illumination systems that combine direct and indirect lighting.: Baked Global Illumination, and Realtime Global Illumination (deprecated).<br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#globalillumination">Glossary</a></span></span></span> (GI) is supported by GPU Instancing rendering in Unity. Each GPU instance can support GI coming from either different <span class="tooltip"><a href="#LightProbes">Light Probes</a><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#LightProbe">Glossary</a></span></span></span>, one <span class="tooltip"><a href="#Lightmapping">lightmap</a><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Lightmap">Glossary</a></span></span></span> (but different region in the atlas), or one <span class="tooltip"><a href="#class-LightProbeProxyVolume">Light Probe Proxy Volume</a><span class="tooltiptext">A component that allows you to use more lighting information for large dynamic GameObjects that cannot use baked lightmaps (for example, large Particle Systems or skinned Meshes). <a href="class-LightProbeProxyVolume.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#LightProbeProxyVolume">Glossary</a></span></span></span> component (baked for the space volume containing all the instances). <span class="tooltip"><strong>Standard shaders</strong><span class="tooltiptext">A built-in shader for rendering real-world objects such as stone, wood, glass, plastic and metal. Supports a wide range of shader types and combinations. <a href="shader-StandardShader.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#StandardShader">Glossary</a></span></span></span> and <span class="tooltip"><strong>surface shaders</strong><span class="tooltiptext">Unity’s code generation approach that makes it much easier to write lit shaders than using low level vertex/pixel shader programs. <a href="SL-SurfaceShaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#surfaceshader">Glossary</a></span></span></span> come with these changes automatically, but you need to update custom shader code to enable these features.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="ComplexHandles"></a></p>
+
+<h3>Handle Draw and Size Function Defaults</h3>
+
+<p>Complex handles in the UnityEditor.IMGUI.Controls namespace, such as BoxBoundsHandle, CapsuleBoundsHandle, SphereBoundsHandle, ArcHandle, and JointAngularLimitHandle have delegates that can be assigned to, in order to alter the appearance of their control points. Previously, assigning a value of null to these delegates would fall back to a default behavior. Assigning a value of null to them now results in no behavior, making it easier to disable particular control handles. Respectively, each class now has public API points for the default methods if you need to reset the control handles to their default behavior.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+
+<p><a name="UnsafeC"></a></p>
+
+<h3>Compiling ‘unsafe’ C# code in the Unity Editor now requires enabling of option.</h3>
+
+<p>Compiling ‘unsafe’ C# code now requires the <strong>Allow ‘unsafe’ code</strong> option to be enabled in the <span class="tooltip"><strong>Player Settings</strong><span class="tooltiptext">Settings that let you set various player-specific options for the final game built by Unity. <a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> for predefined assemblies (like Assembly-CSharp.dll) and in the <span class="tooltip"><strong>inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> for Assembly Definition Files assemblies. Enabling this option will make Unity pass /unsafe option to the C# compiler when compiling scripts.</p>
+
+<p><a href="#TopOfPage">Back to top</a></p>
+<!-- area:none -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide2019LTS.html"></a></span><div class="tip">Upgrading to Unity 2019 LTS</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuideLegacy.html"></a></span><div class="tip">Legacy Upgrade Guides</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

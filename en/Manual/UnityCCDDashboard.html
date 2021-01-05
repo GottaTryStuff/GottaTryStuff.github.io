@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Unity CCD Develop Dashboard</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityCCDDashboard.html">English</a></li>
+<li><a href="/cn/current/Manual/UnityCCDDashboard.html">中文</a></li>
+<li><a href="/ja/current/Manual/UnityCCDDashboard.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityCCDDashboard.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityCCDDashboard.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityCCDDashboard.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityCCDDashboard.html">English</a></li>
+<li><a href="/cn/current/Manual/UnityCCDDashboard.html">中文</a></li>
+<li><a href="/ja/current/Manual/UnityCCDDashboard.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityCCDDashboard.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityCCDDashboard.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityCCDDashboard.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityCCD.html"> Unity Cloud Content Delivery</a></li>
+<li><a href="UnityCCDInterfaces.html"> Cloud Content Delivery interfaces</a></li>
+<li> Unity CCD Develop Dashboard</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCCDCLI.html"></a></span><div class="tip"> Unity CCD Command-line interface (CLI)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCCDCLIWalkthrough.html"></a></span><div class="tip"> Using CCD via the command-line interface</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Unity CCD Develop Dashboard</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>You can use Cloud Content Delivery (CCD) in the Develop Dashboard to create and maintain buckets, badges and releases. However, you must use the command-line interface (CLI) to upload, delete and sync files and folders before you manage them in the Develop Dashboard.</p>
+
+<p>As an example scenario, you could use the Develop Dashboard to interactively manage an application’s assets using a more visual user interface than the CLI provides.</p>
+
+<p>To access CCD in the Develop Dashboard:</p>
+
+<ol>
+<li>If you are using Unity services for the first time:
+
+<ol>
+<li>Create a <a href="https://id.unity.com/">Unity ID</a> account (if you don’t already have one).</li>
+<li>Log into the <a href="https://dashboard.unity3d.com/">Develop Dashboard</a> from the <strong>Develop</strong> tab.</li>
+<li>Click <strong>Create New Project</strong>. In the Create New <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">A window that shows the contents of your <code>Assets</code> folder (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span>, fill in the details.</li>
+</ol>
+</li>
+<li>Select the project name, or click <strong>View</strong>.</li>
+<li>In the <strong>Overview</strong> page for this project, in the left-side navigation bar, select <strong>Content Delivery</strong> &gt; <strong>Buckets</strong>.</li>
+</ol>
+
+<h2>Buckets</h2>
+
+<p>In the <strong>Cloud Content Delivery</strong> page for your project, you need to create buckets to host your content.</p>
+
+<p>To add a bucket:</p>
+
+<ol>
+<li>Click <strong>Create Bucket</strong>.</li>
+<li>In the Create Bucket window, give the bucket a name and an optional description.</li>
+</ol>
+
+<p>In the bucket list view, each bucket has a details row that contains the following information:</p>
+
+<ul>
+<li>The bucket name</li>
+<li>A description of the bucket</li>
+<li>A snapshot of the current state:
+
+<ul>
+<li>The release number of the current release, or notification of unreleased changes.</li>
+<li>The date at which the last change was made to the bucket.</li>
+<li>The user name of the person who made the latest changes, or the name of the source for automated changes.</li>
+</ul>
+</li>
+</ul>
+
+<p>You can edit or delete a bucket via the <strong>More Items</strong> menu (⋮) at the end of a bucket’s row.</p>
+
+<p>To see more information about a bucket, click its name in the list view. In the bucket details screen, there are following tabs:</p>
+
+<ul>
+<li>
+<strong>Latest</strong>: Shows the current state of the bucket, and the latest versions of all its content. From here, you can create a release.
+The asset list is paginated, searchable, and contains a filter.
+If your bucket does not have any unreleased changes, you can promote a release from this tab.</li>
+<li>
+<strong>Releases</strong>: Displays all the releases you have created for this project.</li>
+<li>
+<strong>Badges</strong>: Lists all the badges available for this release.</li>
+</ul>
+
+<h2>Releases</h2>
+
+<p>You can manage the releases you have created for your project on the <strong>Releases</strong> tab. If your bucket has any unreleased content, you see the <strong>Create Release</strong> button in your release’s details row.</p>
+
+<p>To create a release:</p>
+
+<ol>
+<li>Select a bucket from the <strong>Content Delivery Buckets</strong> page that contains unreleased changes.</li>
+<li>In the bucket’s page, select the <strong>Latest</strong> tab.</li>
+<li>Select the <strong>Create Release</strong> button.</li>
+<li>In the <strong>Create Release</strong> dialog box, enter optional release notes and click <strong>Next</strong>.</li>
+<li>On the next page, choose the badges that you want to assign to this release (removing them from their current releases), and select <strong>Next</strong>.</li>
+<li>Review your changes, then select <strong>Submit</strong> to finalize, or <strong>Back</strong> to continue editing. The <strong>Unreleased Changes</strong> notification changes to reflect the new status.</li>
+</ol>
+
+<p>After you create a release, it appears in the list in the <strong>Releases</strong> tab, with its creation date and any associated badges. You can assign a badge to a release via the <strong>More Items</strong> menu (⋮) at the end of a release’s row.</p>
+
+<p>When you click on the <strong>Release #</strong> of a release in the list, you see a page that contains the release’s details, and a list of assets and bundles associated with that release.</p>
+
+<p>Some situations in your project’s release pipeline might require you to move a release from one bucket to another, which is a process called promotion. If your bucket does not have any unreleased changes, you see the <strong>Promote Release</strong> button in your release’s details row.</p>
+
+<p>To promote a release:</p>
+
+<ol>
+<li>Click the <strong>Release #</strong> of the release you want to promote in the <strong>Releases</strong> tab.</li>
+<li>In the release summary, click <strong>Promote Release</strong>.</li>
+<li>In the Promote Release window, select the bucket to which you want to promote the release in the <strong>Target Bucket</strong> drop-down.</li>
+<li>Add any optional release notes, and select <strong>Next</strong>.</li>
+<li>On the next page, choose the badges that you want to assign to this release (removing them from their current releases), and select <strong>Next</strong>.</li>
+<li>Review your changes, then select <strong>Promote Release</strong> to finalize, or <strong>Back</strong> to continue editing.</li>
+</ol>
+
+<h2>Badges</h2>
+
+<p>Attaching a badge to a release allows your application to load content from whichever release the badge is assigned to.</p>
+
+<p>To create a badge:</p>
+
+<ol>
+<li>Select a bucket from the <strong>Content Delivery Buckets</strong> page.</li>
+<li>Select the <strong>Badges</strong> tab.</li>
+<li>Select <strong>Add New</strong>.</li>
+<li>In the Add New Badge window, give the badge a unique name, and select its release from the drop-down list.</li>
+<li>Select <strong>Submit</strong>.</li>
+</ol>
+
+<p>The badge now appears in the badge list in the <strong>Badges</strong> tab. You can edit a badge’s associated release, or delete the badge via the <strong>More Items</strong> menu (⋮) at the end of a badge’s row.</p>
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCCDCLI.html"></a></span><div class="tip"> Unity CCD Command-line interface (CLI)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCCDCLIWalkthrough.html"></a></span><div class="tip"> Using CCD via the command-line interface</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

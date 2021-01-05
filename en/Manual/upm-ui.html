@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Package Manager window</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/upm-ui.html">English</a></li>
+<li><a href="/cn/current/Manual/upm-ui.html">中文</a></li>
+<li><a href="/ja/current/Manual/upm-ui.html">日本語</a></li>
+<li><a href="/es/current/Manual/upm-ui.html">Español</a></li>
+<li><a href="/kr/current/Manual/upm-ui.html">한국어</a></li>
+<li><a href="/ru/current/Manual/upm-ui.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/upm-ui.html">English</a></li>
+<li><a href="/cn/current/Manual/upm-ui.html">中文</a></li>
+<li><a href="/ja/current/Manual/upm-ui.html">日本語</a></li>
+<li><a href="/es/current/Manual/upm-ui.html">Español</a></li>
+<li><a href="/kr/current/Manual/upm-ui.html">한국어</a></li>
+<li><a href="/ru/current/Manual/upm-ui.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="PackagesList.html"> Packages</a></li>
+<li><a href="Packages.html"> Unity's Package Manager</a></li>
+<li> Package Manager window</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-config-scoped.html"></a></span><div class="tip"> Scoped registry authentication</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-ui-list.html"></a></span><div class="tip"> List view</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Package Manager window</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Use the Unity Package Manager (in Unity’s top menu: <strong>Window</strong> &gt; <strong>Package Manager</strong>) to view which <a href="Packages.html">packages</a> are available for installation or already installed in your project. In addition, you can use this window to see <a href="upm-ui-find.html#VersionList">which versions are available</a>, and <a href="upm-ui-actions.html">install</a>, <a href="upm-ui-remove.html">remove</a>, <a href="upm-ui-disable.html">disable</a>, or <a href="upm-ui-update.html">update</a> packages for each project.</p>
+
+<figure>
+<img src="../uploads/Main/PackageManagerUI-Main.png" alt="The Package Manager window">
+<figcaption>The Package Manager window</figcaption>
+</figure>
+
+<p>The Package Manager window displays:</p>
+
+<p>
+<strong>(A)</strong> The <strong>add</strong> <img src="../uploads/Main/PackageManagerUI-add.png" alt=""> button, which you can click to <a href="upm-ui-actions.html">install a package</a> directly into your project by entering a git URL or a local path.</p>
+
+<p>
+<strong>(B)</strong> The <a href="upm-ui-filter.html">Packages</a> drop-down menu, which you can use to change what appears in the list (context):</p>
+
+<p>
+<strong>(C)</strong> The <a href="#Advanced">Advanced</a> drop-down menu, which you can click to display preview packages in addition to those that have been verified to work with Unity, show the <span class="tooltip"><strong>dependency</strong><span class="tooltiptext"><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Dependency">Glossary</a></span></span></span> list in the details for each package, or reset your project’s packages to default.</p>
+
+<p>
+<strong>(D)</strong> The <a href="upm-ui-search.html">search box</a>, which you can use to look for packages by name.</p>
+
+<p>
+<strong>(E)</strong> The <a href="upm-ui-list.html">packages list view</a>, which displays all packages that match the filter and search parameters you specify.</p>
+
+<p>
+<strong>(F)</strong> The <a href="upm-ui-details.html">package-specific detail view</a>, which displays information specific to the package selected in the list.</p>
+
+<p>
+<strong>(G)</strong> The <a href="#StatusBar">status bar</a>, which displays messages about the package load status and any errors or warnings.</p>
+
+<p>
+<strong>(H)</strong> The <strong>reload</strong> <img src="../uploads/Main/PackageManagerUI-reload.png" alt=""> button, which you can click to force Package Manager to reload your packages.</p>
+
+<p>
+<strong>(I)</strong> Buttons to <a href="upm-ui-install.html">install</a> or <a href="upm-ui-update.html">update</a> a package (or the <strong>Up to date</strong> message if the selected version is already installed.)</p>
+
+<p>
+<strong>(J)</strong> Buttons to <a href="upm-ui-remove.html">remove</a> or <a href="upm-ui-disable.html">disable</a> the package.</p>
+
+<p>
+<strong>(K)</strong> The <strong>manifest</strong> <img src="../uploads/Main/PackageManagerUI-manifest.png" alt="">button, which you can click to <a class="tooltipMoreInfoLink" href="class-PackageManifestImporter.html">display the package.json manifest file</a> in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> view. If this is a <a href="upm-concepts.html#Local">local</a> or an <a href="upm-concepts.html#Embedded">embedded</a> package, you can edit it directly in the Inspector; otherwise, it is read-only.</p>
+
+<p><a name="Advanced"></a></p>
+
+<h2>Advanced actions</h2>
+
+<p>The <strong>Advanced</strong> drop-down menu allows you to perform these actions:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Drop-down menu item</strong></th>
+	<th style="text-align:left;"><strong>Action results</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Reset Packages to defaults</strong></td>
+	<td style="text-align:left;">Select this item to return to Unity Package Manager default settings. <br><br><strong>Warning</strong>: This removes all customization from your project manifest file. Only use this a last resort when you can’t figure out what is wrong with your project manifest file.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show dependencies</strong></td>
+	<td style="text-align:left;">Display each package’s dependencies in the <a href="upm-ui-details.html">details view</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show preview packages</strong></td>
+	<td style="text-align:left;">Display <span class="tooltip"><a href="pack-preview.html">preview packages</a><span class="tooltiptext">A <em>preview</em> package is in development and not yet ready for production. A package in preview might be at any stage of development, from the initial stages to near completion.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Previewpackage">Glossary</a></span></span></span> in the packages list when browsing the Unity Registry. <br><br><strong>Note</strong>: Preview packages are not verified to work with Unity and might be unstable. They are not supported in production environments.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="StatusBar"></a></p>
+
+<h2>Status bar</h2>
+
+<p>The Package Manager displays messages in the status bar at the bottom left of the Package Manager window.</p>
+
+<p>There are typically four status messages that you might see:</p>
+
+<ul>
+<li>
+<p>The first time you open the Package Manager window in a new project, the <strong>Loading packages</strong> message appears briefly:</p>
+
+<figure>
+<img src="../uploads/Main/PackageManagerUI-StatusBar_Loading.png" alt="Loading packages message">
+<figcaption>Loading packages message</figcaption>
+</figure>
+
+<p>This message also appears when you click the <strong>reload</strong> <img src="../uploads/Main/PackageManagerUI-reload.png" alt=""> button.</p>
+</li>
+<li>
+<p>Most of the time the status bar displays the date and time of when the Package Manager window last refreshed its information:</p>
+
+<figure>
+<img src="../uploads/Main/PackageManagerUI-StatusBar_Update.png" alt="Last update message">
+<figcaption>Last update message</figcaption>
+</figure>
+</li>
+<li>
+<p>However, if the Package Manager <a href="https://docs.unity3d.com/Manual/upm-errors.html">detects a problem</a>, such as a missing network connection, the Package Manager displays an error in the status bar:</p>
+
+<figure>
+<img src="../uploads/Main/PackageManagerUI-StatusBar_Network.png" alt="Network error message">
+<figcaption>Network error message</figcaption>
+</figure>
+</li>
+<li>
+<p>If your network connection is working, but you are not signed into your <a class="tooltipMoreInfoLink" href="https://id.unity.com/">Unity account</a>, the Package Manager doesn’t display any <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">A growing library of free and commercial assets created by Unity and members of the community. Offers a wide variety of assets, from textures, models and animations to whole project examples, tutorials and Editor extensions. <a href="AssetStore.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AssetStore">Glossary</a></span></span></span> packages. When you try to use the <strong>My Assets</strong> scope, the Package Manager displays an error in the status bar:</p>
+
+<figure>
+<img src="../uploads/Main/PackageManagerUI-StatusBar_UnityID.png" alt="Logged out of Unity account">
+<figcaption>Logged out of Unity account</figcaption>
+</figure>
+
+<p>In the list view, click the <strong>Sign in</strong> button to sign into your Unity account through the <a href="GettingStartedUnityHub.html">Unity Hub</a>.</p>
+</li>
+</ul>
+
+<p>For information on how to resolve these errors and more, see <a href="upm-errors.html">Error messages</a>.
+<br>
+</p>
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-config-scoped.html"></a></span><div class="tip"> Scoped registry authentication</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-ui-list.html"></a></span><div class="tip"> List view</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

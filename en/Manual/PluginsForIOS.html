@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Building plug-ins for iOS</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PluginsForIOS.html">English</a></li>
+<li><a href="/cn/current/Manual/PluginsForIOS.html">中文</a></li>
+<li><a href="/ja/current/Manual/PluginsForIOS.html">日本語</a></li>
+<li><a href="/es/current/Manual/PluginsForIOS.html">Español</a></li>
+<li><a href="/kr/current/Manual/PluginsForIOS.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PluginsForIOS.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PluginsForIOS.html">English</a></li>
+<li><a href="/cn/current/Manual/PluginsForIOS.html">中文</a></li>
+<li><a href="/ja/current/Manual/PluginsForIOS.html">日本語</a></li>
+<li><a href="/es/current/Manual/PluginsForIOS.html">Español</a></li>
+<li><a href="/kr/current/Manual/PluginsForIOS.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PluginsForIOS.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">Platform development</a></li>
+<li><a href="iphone.html">iOS</a></li>
+<li>iOS Advanced Topics</li>
+<li> Building plug-ins for iOS</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-Optimizing-Physics.html"></a></span><div class="tip">Optimizing Physics Performance</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="iphone-Downloadable-Content.html"></a></span><div class="tip">Preparing your application for In-App Purchases (IAP)</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Building plug-ins for iOS</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page describes how to build <a class="tooltipMoreInfoLink" href="Plugins.html">native code plug-ins</a> for the <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span> platform.</p>
+
+<h2>Building an application with a native plug-in for iOS</h2>
+
+<p>To build an application with a <span class="tooltip"><strong>native plug-in</strong><span class="tooltiptext">A platform-specific native code library that is created outside of Unity for use in Unity. Allows you can access features like OS calls and third-party code libraries that would otherwise not be available to Unity. <a class="tooltipMoreInfoLink" href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Nativeplug-in">Glossary</a></span></span></span> for iOS, follow these steps:</p>
+
+<ol>
+<li>
+<p>For each native function you want to call, define an extern method in the C# file as follows:</p>
+
+<pre><code class="csharp">[DllImport (&quot;__Internal&quot;)] 
+    
+private static extern float FooPluginFunction();
+</code></pre>
+</li>
+<li><p>Add your native code source files to the Unity Project.</p></li>
+<li><p>Customize the plug-in’s settings in the Plugin Inspector window. For example, if your native code is iOS-specific, make sure the plug-in is only enabled for iOS.<br><br>
+</p></li>
+</ol>
+
+<p>
+<strong>Note:</strong> If you are using C++ (.cpp) or Objective-C++ (.mm) to implement the plug-in, you must declare functions with C linkage to avoid issues with name mangling:<br><br>
+</p>
+
+<pre><code>extern &quot;C&quot; {
+  float FooPluginFunction();
+}
+</code></pre>
+
+<p>Plug-ins written in C or Objective-C don’t need this, because these languages don’t use name mangling.</p>
+
+<h2>Using your plug-in from C</h2>
+
+<p>Your app can only call iOS native <span class="tooltip"><strong>plug-ins</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plug-ins you can use in Unity: Managed plug-ins (managed .NET assemblies created with tools like Visual Studio) and Native plug-ins (platform-specific native code libraries). <a class="tooltipMoreInfoLink" href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plug-in">Glossary</a></span></span></span> when it’s deployed on an actual device, so you should wrap all native code methods with an additional C# code layer. This code should either use <code>UNITY_IOS &amp;&amp; !UNITY_EDITOR</code> conditional compilation, or check <code>Application.platform</code> and only calll native methods when the app is running on a device. A simple way to implement this is:</p>
+
+<pre><code class="csharp">void MyMethod()
+{
+#if UNITY_IOS &amp;&amp; !UNITY_EDITOR
+    CallNativeMethodImplementation();
+#else
+    CallEditorMethodImplementation();
+#endif
+}
+</code></pre>
+
+<p>For a more detailed implementation, download the Bonjour Browser Sample below.</p>
+
+<h2>Calling C# back from native code</h2>
+
+<p>Unity iOS supports limited native-to-managed callback functionality. You can do this in one of two ways:
+* Using <code>UnitySendMessage</code>
+* Via delegates</p>
+
+<h3>Using <code>UnitySendMessage</code>
+</h3>
+
+<p>This option is simpler, but has some limitations. It looks like this:</p>
+
+<p><code>UnitySendMessage(&quot;GameObjectName1&quot;, &quot;MethodName1&quot;, &quot;Message to send&quot;);</code></p>
+
+<p>There are three parameters:
+* The name of the target <code>GameObject</code>
+* The script method to call on that object
+* The message string to pass to the called method</p>
+
+<p>Using <code>UnitySendMessage</code> has the following limitations:</p>
+
+<ol>
+<li>From native code, you can only call script methods that correspond to the following signature: <code>void MethodName(string message);</code>.</li>
+<li>Calls to <code>UnitySendMessage</code> are asynchronous and have a delay of one frame.</li>
+<li>If two or more <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> have the same name, this can cause conflicts wHEN YOU USE <code>UnitySendMessage</code>.</li>
+</ol>
+
+<h3>Using delegates</h3>
+
+<p>This is the more complex option. When you use delegates, the method on the C# side must be static and be marked with the <code>MonoPInvokeCallback</code> attribute. You must pass the method as a delegate to the extern method which is implemented in native code as a function that takes a pointer to function with the corresponding signature. The function pointer in the native code then leads back to the C# static method.</p>
+
+<p>The C# code for this method looks like this:</p>
+
+<pre><code class="csharp">delegate void MyFuncType();
+
+[AOT.MonoPInvokeCallback(typeof(MyFuncType))]
+
+static void MyFunction() { }
+
+static extern void RegisterCallback(MyFuncType func);
+</code></pre>
+
+<p>The C code that accepts the callback then looks like this:</p>
+
+<pre><code class="c">typedef void (*MyFuncType)();
+
+void RegisterCallback(MyFuncType func) {}
+</code></pre>
+
+<h2>Automated plug-in integration</h2>
+
+<p>Unity supports automated plug-in integration and copies all files with the following extensions to the generated Xcode project if you enable them for iOS in the Plugin <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, alowing you to inspect and edit the values. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window: <code>.a</code>, <code>.m</code> , <code>.mm</code>, <code>.c</code>, <code>.cpp</code>, <code>.h</code>. If any files with these extensions are located n the <code>Assets/Plugins/iOS</code> folder, Unity only enables them for the iOS platform.</p>
+
+<p>
+<strong>Note:</strong> After the files are copied to the generated Xcode project, they’re no longer linked to their counterparts in your Unity Project. If you change these files in Xcode, you must copy them back into your Unity Project. Otherwise, Unity will overwrite them the next time you build your Project.</p>
+
+<figure>
+<img src="../uploads/Main/PluginInspectoriOS.png" alt="This Inspector window shows that the plug-in has been enabled for iOS.">
+<figcaption>This Inspector window shows that the plug-in has been enabled for iOS.</figcaption>
+</figure>
+
+<h2>Tips for iOS:</h2>
+
+<ol>
+<li><p>Managed-to-unmanaged calls are quite processor-intensive on iOS. Try to avoid calling multiple native methods per frame.</p></li>
+<li><p>Wrap your native methods with an additional C# layer that calls native code on the device and returns dummy values in the Editor.</p></li>
+<li><p>String values returned from a native method should be UTF–8 encoded and allocated on the heap. Mono marshalling calls free for strings like this.</p></li>
+</ol>
+
+<h2>Bonjour Browser Sample</h2>
+
+<p>You can download a simple example of how to use a native code plug-in here: <a href="https://docs.unity3d.com/uploads/Examples/iPhoneNativeCodeSample.zip">Bonjour Browser Sample</a>.</p>
+
+<p>This example demonstrates how you can invoke bjective-C code from a Unity iOS application. This application implements a simple Bonjour client and consists of:</p>
+
+<ul>
+<li>A Unity iOS Project where <code>Plugins\Bonjour.cs</code> is the C# interface to the native code, and <code>BonjourTest.cs</code> is the script that implements the application logic</li>
+<li>Native code (located in <code>Assets/Plugins/iOS</code>) that should be added to the built Xcode project as described in the <strong>Automated plug-in integration</strong> section above</li>
+</ul>
+<!-- area:platforms -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="iphone-Optimizing-Physics.html"></a></span><div class="tip">Optimizing Physics Performance</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="iphone-Downloadable-Content.html"></a></span><div class="tip">Preparing your application for In-App Purchases (IAP)</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

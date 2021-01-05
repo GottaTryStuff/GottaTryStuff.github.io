@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Triggers module</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PartSysTriggersModule.html">English</a></li>
+<li><a href="/cn/current/Manual/PartSysTriggersModule.html">中文</a></li>
+<li><a href="/ja/current/Manual/PartSysTriggersModule.html">日本語</a></li>
+<li><a href="/es/current/Manual/PartSysTriggersModule.html">Español</a></li>
+<li><a href="/kr/current/Manual/PartSysTriggersModule.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PartSysTriggersModule.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PartSysTriggersModule.html">English</a></li>
+<li><a href="/cn/current/Manual/PartSysTriggersModule.html">中文</a></li>
+<li><a href="/ja/current/Manual/PartSysTriggersModule.html">日本語</a></li>
+<li><a href="/es/current/Manual/PartSysTriggersModule.html">Español</a></li>
+<li><a href="/kr/current/Manual/PartSysTriggersModule.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PartSysTriggersModule.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="ParticleSystems.html"> Particle systems</a></li>
+<li><a href="Built-inParticleSystem.html"> Built-in Particle System</a></li>
+<li><a href="PartSysReference.html">Components and Modules</a></li>
+<li><a href="ParticleSystemModules.html">Particle System modules</a></li>
+<li> Triggers module</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysCollisionModule.html"></a></span><div class="tip">Collision module</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysSubEmitModule.html"></a></span><div class="tip">Sub Emitters module</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Triggers module</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The Built-in <span class="tooltip"><strong>Particle System</strong><span class="tooltiptext">A component that simulates fluid entities such as liquids, clouds and flames by generating and animating large numbers of small 2D images in the scene. <a class="tooltipMoreInfoLink" href="class-ParticleSystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#particlesystem">Glossary</a></span></span></span>’s Triggers module allows you to access and modify particles based on their interaction with one or more <span class="tooltip"><strong>Colliders</strong><span class="tooltiptext">An invisible shape that is used to handle physical collisions for an object. A collider doesn’t need to be exactly the same shape as the object’s mesh - a rough approximation is often more efficient and indistinguishable in gameplay. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Collider">Glossary</a></span></span></span> in the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span>. When you enable this module, the <strong>Particle System</strong> calls the <a href="../ScriptReference/MonoBehaviour.OnParticleTrigger.html">OnParticleTrigger()</a> callback on attached <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span>, which you can use to access lists of particles depending on where they are in respect to the Colliders in the Scene.</p>
+
+<figure>
+<img src="../uploads/Main/PartSysTriggersModule.png" alt="Particle Systems Triggers module">
+<figcaption>Particle Systems Triggers module</figcaption>
+</figure>
+
+<h2>Using the Triggers module</h2>
+
+<p>To begin, specify which Colliders in the Scene the particles can interact with. To do this, assign one or more Colliders to the <strong>Colliders</strong> list property. To increase the number of Colliders in the list, click the Add (+) button beneath the list of Colliders. To remove a Collider from the list, select the Collider and click the Remove (-) button. If you have not yet assigned a Collider to an index of the list, you can use the smaller Add (+) button, to the right of the empty entry, to create and assign a new Collider. This creates a new <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> as a child of the Particle System and attaches a <span class="tooltip"><strong>Sphere Collider</strong><span class="tooltiptext">A sphere-shaped collider component that handles collisions for GameObjects like balls or other things that can be roughly approximated as a sphere for the purposes of physics. <a href="class-SphereCollider.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SphereCollider">Glossary</a></span></span></span> to it, then assigns the Collider to the empty entry.</p>
+
+<p>After you add the Colliders, you can then specify what a particle does when it meets the criteria for passing a particular trigger event type. There are four event types that describe how a particle can interact with a Collider. They are:</p>
+
+<ul>
+<li>
+<strong>Inside</strong>: A particle is inside a Collider’s bounds.</li>
+<li>
+<strong>Outside</strong>: A particle is outside a Collider’s bounds.</li>
+<li>
+<strong>Enter</strong>: A particle enters a Collider’s bounds.</li>
+<li>
+<strong>Exit</strong>: A particle exits a Collider’s bounds.</li>
+</ul>
+
+<p>In the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, alowing you to inspect and edit the values. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, there is a drop-down for each of these event types that lets you select what should happen to a particle if it passes the trigger event’s conditions. The options are:</p>
+
+<ul>
+<li>
+<strong>Callback</strong>: Allows you to access the particle in the OnParticleTrigger() callback function.</li>
+<li>
+<strong>Kill</strong>: Destroys the particle. You can not access the particle in the OnParticleTrigger() callback function.</li>
+<li>
+<strong>Ignore</strong>: Ignores the particle. You can not access the particle in the OnParticleTrigger() callback function.</li>
+</ul>
+
+<h3>Accessing particles within OnParticleTrigger()</h3>
+
+<p>If you select <strong>Callback</strong> as the reaction to one of the trigger events, you can access the particles that fulfill the event condition from an attached script. To do this, you first need to add the <code>OnParticleTrigger()</code> function to an attached script. Inside this function, call the <a class="tooltipMoreInfoLink" href="../ScriptReference/ParticlePhysicsExtensions.GetTriggerParticles.html">ParticlePhysicsExtensions.GetTriggerParticles()</a> function to get the list of particles that fulfill the trigger event’s criteria. This function takes a <a href="../ScriptReference/ParticleSystemTriggerEventType.html">ParticleSystemTriggerEventType</a>, which specifies the trigger event you want to get the particles for (<strong>Inside</strong>, <strong>Outside</strong>, <strong>Enter</strong>, or <strong>Exit</strong>), and a list of <span class="tooltip"><a href="../ScriptReference/ParticleSystem.Particle.html">Particles</a><span class="tooltiptext">A small, simple image or mesh that is emitted by a particle system. A particle system can display and move particles in great numbers to represent a fluid or amorphous entity. The effect of all the particles together creates the impression of the complete entity, such as smoke. <a href="class-ParticleSystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#particle">Glossary</a></span></span></span> which the function populates with the result. From the list, you can access, modify, or destroy any particle.</p>
+
+<p>For more information on the API and how to use it, see the <a href="#Example">below example</a>.</p>
+
+<h2>Properties</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Inside</strong></td>
+	<td style="text-align:left;">Specifies the action the Particle System takes for particles every frame they are inside a Collider. The options are:<br>• <strong>Callback</strong>: Adds the particle to a list which you can retrieve in the OnParticleTrigger() callback<br>• <strong>Kill</strong>: Destroys the particle.<br>• <strong>Ignore</strong>: Ignores the particle.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Outside</strong></td>
+	<td style="text-align:left;">Specifies the action the Particle System takes for particles every frame they are outside a Collider. The options are:<br>• <strong>Callback</strong>: Adds the particle to a list which you can retrieve in the OnParticleTrigger() callback<br>• <strong>Kill</strong>: Destroys the particle.<br>• <strong>Ignore</strong>: Ignores the particle.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Enter</strong></td>
+	<td style="text-align:left;">Specifies the action the Particle System takes for particles in the frame they enter a Collider. The options are:<br>• <strong>Callback</strong>: Adds the particle to a list which you can retrieve in the OnParticleTrigger() callback<br>• <strong>Kill</strong>: Destroys the particle.<br>• <strong>Ignore</strong>: Ignores the particle.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Exit</strong></td>
+	<td style="text-align:left;">Specifies the action the Particle System takes for particles in the frame they exit a Collider. The options are:<br>• <strong>Callback</strong>: Adds the particle to a list which you can retrieve in the OnParticleTrigger() callback<br>• <strong>Kill</strong>: Destroys the particle.<br>• <strong>Ignore</strong>: Ignores the particle.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Radius Scale</strong></td>
+	<td style="text-align:left;">The particle’s Collider bounds. This allows you to match the particle’s Collider bounds to the visual appearance of the particle more closely. This is useful if a particle is circular with a fade in its texture because the default particle Collider would be inside the trigger before the particle visually looks to be. Note that this setting does not change when the event actually triggers, but can delay or advance the visual effect of the trigger. <br><br>• Enter <strong>1</strong> to keep the particle Colliders the same size and for the event to appear to happen as a particle touches the Collider.<br>• Enter a value less than <strong>1</strong> to make the particle Colliders smaller and for the trigger to appear to happen after a particle penetrates the Collider <br>• Enter a value greater than <strong>1</strong> to make the particle Colliders larger and for the trigger to appear to happen before a particle penetrates the Collider</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Visualize Bounds</strong></td>
+	<td style="text-align:left;">Indicates whether to display the Collider bounds of each particle in the <span class="tooltip"><strong>Scene view</strong><span class="tooltiptext">An interactive view into the world you are creating. You use the Scene View to select and position scenery, characters, cameras, lights, and all other types of Game Object. <a class="tooltipMoreInfoLink" href="UsingTheSceneView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#SceneView">Glossary</a></span></span></span>. Enable this property to display the Collider bounds and disable it to hide the Collider bounds.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Example"></a></p>
+
+<h2>Example</h2>
+
+<p>The example below causes particles to turn red as they enter the Collider’s bounds, then turn green as they leave the Collider’s bounds.</p>
+
+<pre><code>using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+[ExecuteInEditMode]
+public class TriggerScript : MonoBehaviour
+{
+    ParticleSystem ps;
+
+    // these lists are used to contain the particles which match
+    // the trigger conditions each frame.
+    List&lt;ParticleSystem.Particle&gt; enter = new List&lt;ParticleSystem.Particle&gt;();
+    List&lt;ParticleSystem.Particle&gt; exit = new List&lt;ParticleSystem.Particle&gt;();
+
+    void OnEnable()
+    {
+        ps = GetComponent&lt;ParticleSystem&gt;();
+    }
+
+    void OnParticleTrigger()
+    {
+        // get the particles which matched the trigger conditions this frame
+        int numEnter = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
+        int numExit = ps.GetTriggerParticles(ParticleSystemTriggerEventType.Exit, exit);
+
+        // iterate through the particles which entered the trigger and make them red
+        for (int i = 0; i &lt; numEnter; i++)
+        {
+            ParticleSystem.Particle p = enter[i];
+            p.startColor = new Color32(255, 0, 0, 255);
+            enter[i] = p;
+        }
+
+        // iterate through the particles which exited the trigger and make them green
+        for (int i = 0; i &lt; numExit; i++)
+        {
+            ParticleSystem.Particle p = exit[i];
+            p.startColor = new Color32(0, 255, 0, 255);
+            exit[i] = p;
+        }
+
+        // re-assign the modified particles back into the particle system
+        ps.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
+        ps.SetTriggerParticles(ParticleSystemTriggerEventType.Exit, exit);
+    }
+}
+
+</code></pre>
+
+<p>See the images below for the result of this example:</p>
+
+<figure>
+<img src="../uploads/Main/PartSysTriggersModule-ExampleEditorView.jpg" alt="Editor view">
+<figcaption>Editor view</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/PartSysTriggersModule-ExampleGameView.jpg" alt="Game view">
+<figcaption>Game view</figcaption>
+</figure>
+<!-- area:graphics -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="PartSysCollisionModule.html"></a></span><div class="tip">Collision module</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="PartSysSubEmitModule.html"></a></span><div class="tip">Sub Emitters module</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

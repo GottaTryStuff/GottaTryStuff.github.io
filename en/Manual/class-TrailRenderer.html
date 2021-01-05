@@ -1,0 +1,522 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Trail Renderer</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="graphics" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-TrailRenderer.html">English</a></li>
+<li><a href="/cn/current/Manual/class-TrailRenderer.html">中文</a></li>
+<li><a href="/ja/current/Manual/class-TrailRenderer.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-TrailRenderer.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-TrailRenderer.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-TrailRenderer.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-TrailRenderer.html">English</a></li>
+<li><a href="/cn/current/Manual/class-TrailRenderer.html">中文</a></li>
+<li><a href="/ja/current/Manual/class-TrailRenderer.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-TrailRenderer.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-TrailRenderer.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-TrailRenderer.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="Graphics.html">Graphics</a></li>
+<li><a href="comp-Effects.html">Visual Effects Components</a></li>
+<li> Trail Renderer</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-LineRenderer.html"></a></span><div class="tip"> Line Renderer</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-BillboardRenderer.html"></a></span><div class="tip">Billboard Renderer</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Trail Renderer</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/TrailRenderer.html' title='Go to TrailRenderer page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The <strong>Trail Renderer</strong> component renders a trail of polygons behind a moving <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span>. This can be used to give an emphasized feeling of motion to a moving object, or to highlight the path or position of moving objects. A trail behind a projectile adds visual clarity to its trajectory; contrails from the tip of a plane’s wings are an example of a trail effect that happens in real life.</p>
+
+<p>Trail Renderers must be laid out over a sequence of frames; they cannot appear instantaneously. The Trail Renderer uses the same algorithm for trail <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a class="tooltipMoreInfoLink" href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Rendering">Glossary</a></span></span></span> as the <span class="tooltip"><a href="class-LineRenderer.html">Line Renderer</a><span class="tooltiptext">A component that takes an array of two or more points in 3D space and draws a straight line between each one. You can use a single Line Renderer component to draw anything from a simple straight line to a complex spiral. <a href="class-LineRenderer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LineRenderer">Glossary</a></span></span></span>.</p>
+
+<h2>Getting started</h2>
+
+<p>To create a Trail Renderer:</p>
+
+<ol>
+<li>In the Unity menu bar, go to <strong>GameObject</strong> &gt; <strong>Effects</strong> &gt; <strong>Trail</strong>.</li>
+<li>Select the Trail Renderer GameObject, and parent it to the GameObject that you want it to generate a trail for.</li>
+<li>Use the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, alowing you to inspect and edit the values. <a class="tooltipMoreInfoLink" href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span> window to configure the color, width, and other display settings of the trail.</li>
+<li>You can preview the trail in Edit Mode by moving the GameObject and observing the effect in the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span> view.</li>
+</ol>
+
+<figure>
+<img src="../uploads/Main/TrailRenderer-example2.jpg" alt="Example Trail Renderer configuration">
+<figcaption>Example Trail Renderer configuration</figcaption>
+</figure>
+
+<h2>Trail Renderer Materials</h2>
+
+<p>By default, a Trail Renderer uses the built-in Material, <strong>Default-Line</strong>. You can make many changes to the appearance of the trail without changing this Material, such as editing the color gradient or width of the trail.</p>
+
+<p>For other effects, such as applying a texture to the trail, you will need to use a different Material. If you do not want to write your own <span class="tooltip"><strong>Shader</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shader">Glossary</a></span></span></span> for the new Material, Unity’s built-in <a href="shader-StandardParticleShaders.html">Standard Particle Shaders</a> work well with Trail Renderers. If you apply a Texture to a Trail Renderer, the Texture should be of square dimensions (for example 256x256, or 512x512).</p>
+
+<p>If you apply more than one Material to a Trail Renderer, the trail is rendered once for each Material.</p>
+
+<p>See <a href="Materials.html">Creating and using Materials</a> for more information.</p>
+
+<h2>Distance between points</h2>
+
+<p>The <strong>Min Vertex Distance</strong> value determines how far in world units the GameObject to which the trail applies must travel before a new segment is added to the trail. Low values like 0.1 create trail segments more often, creating smoother trails. Higher values like 1.5 create segments that are more jagged in appearance. Additionally, wide trails may exhibit visual artifacts when the vertices are very close together and the trail changes direction significantly over a short distance.</p>
+
+<p>For performance reasons, it is best to use the largest possible value that achieves the effect you are trying to create.</p>
+
+<h2>Properties</h2>
+
+<figure>
+<img src="../uploads/Main/Inspector-TrailRenderer.png" alt="">
+</figure>
+
+<p>This section contains the following sub-sections: </p>
+
+<ul>
+<li><a href="#TrailSettings">Trail settings</a></li>
+<li><span class="tooltip"><a class="tooltipMoreInfoLink" href="#Materials">Materials</a><span class="tooltiptext">An asset that defines how a surface should be rendered, by including references to the Textures it uses, tiling information, Color tints and more. The available options for a Material depend on which Shader the Material is using. <a href="class-Material.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Material">Glossary</a></span></span></span></li>
+<li><a href="#Lighting">Lighting</a></li>
+<li><a href="#Probes">Probes</a></li>
+<li><a href="#AdditionalSettings">Additional settings</a></li>
+</ul>
+
+<p><a name="TrailSettings"></a></p>
+
+<h3>Trail settings</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Width</strong></td>
+	<td style="text-align:left;">Define a width value, and a curve value to control the width of your trail along its length.<br><br>The curve is sampled at each vertex, so its accuracy is limited by the number of vertices in your trail. The overall width of the trail is controlled by the width value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Time</strong></td>
+	<td style="text-align:left;">Define the lifetime of a point in the trail, in seconds.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Min Vertex Distance</strong></td>
+	<td style="text-align:left;">The minimum distance between points in the trail, in world units.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>AutoDestruct</strong></td>
+	<td style="text-align:left;">Enable this to destroy the GameObject to which the Trail Renderer component is attached after it has not moved for <strong>Time</strong> seconds.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Emitting</strong></td>
+	<td style="text-align:left;">When this is enabled, Unity adds new points in the trail. When this is disabled, Unity does not add new points to the trail. Use this to pause and unpause trail generation.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Color</strong></td>
+	<td style="text-align:left;">Define a gradient to control the color of the trail along its length.<br><br>Unity samples colors from the Color gradient at each vertex. Between each vertex, Unity applies linear interpolation to colors. Adding more vertices to your trail might give a closer approximation of a detailed gradient.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Corner Vertices</strong></td>
+	<td style="text-align:left;">This property dictates how many extra vertices are used when drawing corners in a trail. Increase this value to make the trail corners appear rounder.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>End Cap Vertices</strong></td>
+	<td style="text-align:left;">This property dictates how many extra vertices are used to create end caps on the trail. Increase this value to make the trail caps appear rounder.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Alignment</strong></td>
+	<td style="text-align:left;">Set the direction that the trail faces.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>View</strong></td>
+	<td style="text-align:left;">The trail faces the <span class="tooltip"><strong>Camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>TransformZ</strong></td>
+	<td style="text-align:left;">The trail faces the Z axis of its <span class="tooltip"><strong>Transform component</strong><span class="tooltiptext">A Transform component determines the Position, Rotation, and Scale of each object in the scene. Every GameObject has a Transform. <a class="tooltipMoreInfoLink" href="class-Transform.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#TransformComponent">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Texture Mode</strong></td>
+	<td style="text-align:left;">Control how the Texture is applied to the trail.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Stretch</strong></td>
+	<td style="text-align:left;">Map the texture once along the entire length of the trail.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Tile</strong></td>
+	<td style="text-align:left;">Repeat the texture along the trail, based on its length in world units. To set the tiling rate, use <a href="../ScriptReference/Material.SetTextureScale.html">Material.SetTextureScale</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>DistributePerSegment</strong></td>
+	<td style="text-align:left;">Map the texture once along the entire length of the trail, assuming all vertices are evenly spaced.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>RepeatPerSegment</strong></td>
+	<td style="text-align:left;">Repeat the texture along the trail, repeating at a rate of once per trail segment. To adjust the tiling rate, use <a href="../ScriptReference/Material.SetTextureScale.html">Material.SetTextureScale</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Shadow Bias</strong></td>
+	<td style="text-align:left;">Set the amount to move shadows away from the Light to remove shadowing artifacts.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Generate Lighting Data</strong></td>
+	<td style="text-align:left;">If enabled, Unity builds the trail geometry with normals and tangents included. This allows it to use Materials that use the Scene lighting.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Materials"></a></p>
+
+<h3>Materials</h3>
+
+<p>The <strong>Materials</strong> section in the Trail Renderer Inspector lists the Materials that the <strong>Trail Renderer</strong> is using.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Size</strong></td>
+	<td style="text-align:left;">Specify the number of <strong>Materials</strong> in the Trail Renderer. If you decrease the size of the list of <strong>Materials</strong>, Unity deletes the elements at the end of the list.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Element</strong></td>
+	<td style="text-align:left;">A list of the <strong>Materials</strong> in the Trail Renderer, in numeric order. The first element is always named Element 0.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Lighting"></a></p>
+
+<h3>Lighting</h3>
+
+<p>The <strong>Lighting</strong> section contains properties for how this Trail Renderer interacts with lighting in Unity.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Cast Shadows</strong></td>
+	<td style="text-align:left;">Specify if and how the trail casts shadows when a suitable <a href="class-Light.html">Light</a> shines on it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>On</strong></td>
+	<td style="text-align:left;">The trail casts a shadow when a shadow-casting Light shines on it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Off</strong></td>
+	<td style="text-align:left;">The trail does not cast shadows.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Two Sided</strong></td>
+	<td style="text-align:left;">The trail casts two-sided shadows from either side. <span class="tooltip"><strong>Enlighten</strong><span class="tooltiptext">A lighting system by Geomerics used in Unity for lightmapping and for Realtime Global Illumination. <a class="tooltipMoreInfoLink" href="https://www.siliconstudio.co.jp/en/products-service/enlighten/">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Enlighten">Glossary</a></span></span></span> and the Progressive <span class="tooltip"><strong>Lightmapper</strong><span class="tooltiptext">A tool in Unity that bakes lightmaps according to the arrangement of lights and geometry in your scene. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span> do not support two-sided shadows.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Shadows Only</strong></td>
+	<td style="text-align:left;">Shadows from the trail are visible, but not the trail itself.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Receive Shadows</strong></td>
+	<td style="text-align:left;">Enable this option to make the trail display any shadows that are cast upon it. This is only supported when using the <a href="CPUProgressiveLightmapper">Progressive Lightmapper</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Probes"></a></p>
+
+<h3>Probes</h3>
+
+<p>The <strong>Probes</strong> section contains properties relating to Light Probes and Reflection Probes.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Light Probes</strong></td>
+	<td style="text-align:left;">Set how this Renderer receives light from the <a class="tooltipMoreInfoLink" href="LightProbes.html">Light Probe</a> system.<br><br>For more information, see <span class="tooltip"><a href="LightProbes.html">Light Probes</a><span class="tooltiptext">Light probes store information about how light passes through space in your scene. A collection of light probes arranged within a given space can improve lighting on moving objects and static LOD scenery within that space. <a href="LightProbes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LightProbe">Glossary</a></span></span></span>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Off</strong></td>
+	<td style="text-align:left;">The Renderer doesn’t use any interpolated Light Probes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Blend Probes</strong></td>
+	<td style="text-align:left;">The Renderer uses one interpolated Light Probe. This is the default value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Use Proxy Volume</strong></td>
+	<td style="text-align:left;">The Renderer uses a 3D grid of interpolated Light Probes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Custom Provided</strong></td>
+	<td style="text-align:left;">The Renderer extracts Light Probe shader uniform values from the <a href="../ScriptReference/MaterialPropertyBlock.html">MaterialPropertyBlock</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Proxy Volume Override</strong></td>
+	<td style="text-align:left;">Set a reference to another GameObject that has a Light Probe Proxy Volume component.<br><br>This property is only visible when <strong>Light Probes</strong> is set to <strong>Use Proxy Volume</strong>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Reflection Probes</strong></td>
+	<td style="text-align:left;">Set how the Renderer receives reflections from the <span class="tooltip"><a class="tooltipMoreInfoLink" href="class-ReflectionProbe.html">Reflection Probe</a><span class="tooltiptext">A rendering component that captures a spherical view of its surroundings in all directions, rather like a camera. The captured image is then stored as a Cubemap that can be used by objects with reflective materials. <a href="class-ReflectionProbe.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ReflectionProbe">Glossary</a></span></span></span> system.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Off</strong></td>
+	<td style="text-align:left;">Disables Reflection Probes. Unity uses a <span class="tooltip"><strong>skybox</strong><span class="tooltiptext">A special type of Material used to represent skies. Usually six-sided. <a class="tooltipMoreInfoLink" href="class-Skybox.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Skybox">Glossary</a></span></span></span> for reflection.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Blend Probes</strong></td>
+	<td style="text-align:left;">Enables Reflection Probes. Blending occurs only between Reflection Probes. This is useful in indoor environments where the character may transition between areas with different lighting settings.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Blend Probes and Skybox</strong></td>
+	<td style="text-align:left;">Enables Reflection Probes. Blending occurs between Reflection Probes, or between Reflection Probes and the default reflection. This is useful for outdoor environments.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Simple</strong></td>
+	<td style="text-align:left;">Enables Reflection Probes, but no blending occurs between Reflection Probes when there are two overlapping volumes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Anchor Override</strong></td>
+	<td style="text-align:left;">Set the Transform that Unity uses to determine the interpolation position when using the <a href="LightProbes.html">Light Probe</a> or <a href="class-ReflectionProbe.html">Reflection Probe</a> systems. By default, this is the centre of the bounding box of the Renderer’s geometry.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="AdditionalSettings"></a></p>
+
+<h3>Additional Settings</h3>
+
+<p>The <strong>Additional Settings</strong> contain additional properties.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Motion Vectors</strong></td>
+	<td style="text-align:left;">Set whether to use motion vectors to track this Renderer’s per-pixel, screen-space motion from one frame to the next. You can use this information to apply post-processing effects such as motion blur.<br><br>Note that not all platforms support motion vectors. See <a href="SystemInfo-supportsMotionVectors">SystemInfo.supportsMotionVectors</a> for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Camera Motion Only</strong></td>
+	<td style="text-align:left;">Use only Camera movement to track motion.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Per Object Motion</strong></td>
+	<td style="text-align:left;">Use a specific pass to track motion for this Renderer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><strong>Force No Motion</strong></td>
+	<td style="text-align:left;">Do not track motion.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Dynamic Occlusion</strong></td>
+	<td style="text-align:left;">When <strong>Dynamic Occlusion</strong> is enabled, Unity culls this Renderer when it is blocked from a Camera’s view by a Static Occluder. Dynamic Occlusion is enabled by default.<br><br>When <strong>Dynamic Occlusion</strong> is disabled, Unity does not cull this Renderer when it is blocked from a Camera’s view by a Static Occluder. Disable Dynamic Occlusion to achieve effects such as drawing the outline of a character behind a wall.<br><br>See documentation on <span class="tooltip"><a class="tooltipMoreInfoLink" href="OcclusionCulling.html">occlusion culling</a><span class="tooltiptext">A Unity feature that disables rendering of objects when they are not currently seen by the camera because they are obscured (occluded) by other objects. <a href="OcclusionCulling.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#occlusionculling">Glossary</a></span></span></span> for more information.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Sorting Layer</strong></td>
+	<td style="text-align:left;">The name of this Renderer’s <a href="class-TagManager.html">Sorting Layer</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Order in Layer</strong></td>
+	<td style="text-align:left;">This Renderer’s order within a <a href="class-TagManager.html">Sorting Layer</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li><span class="page-history">Properties added in Unity <a href="../Manual/30_search.html?q=newin20171">2017.1</a> <span class="search-words">NewIn20171</span></span></li>
+<li><span class="page-history">Particle Trail Renderer properties added in Unity <a href="../Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></li>
+</ul>
+<!-- area:graphics -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-LineRenderer.html"></a></span><div class="tip"> Line Renderer</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-BillboardRenderer.html"></a></span><div class="tip">Billboard Renderer</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

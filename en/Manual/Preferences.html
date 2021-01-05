@@ -1,0 +1,800 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Preferences</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/Preferences.html">English</a></li>
+<li><a href="/cn/current/Manual/Preferences.html">中文</a></li>
+<li><a href="/ja/current/Manual/Preferences.html">日本語</a></li>
+<li><a href="/es/current/Manual/Preferences.html">Español</a></li>
+<li><a href="/kr/current/Manual/Preferences.html">한국어</a></li>
+<li><a href="/ru/current/Manual/Preferences.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/Preferences.html">English</a></li>
+<li><a href="/cn/current/Manual/Preferences.html">中文</a></li>
+<li><a href="/ja/current/Manual/Preferences.html">日本語</a></li>
+<li><a href="/es/current/Manual/Preferences.html">Español</a></li>
+<li><a href="/kr/current/Manual/Preferences.html">한국어</a></li>
+<li><a href="/ru/current/Manual/Preferences.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html"> Working in Unity</a></li>
+<li><a href="EditorFeatures.html">Editor Features</a></li>
+<li> Preferences</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="2DAnd3DModeSettings.html"></a></span><div class="tip">2D and 3D mode settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Presets.html"></a></span><div class="tip"> Presets</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Preferences</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Unity provides a number of preferences that let you customize the behavior of the Unity Editor. </p>
+
+<p>To access the <strong>Preferences</strong> window, go to <strong>Edit</strong> &gt; <strong>Preferences</strong> (Windows) or <strong>Unity</strong> &gt; <strong>Preferences</strong> (macOS) from the main menu in Unity. The following preference categories are available:</p>
+
+<ul>
+<li><a href="#General">General</a></li>
+<li><a href="#2D">2D</a></li>
+<li><a href="#Analysis">Analysis</a></li>
+<li><a href="#Cache-Server">Cache Server (global)</a></li>
+<li><a href="#Colors">Colors</a></li>
+<li><a href="#External-Tools">External Tools</a></li>
+<li><span class="tooltip"><a class="tooltipMoreInfoLink" href="#GI-Cache">GI Cache</a><span class="tooltiptext">The cached intermediate files used when Unity precomputes lighting data. Unity keeps this cache to speed up computation. <a href="GICache.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GICache">Glossary</a></span></span></span></li>
+<li><a href="#UI-Scaling">UI Scaling</a></li>
+<li><a href="#Custom">Custom package preferences</a></li>
+</ul>
+
+<h2>Navigating the Preferences window</h2>
+
+<p>Use the search box to filter the list of settings categories, and highlight keywords in the details pane on the right.</p>
+
+<p><a name="General"></a></p>
+
+<h2>General</h2>
+
+<p>
+<strong>General</strong> preferences let you customize the overall behavior for working in Unity. </p>
+
+<figure>
+<img src="../uploads/Main/PrefsGeneral.png" alt="General scope on the Preferences window">
+<figcaption>General scope on the Preferences window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;" colspan="2"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Auto Refresh</strong></td>
+	<td style="text-align:left;">Enable this setting to update Assets automatically as they change.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Load Previous Project on Startup</strong></td>
+	<td style="text-align:left;">Enable this setting to always load the previous Project at startup.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Compress Assets on Import</strong></td>
+	<td style="text-align:left;">Enable this setting to automatically compress Assets during import.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<strong>Disable Editor Analytics</strong> (Pro only)</td>
+	<td style="text-align:left;">Enable this setting to stop the Editor automatically sending information back to Unity.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Show <span class="tooltip"><strong>Asset Store</strong><span class="tooltiptext">A growing library of free and commercial assets created by Unity and members of the community. Offers a wide variety of assets, from textures, models and animations to whole project examples, tutorials and Editor extensions. <a class="tooltipMoreInfoLink" href="AssetStore.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AssetStore">Glossary</a></span></span></span> search hits</strong></td>
+	<td style="text-align:left;">Enable this setting to show the number of free/paid Assets from the <strong>Asset Store</strong> in the Project Browser.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Verify Saving Assets</strong></td>
+	<td style="text-align:left;">Enable this setting if you wish to verify which Assets to save individually on quitting Unity.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Script Changes While Playing</strong></td>
+	<td style="text-align:left;">Choose Unity’s behavior when <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> change while your game is running in the Editor.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Recompile And Continue Playing</em></td>
+	<td style="text-align:left;">Recompile your scripts and keep running the <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>. This is the default behavior, but you might want to change it if your scripts rely on any non-serializable data.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Recompile After Finished Playing</em></td>
+	<td style="text-align:left;">Defer recompilation until you manually stop your Scene, avoiding any interruption.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Stop Playing And Recompile</em></td>
+	<td style="text-align:left;">Immediately stop your Scene for recompilation, allowing you to quickly restart testing.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Editor Theme</strong></td>
+	<td style="text-align:left;">Choose which skin to use in the Unity Editor. This is only available for Plus and Pro Unity subscriptions.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Personal</em></td>
+	<td style="text-align:left;">Use the light grey background with black text.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Professional</em></td>
+	<td style="text-align:left;">Use the dark grey background with white text.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Editor Font</strong></td>
+	<td style="text-align:left;">Select which font to display in the Unity Editor. The default font is Inter.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Alpha Numeric Sorting</strong></td>
+	<td style="text-align:left;">Enable this setting to display a button in the top-right corner of the <a href="Hierarchy.html">Hierarchy</a> window, which toggles between Transform sort (the default) and Alphanumeric sort.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Enable Code Coverage</strong></td>
+	<td style="text-align:left;">Enable this setting to access the interface for the code coverage data that Mono exposes. <a href="https://en.wikipedia.org/wiki/Code_coverage">Code coverage</a> lets you see how much of your code is executed when it is run. It’s normally associated with automated unit tests, but coverage data in Unity can be gathered at any time when the Editor is running. For more information, see documentation on <a href="https://docs.unity3d.com/ScriptReference/TestTools.Coverage.html">Coverage API</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Interaction Mode</strong></td>
+	<td style="text-align:left;">Specifies how long the Editor can idle before it updates. After one frame finishes, the Editor waits up to the specified amount of time before the next frame begins.<br><br>This allows you to throttle Editor performance, and reduce consumption of CPU resources and power.<br><br>For example, if you want to test the Editor’s performance, set this property to <strong>No Throttling</strong>. If you want to conserve power (for example, to prolong battery life on a laptop computer), set this property to one of the throttled modes.<br><br>In throttled modes, the Editor stops idling if you interact with it (for example, by panning in the Scene view).<br><br><strong>Note:</strong> In Play mode, Unity ignores any throttling that you apply using this preference. The editor updates as fast as possible unless you enable the VSync option in the <a href="GameView.html">Game view</a>, or set <code>Application.targetFrameRate</code> to a value other than –1.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Default</em></td>
+	<td style="text-align:left;">The Editor idles up to 4 ms each tick. If a frame takes 5 ms or more, the Editor doesn’t idle at all, and the next frame starts automatically.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>No Throttling</em></td>
+	<td style="text-align:left;">Each time a frame finishes, the next frame begins immediately. The Editor never waits, and updates as fast as possible.<br><br>This mode consumes a lot of CPU resources. If you are using a laptop computer, it can cause the battery to drain quickly.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Monitor Refresh Rate</em></td>
+	<td style="text-align:left;">The Editor idles up to the monitor’s update rate in milliseconds. For most monitors, this is 16 ms.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;"><em>Custom</em></td>
+	<td style="text-align:left;">You specify the maximum amount of time application can be idle.<br><br>When you select this option the <strong>Frame Throttling (milliseconds)</strong> property appears.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Frame Throttling (milliseconds)</strong></td>
+	<td style="text-align:left;">When <strong>Interaction Mode</strong> is set to <strong>Custom</strong>, this property specifies how long the Editor can idle between frames. The value can be between 0 and 33 ms. 0 is equivalent to setting <strong>Interaction Mode</strong> to <strong>No Throttling</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="2D"></a></p>
+
+<h2>2D</h2>
+
+<p>Use the <strong>Max <span class="tooltip"><strong>Sprite</strong><span class="tooltiptext">A 2D graphic objects. If you are used to working in 3D, Sprites are essentially just standard textures but there are special techniques for combining and managing sprite textures for efficiency and convenience during development. <a class="tooltipMoreInfoLink" href="Sprites.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Sprite">Glossary</a></span></span></span> Atlas Cache Size (GB)</strong> preference to set the maximum size of the <span class="tooltip"><a href="class-SpriteAtlas.html">Sprite Atlas</a><span class="tooltiptext">A texture that is composed of several smaller textures. Also referred to as a texture atlas, image sprite, sprite sheet or packed texture. <a href="class-SpriteAtlas.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#spriteatlas">Glossary</a></span></span></span> cache folder. Whenever possible, Unity keeps the size of this folder below this level.</p>
+
+<figure>
+<img src="../uploads/Main/Prefs2D.png" alt="2D scope on the Preferences window">
+<figcaption>2D scope on the Preferences window</figcaption>
+</figure>
+
+<p><a name="Analysis"></a></p>
+
+<h2>Analysis</h2>
+
+<p>The <strong>Analysis</strong> preferences let you define settings for the <span class="tooltip"><a class="tooltipMoreInfoLink" href="https://docs.unity3d.com/Manual/Profiler.html">Profiler</a><span class="tooltiptext">A window that helps you to optimize your game. It shows how much time is spent in the various areas of your game. For example, it can report the percentage of time spent rendering, animating or in your game logic. <a href="Profiler.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Profiler">Glossary</a></span></span></span>.</p>
+
+<figure>
+<img src="../uploads/Main/PrefsAnalysis.png" alt="Analysis scope on the Preferences window">
+<figcaption>Analysis scope on the Preferences window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Frame count</strong></td>
+	<td style="text-align:left;">Set the maximum number of frames for the Profiler to capture. You can set this number between 300 and 2,000.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show stats for ‘current frame’</strong></td>
+	<td style="text-align:left;">By default, when you select the <strong>Current Frame</strong> button and enter Current Frame mode, the frame indicator line does not have annotations with the stats for the current frame. This is because the stats annotations might make it difficult to view data in real-time. To display the annotations, enable this setting.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default recording state</strong></td>
+	<td style="text-align:left;">Select which recording state the Profiler should open in. Choose from <strong>Enabled</strong>, <strong>Disabled</strong>, or <strong>Remember</strong>. Enabled keeps the <strong>Record</strong> button enabled between sessions, while <strong>Disbled</strong> disables it, regardless of whether you turn it on or off during your profiling session. The <strong>Remember</strong> state remembers whether you have enabled or disabled the <strong>Record</strong> button during your session and keeps it at its last state next time you open the Profiler window.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default editor target mode</strong></td>
+	<td style="text-align:left;">Select what mode the <strong>Attach to Player</strong> dropdown should target by default. Choose from either <strong>Playmode</strong> or <strong>Editor</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Cache-Server"></a></p>
+
+<h2>Cache Server</h2>
+
+<p>Any time an Asset changes, Unity automatically re-imports it. Setting up a Cache Server drastically reduces the time it takes to import Assets. You can set up a Cache Server using remote hosting or stored on your local computer.</p>
+
+<figure>
+<img src="../uploads/Main/PrefsCacheServer.png" alt="Cache Server scope on the Preferences window">
+<figcaption>Cache Server scope on the Preferences window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>New Projects default asset pipeline</strong></td>
+	<td style="text-align:left;">Select the default asset pipeline for new Projects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Active version</strong></td>
+	<td style="text-align:left;">Displays the current asset pipeline version.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Asset pipeline v1 (deprecated)</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Server Mode</strong></td>
+	<td style="text-align:left;">Define the <span class="tooltip"><a class="tooltipMoreInfoLink" href="CacheServer.html">Cache Server</a><span class="tooltiptext">A standalone app that you can run on your local computer that stores the imported asset data to reduce the time it takes to import assets. <a href="CacheServer.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#CacheServer">Glossary</a></span></span></span> mode. <br><strong>Local</strong>: Use a local Cache Server on this computer. The preferences for <a href="#local">Local storage</a> appear. <br><strong>Remote</strong>: Use a Cache Server hosted on a remote computer. The preferences for <a href="#remote">Remote hosting</a> appear. <br>By default the Cache Server is disabled.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2"><strong>Asset pipeline v2</strong></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Server Default Mode</strong></td>
+	<td style="text-align:left;">Define whether the Cache Server is enabled or disabled by default. You can override this per Project in the Unity Editor settings.<br>For more information on using <strong>Asset pipeline v2</strong>, see <a href="UnityAccelerator.html">Unity Accelerator</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Default IP address</strong></td>
+	<td style="text-align:left;">Set the default IP address for the Cache Server to use. You can override this per Project in the Unity Editor settings.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Check Connection</strong></td>
+	<td style="text-align:left;">Click this button to attempt to connect to the remote Cache Server.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="remote"></a></p>
+
+<h3>Remote hosting</h3>
+
+<p>These preferences are only available when <strong>Use Cache Server</strong> is set to <strong>Remote</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/PrefsCacheServer-Remote.png" alt="Remote Cache Server preferences">
+<figcaption>Remote Cache Server preferences</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>IP Address</strong></td>
+	<td style="text-align:left;">Enter the IP address of the dedicated cache server that <a href="CacheServer.html#admin-setup">an administrator set up</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Check Connection</strong></td>
+	<td style="text-align:left;">Click this button to attempt to connect to the remote Cache Server.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="local"></a></p>
+
+<h3>Local storage</h3>
+
+<p>These preferences are only available when the <strong>Use Cache Server</strong> is set to <strong>Local</strong>.</p>
+
+<figure>
+<img src="../uploads/Main/PrefsCacheServer-Local.png" alt="Local Cache Server preferences">
+<figcaption>Local Cache Server preferences</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Maximum Cache Size (GB)</strong></td>
+	<td style="text-align:left;">Specify the maximum size in gigabytes for the Cache Server on this computer’s storage. The minimum size is 1GB. The maximum size is 200GB. <br>The default cache size is 10GB.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom cache location</strong></td>
+	<td style="text-align:left;">Enable this option to specify a location where you want to store the cache.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Folder Location</strong></td>
+	<td style="text-align:left;">Click the <strong>Browse</strong> button to specify a location for the cache.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Cache size is</strong> …</td>
+	<td style="text-align:left;">Message displaying the current size of the cache. Before clicking the <strong>Check Cache Size</strong> button, this appears as <strong>Cache size is unknown</strong>. After clicking the button, the calculated cache size appears in the message.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Check Cache Size</strong></td>
+	<td style="text-align:left;">Click this to find out how much storage the Local Cache Server is using. This operation can take some time to complete if you have a large project.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Clean Cache</strong></td>
+	<td style="text-align:left;">Delete the contents of the cache.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Folder Location</strong></td>
+	<td style="text-align:left;">Displays the current cache folder location.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Colors"></a></p>
+
+<h2>Colors</h2>
+
+<figure>
+<img src="../uploads/Main/PrefsColors.png" alt="Colors scope on the Preferences window">
+<figcaption>Colors scope on the Preferences window</figcaption>
+</figure>
+
+<p>The <strong>Colors</strong> preferences allow you to choose the colors that Unity uses when displaying various user interface elements.</p>
+
+<p><a name="External-Tools"></a></p>
+
+<h2>External Tools</h2>
+
+<p>Use the <strong>External Tools</strong> preferences to set up external applications for scripting, working with images, and source control.</p>
+
+<figure>
+<img src="../uploads/Main/PrefsExtToolsNew.png" alt="External Tools scope on the Preferences window">
+<figcaption>External Tools scope on the Preferences window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>External Script Editor</strong></td>
+	<td style="text-align:left;">Choose which application Unity should use to open script files. Unity automatically passes the correct arguments to script editors it has built-in support for. Unity has built-in support for Visual Studio Community, Visual Studio Code (VSCode) and JetBrains Rider. The <strong>Open by file extension</strong> option uses your device’s default application for the relevant file type when you open a file. If no default application is available, your device opens a window that prompts you to choose an application to use to open the file.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>External Script Editor Args</strong></td>
+	<td style="text-align:left;">This field controls parameters that Unity can send to your code editor when you open a file. The <code>$(File)</code>, <code>$(Line)</code> and <code>$(Column)</code> arguments pass the filename, line number and column number to your external code editor. Your code editor uses these arguments to open the correct file with the cursor at the correct position. For example, if you double click an error message in the Unity Console, Unity passes these arguments from that error message to the external editor, which then opens the right file at the position where that error occurred.<br><br>You can manually edit this field to customize the arguments Unity sends to your external code editor. Click the <strong>Reset argument</strong> button to reset this field to its default setting, which is shown in the above screenshot.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Generate all .csproj files.</strong></td>
+	<td style="text-align:left;">Enable this setting to generate all .csproj files. Code editors use .sln and .csproj files to access data about your Project. .csproj files store descriptive data or metadata in an XML format. This data might include versioning information, platform requirements, build files, or database settings.<br><br>When these files are present, code editors can use the data they contain to provide useful features like highlighting potential compilation errors. Enable this setting to instruct Unity to create .csproj files wherever possible in your Project.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Extensions handled</strong><br><em>(Only available if you select either Rider or Visual Studio Code as your External Script Editor)</em>
+</td>
+	<td style="text-align:left;">This field determines which file types the <strong>External Script Editor</strong> opens. The field is pre-populated with a list of files that the script editor opens by default. To add other file types to this list, type in the file extension and separate each extension with a semicolon.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Add .unityproj’s to .sln</strong><br><em>(Deprecated)</em>
+</td>
+	<td style="text-align:left;">This setting is permanently inactive because Unityscript, the scripting language that produced .unityproj files, is deprecated.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Editor Attaching</strong></td>
+	<td style="text-align:left;">Enable this setting to allow your external code editor to debug scripts running in the Unity Editor. If you disable this option, you can’t attach a script debugger to Unity to debug your scripts. For more information on debugging, see the <a href="ManagedCodeDebugging.html">Debugging C# in Unity documentation</a>. <br><br><strong>Note:</strong> When you change this setting, you need to restart Unity for the change to take effect.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Image application</strong></td>
+	<td style="text-align:left;">Choose which application you want Unity to use to open image files.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Revision Control Diff/Merge</strong></td>
+	<td style="text-align:left;">Choose which application you want Unity to use to resolve file differences in your source control repository. Unity detects these tools in their default installation locations. On Windows, Unity checks registry keys for TortoiseMerge, WinMerge, PlasticSCM Merge, and Beyond Compare 4.<br><br>For more information, see the <a href="#diffmerge">Revision Control Diff/Merge</a> section below.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="diffmerge"></a></p>
+
+<h3>Revision Control Diff/Merge</h3>
+
+<p>Unity currently supports these tools:</p>
+
+<ul>
+<li>SourceGear DiffMerge</li>
+<li>TkDiff</li>
+<li>P4Merge</li>
+<li>TortoiseMerge</li>
+<li>WinMerge</li>
+<li>PlasticSCM Merge</li>
+<li>Beyond Compare 4</li>
+</ul>
+
+<p>
+<strong>Note:</strong> These are third-party tools that Unity doesn’t include by default. You must download and install them separately.</p>
+
+<p>To set up a custom revision tool, follow these steps:</p>
+
+<ol>
+<li>From the <strong>Revision Control Diff/Merge</strong> drop-down list, select <strong>Custom Tool</strong>.</li>
+<li>Enter the path to the custom tool’s installation folder. On Mac, this should point to the <em>Contents / MacOS</em> folder in the tool’s installation folder.</li>
+<li>Enter the arguments for two-way diffs, three-way diffs, and merges.</li>
+</ol>
+
+<p>To specify file layout in the revision tool, use these arguments:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>#LTITLE</code></td>
+	<td style="text-align:left;">Left title</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#RTITLE</code></td>
+	<td style="text-align:left;">Right title</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ATITLE</code></td>
+	<td style="text-align:left;">Ancestor title</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#LEFT</code></td>
+	<td style="text-align:left;">Left file</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#RIGHT</code></td>
+	<td style="text-align:left;">Right file</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ANCESTOR</code></td>
+	<td style="text-align:left;">Ancestor file</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#OUTPUT</code></td>
+	<td style="text-align:left;">Output file</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ABSLEFT</code></td>
+	<td style="text-align:left;">Absolute path to the left file</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ABSRIGHT</code></td>
+	<td style="text-align:left;">Absolute path to the right file</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ABSANCESTOR</code></td>
+	<td style="text-align:left;">Absolute path to the ancestor file</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>#ABSOUTPUT</code></td>
+	<td style="text-align:left;">Absolute path to the output file</td>
+</tr>
+</tbody>
+</table>
+
+<p>Examples:</p>
+
+<figure>
+<img src="../uploads/Main/SourceGearDiffMerge.png" alt="SourceGear DiffMerge">
+<figcaption>SourceGear DiffMerge</figcaption>
+</figure>
+
+<figure>
+<img src="../uploads/Main/P4DiffMerge.png" alt="P4Merge">
+<figcaption>P4Merge</figcaption>
+</figure>
+
+<p><a name="GI-Cache"></a></p>
+
+<h2>GI Cache</h2>
+
+<p>The <span class="tooltip"><a href="GIIntro">Global Illumination</a><span class="tooltiptext">A group of techniques that model both direct and indirect lighting to provide realistic lighting results. Unity has two global illumination systems that combine direct and indirect lighting.: Baked Global Illumination, and Realtime Global Illumination (deprecated).<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#globalillumination">Glossary</a></span></span></span> (GI) system uses <a href="GICache.html">a cache on each computer</a> to store intermediate files used to pre-compute real-time Global Illumination. All projects on the computer share the cache.</p>
+
+<figure>
+<img src="../uploads/Main/PrefsGICache.png" alt="GI Cache scope on the Preferences window">
+<figcaption>GI Cache scope on the Preferences window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Maximum Cache Size (GB)</strong></td>
+	<td style="text-align:left;">Use the slider to set the maximum GI cache folder size. Unity keeps the GI cache folder size below this number whenever possible. Unity periodically deletes unused files to create more space (deleting the oldest files first). This is an automatic process, and doesn’t require you to do anything. <br><strong>Note:</strong> If the current Scene is using all the files in the GI cache, increase your cache size. Otherwise, resource-intensive recomputation occurs when baking. This can happen when the Scene is very large or the cache size is too small.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Custom cache location</strong></td>
+	<td style="text-align:left;">Enable this option to allow a custom location for the GI cache folder. By default, the GI cache is stored in the <em>Caches</em> folder. All Projects share the cache folder.<br><strong>Tip:</strong> Storing the GI Cache on an SSD drive can speed up baking in cases where the baking process is I/O bound.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Folder Location</strong></td>
+	<td style="text-align:left;">Click the <strong>Browse</strong> button to specify a location for the cache.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache compression</strong></td>
+	<td style="text-align:left;">Enable this option to allow Unity to compress files in the GI cache and reduce the size of the generated data. The files are LZ4-compressed by default, and the naming scheme is a hash and a file extension. The hashes are computed based on the inputs to the lighting system, so changing any of the following can lead to recomputation of lighting:<br>- Materials (Textures, Albedo, Emission)<br>- Lights<br>- Geometry<br>- Static flags<br>- Light Probe groups<br>- Reflection probes<br>- Lightmap Parameters<br><strong>Tip:</strong> If you need to access the raw Enlighten data, disable Cache Compression and clean the cache.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Clean Cache</strong></td>
+	<td style="text-align:left;">Use this button to clear the cache directory. <br>It is not safe to delete the GI Cache directory manually while the Editor is running. This is because the Editor creates the <em>GiCache</em> folder when it starts and maintains a set of references to those files. The <strong>Clean Cache</strong> button ensures that the Editor releases all references to the files on disk before they are deleted.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache size is</strong></td>
+	<td style="text-align:left;">Displays the current size of the cache.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Cache Folder Location</strong></td>
+	<td style="text-align:left;">Displays the current cache folder location.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="UI-Scaling"></a></p>
+
+<h2>UI Scaling</h2>
+
+<p>The <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a class="tooltipMoreInfoLink" href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> Scaling preferences let you define how to scale <strong>UI</strong> text and icons in the Unity Editor.</p>
+
+<figure>
+<img src="../uploads/Main/PrefsUIScaling.png" alt="UI Scaling scope on the Preferences window">
+<figcaption>UI Scaling scope on the Preferences window</figcaption>
+</figure>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Property</strong></th>
+	<th style="text-align:left;"><strong>Function</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Use default desktop setting</strong></td>
+	<td style="text-align:left;">Enable this setting to use your computer’s default settings for scaling UI text and icons.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Current scaling</strong></td>
+	<td style="text-align:left;">Displays the current scaling value.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Use custom scaling value</strong></td>
+	<td style="text-align:left;">Override the scaling value.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="Custom"></a></p>
+
+<h2>Custom package preferences</h2>
+
+<p>Some Asset Store or Unity packages add their own custom preferences to the <strong>Preferences</strong> window. Generally these use the package name as the preferences category. In this example, you can see the <a href="https://docs.unity3d.com/Packages/com.unity.cinemachine@latest">Cinemachine package</a> preferences:</p>
+
+<figure>
+<img src="../uploads/Main/PrefsPackages.png" alt="Package-specific preferences appear in the scope list">
+<figcaption>Package-specific preferences appear in the scope list</figcaption>
+</figure>
+
+<p>For information about a specific package’s preferences, see the documentation for that package. This section contains documentation for standard Unity preferences only.</p>
+
+<hr>
+
+<ul>
+<li><p><span class="page-edit">2020–05–04 Page amended
+</span></p></li>
+<li><p><span class="page-history">Interaction Mode Preferences added in 2019.3</span></p></li>
+<li><p><span class="page-history">Added Analysis and UI Scaling tabs, and removed Grid Brush and Tile Palette tabs in <a href="https://docs.unity3d.com/2019.3/Documentation/Manual/30_search.html?q=newin20193">2019.3</a></span></p></li>
+<li><p><span class="page-history">Added Gradle for Android options to the External Tools section in <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a>.</span></p></li>
+<li><p><span class="page-history">Removed keys and added further options to the Tile Palette Preferences in <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/30_search.html?q=newin20191">2019.1</a>. <span class="search-words">NewIn20191</span></span></p></li>
+<li><p><span class="page-history">Selection outline color preference for child GameObjects added in 2018.3</span></p></li>
+<li><p><span class="page-history">New unified settings and other updates for Unity 2018.3</span></p></li>
+<li><p><span class="page-history">Script Changes While Playing and Device To Use drop-down menus added in Unity 2018.2</span></p></li>
+<li><p><span class="page-history">Updated list of external script editors in 2018.1</span></p></li>
+</ul>
+<!-- area:authoring -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="2DAnd3DModeSettings.html"></a></span><div class="tip">2D and 3D mode settings</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Presets.html"></a></span><div class="tip"> Presets</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

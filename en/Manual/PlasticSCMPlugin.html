@@ -1,0 +1,602 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Plastic SCM plugin for Unity (beta)</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PlasticSCMPlugin.html">English</a></li>
+<li><a href="/cn/current/Manual/PlasticSCMPlugin.html">中文</a></li>
+<li><a href="/ja/current/Manual/PlasticSCMPlugin.html">日本語</a></li>
+<li><a href="/es/current/Manual/PlasticSCMPlugin.html">Español</a></li>
+<li><a href="/kr/current/Manual/PlasticSCMPlugin.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PlasticSCMPlugin.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/PlasticSCMPlugin.html">English</a></li>
+<li><a href="/cn/current/Manual/PlasticSCMPlugin.html">中文</a></li>
+<li><a href="/ja/current/Manual/PlasticSCMPlugin.html">日本語</a></li>
+<li><a href="/es/current/Manual/PlasticSCMPlugin.html">Español</a></li>
+<li><a href="/kr/current/Manual/PlasticSCMPlugin.html">한국어</a></li>
+<li><a href="/ru/current/Manual/PlasticSCMPlugin.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html"> Working in Unity</a></li>
+<li><a href="EditorFeatures.html">Editor Features</a></li>
+<li><a href="VersionControl.html">Version Control</a></li>
+<li> Plastic SCM plugin for Unity (beta)</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="plasticSCMIntegration.html"></a></span><div class="tip"> Plastic SCM Integration</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ExternalVersionControlSystemSupport.html"></a></span><div class="tip">Using external version control systems with Unity</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Plastic SCM plugin for Unity (beta)</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Plastic SCM provides <span class="tooltip"><strong>version control</strong><span class="tooltiptext">A system for managing file changes. You can use Unity in conjunction with most common version control tools, including Perforce, Git, Mercurial and PlasticSCM. <a class="tooltipMoreInfoLink" href="VersionControl.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#VersionControl">Glossary</a></span></span></span> functionality for teams to collaborate on Unity projects.</p>
+
+<p>The Plastic SCM plugin for Unity (beta) provides source control functionality from within the Unity Editor. The <strong>Plastic SCM</strong> window in the Unity Editor displays a list of new or changed files in your local project. From here you can check these files into Plastic SCM.</p>
+
+<p>Any files you update in Unity are automatically checked out. This prevents other users from updating them until you check them back in.</p>
+
+<p>The Plastic SCM plugin for Unity (beta) is supported for Unity 2018.4 LTS and above for macOS and Windows.
+<strong>Note</strong>: The plugin is not currently supported for Unity 2020.1 and above on Windows. Unity will add support for these versions in a future version of the plugin.</p>
+
+<h2>Getting started with Plastic SCM</h2>
+
+<h3>Installing the Plastic SCM plugin for Unity</h3>
+
+<p>The Plastic SCM plugin for Unity is available on the <span class="tooltip"><a class="tooltipMoreInfoLink" href="https://assetstore.unity.com/packages/slug/169442">Asset Store</a><span class="tooltiptext">A growing library of free and commercial assets created by Unity and members of the community. Offers a wide variety of assets, from textures, models and animations to whole project examples, tutorials and Editor extensions. <a href="AssetStore.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AssetStore">Glossary</a></span></span></span>.
+To install the Plastic SCM plugin:</p>
+
+<ol>
+<li>Select <strong>Assets</strong> &gt; <strong>Import Package</strong> &gt; <strong>Custom Package…</strong>
+</li>
+<li>Select the PlasticSCMForUnity package.</li>
+<li>In the <strong>Import Unity Package</strong> window:
+
+<ol>
+<li>Select <strong>All</strong>.</li>
+<li>Select <strong>Import</strong>.</li>
+</ol>
+</li>
+</ol>
+
+<p>The Plastic SCM plugin is now enabled on your project. To access the <strong>Plastic SCM</strong> window in the Unity Editor, select <strong>Window</strong> &gt; <strong>Plastic SCM</strong>.</p>
+
+<h3>Creating a new workspace</h3>
+
+<p>To use the Plastic SCM plugin on a Unity project, you must create a workspace for the project in the <strong>Plastic SCM</strong> window or in the Plastic SCM GUI.</p>
+
+<p>To create a new workspace for your project in the Unity Editor:
+1. Select <strong>Window</strong> &gt; <strong>Plastic SCM</strong>.
+2. Specify the repository name, workspace name and path to the project. By default, the existing project path and name are used.
+3. Choose whether you want to use Plastic SCM as a developer (for full Plastic SCM functionality) or an artist (for a simplified workflow).</p>
+
+<p>Once you’ve created your workspace, the <strong>Plastic SCM</strong> window displays your project files. Additionally, Plastic SCM automatically creates an <span class="tooltip"><a class="tooltipMoreInfoLink" href="#ignore">ignore file</a><span class="tooltiptext">A special file used in many Version Control Systems which specifies files to be excluded from being placed under version control. In Unity projects there are a number of files which could be excluded from version control, and using an Ignore File is the best way to achieve this. <a href="ExternalVersionControlSystemSupport.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Ignorefile">Glossary</a></span></span></span> in the workspace, that is, your project folder.</p>
+
+<h3>Committing your project files to source control</h3>
+
+<p>Once you’ve connected your project to a Plastic SCM workspace, the <strong>Pending Changes</strong> tab of the <strong>Plastic SCM</strong> window displays all your existing project files as <strong>Added and private</strong>. To include these files in the workspace, you must <a href="#checking">check them in</a>.</p>
+
+<p>Once you have checked in your files, the <strong>Pending changes</strong> tab refreshes and no longer lists the files you have checked in. Additionally, the Plastic SCM GUI now displays:
+* Your project files in the Workspace Explorer
+* Your latest check-in in the Changesets view</p>
+
+<h2>Using the Plastic SCM plugin</h2>
+
+<p>The Plastic SCM plugin enables the <strong>Plastic SCM</strong> window in the Unity Editor. Use the <strong>Plastic SCM</strong> window to manage your file changes, including:
+* Link your project to source control
+* Check-in files
+* Undo changes
+* Compare file revisions</p>
+
+<p>The <strong>Plastic SCM</strong> window displays a list of new and changed files in your project. When you add a new file, or save changes to an existing file, the <strong>Plastic SCM</strong> window automatically displays the affected files.</p>
+
+<p>To open the <strong>Plastic SCM</strong> window, select <strong>Window</strong> &gt; <strong>Plastic SCM</strong>.</p>
+
+<p><a name="checking"></a></p>
+
+<h3>Checking in files</h3>
+
+<p>To check in files:</p>
+
+<ol>
+<li>Select <strong>Window</strong> &gt; <strong>Plastic SCM</strong>.</li>
+<li>In the <strong>Plastic SCM</strong> window, select the files you want to check in.</li>
+<li>In the text field, enter a comment to explain your changes.</li>
+<li>Select <strong>Checkin</strong>.</li>
+</ol>
+
+<p>Your changes are listed in the Plastic SCM GUI, in the <strong>Changesets</strong> view.</p>
+
+<p><a name="ignore"></a></p>
+
+<h3>Ignoring files</h3>
+
+<p>When you create a workspace using the Plastic SCM plugin, it automatically creates an ignore file in your workspace. This contains a default list of file types and paths to exclude from source control.
+If there are other files in your project that you want to exclude from the shared repository, add them to the ignore file:</p>
+
+<ol>
+<li>In the <strong>Plastic SCM</strong> window, right-click the file you want to ignore.</li>
+<li>Select <strong>Add to ignored list</strong>.</li>
+<li>Select the file name.</li>
+</ol>
+
+<p>The files you choose to ignore are removed from the <strong>Pending changes</strong> list.
+You can ignore specific file names, whole folders, and all files with a specific extension.</p>
+
+<p>Learn more about <a href="http://blog.plasticscm.com/2020/01/definitive-ignoreconf-for-unity-projects.html">ignore files</a>.</p>
+
+<h3>Viewing file changes</h3>
+
+<p>To compare an updated file with the previous version, right-click the file in the <strong>Plastic SCM</strong> window and select <strong>Diff</strong>. This opens the <strong>Differences</strong> view, which compares the repository source with your local copy. This is a text-only view.</p>
+
+<h3>Reverting file changes</h3>
+
+<p>If you’ve made changes in your project that you don’t want to keep, you can revert back to the previous version, that is, the latest checked-in version. To revert changes to a file, select the file in the <strong>Pending changes</strong> tab and select <strong>Undo changes</strong>.</p>
+
+<h2>Migrating to Plastic SCM</h2>
+
+<p>Plastic SCM provides a migration wizard to help you migrate projects from Collaborate to Plastic SCM. To migrate a project to Plastic SCM:</p>
+
+<ol>
+<li>Go to the <a href="https://www.plasticscm.com/plasticscm-cloud-edition/migrate-unity-projects/unity-login">migration wizard</a>.</li>
+<li>Enter your Unity ID login details.
+
+<ol>
+<li>Select <strong>Log in</strong>.</li>
+</ol>
+</li>
+<li>Create a Plastic SCM organization.
+
+<ol>
+<li>Select a region in the region dropdown.</li>
+<li>Select <strong>Next</strong>.</li>
+</ol>
+</li>
+<li>Choose the projects to migrate.
+
+<ol>
+<li>Select <strong>Next</strong>.</li>
+</ol>
+</li>
+<li>Select the team members from your organization to join Plastic SCM.
+
+<ol>
+<li>Select <strong>Next</strong>.</li>
+</ol>
+</li>
+<li>Select <strong>Confirm</strong>.</li>
+</ol>
+
+<p>Once you’ve completed the steps in the migration wizard, Plastic SCM migrates your projects from Collaborate to Plastic SCM. Plastic SCM also sends email invitations to the invited team members to get started with Plastic SCM.</p>
+
+<h2>Plastic SCM window</h2>
+
+<p>Use the <strong>Plastic SCM</strong> window in the Unity Editor to manage version control for your project.
+If your project is not already connected to Plastic SCM, the <strong>Plastic SCM</strong> window displays a view to create a new workspace.
+The table below describes the fields of this view.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Field</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Repository name</strong></td>
+	<td style="text-align:left;">Name of the repository. By default, this is the name of your project.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Workspace name</strong></td>
+	<td style="text-align:left;">Name of the workspace. By default, this is the name of your project.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Path on disk</strong></td>
+	<td style="text-align:left;">The path to your project. By default, this is the location of your open project.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Developer</strong> radio button</td>
+	<td style="text-align:left;">Select this option for full Plastic SCM functionality, including merging and pushing and pulling branches.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Artist</strong> radio button</td>
+	<td style="text-align:left;">Select this option for a simpler workflow of checking in files, without merges or multiple branches.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Create workspace</strong> button</td>
+	<td style="text-align:left;">Create a workspace for your project with the details you’ve provided.</td>
+</tr>
+</tbody>
+</table>
+
+<p>The table below describes the <strong>Plastic SCM</strong> window in the Unity Editor.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Field</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Branch</strong></td>
+	<td style="text-align:left;">Displays the branch of the workspace you’re currently working on.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Pending changes</strong> tab</td>
+	<td style="text-align:left;">Displays a list of changed files in your project.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Incoming changes</strong> tab</td>
+	<td style="text-align:left;">Displays external changes in the workspace that your local version of the project does not yet have.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Launch branch explorer</strong> (Developer mode only)</td>
+	<td style="text-align:left;">Click to open the branch explorer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Launch Plastic</strong> (Developer mode only)</td>
+	<td style="text-align:left;">Click to open Plastic SCM.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Configure Gluon</strong> (Artist mode only)</td>
+	<td style="text-align:left;">Click to open Plastic Gluon in configuration mode.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Launch Gluon</strong> (Artist mode only)</td>
+	<td style="text-align:left;">Click to open Plastic Gluon.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Pending changes tab</h3>
+
+<p>The <strong>Pending changes</strong> tab displays new and changed files in your local version of the project. Use this tab to check in your files to the Plastic workspace, exclude files from version control and compare changed files with the previously checked-in version.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Field</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Checkin changes</strong></td>
+	<td style="text-align:left;">Commit the selected files to the workspace. You must enter a comment in the text box before you can check in your changes.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Undo changes</strong></td>
+	<td style="text-align:left;">Undo local changes made to the selected files.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Keep items locked</strong> (Artist mode only)</td>
+	<td style="text-align:left;">Keeps the items locked after the check-in operation. This is useful, for example, if you want to make multiple changes to a file but check them in separately as individual changes. To unlock the items, deselect this button.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Options</strong></td>
+	<td style="text-align:left;">Click to open the <a href="#options">Options</a> window.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Item</strong></td>
+	<td style="text-align:left;">The name and path of the file. Files are grouped by the type of change, for example:<br>Changed<br>Deleted<br>Added</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Status</strong></td>
+	<td style="text-align:left;">The status of the file, for example:<br>Changed<br>Removed locally<br>Private</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Size</strong></td>
+	<td style="text-align:left;">The size of the file.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Extension</strong></td>
+	<td style="text-align:left;">The file extension.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Type</strong></td>
+	<td style="text-align:left;">The file type.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Date modified</strong></td>
+	<td style="text-align:left;">Date and time of the change.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Repository</strong></td>
+	<td style="text-align:left;">The repository where the change was made, that is, the local repository or remote repository if another user has made the change.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Learn more about the <a href="https://www.plasticscm.com/documentation/gui/plastic-scm-version-control-gui-guide#Chapter4:ThePendingchangesView">Pending changes</a> view.</p>
+
+<h3>Incoming changes tab</h3>
+
+<p>The <strong>Incoming changes</strong> tab displays external changes in the workspace that your local version of the project does not yet have.
+Use this tab to get the latest changes from the remote workspace.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Field</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Update workspace</strong></td>
+	<td style="text-align:left;">Updates your project with external changes from the workspace.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Path</strong></td>
+	<td style="text-align:left;">The file path and name.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Last edited by</strong> (Artist mode only)</td>
+	<td style="text-align:left;">The user who checked in the change.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Size</strong></td>
+	<td style="text-align:left;">The size of the file.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Date modified</strong> (Artist mode only)</td>
+	<td style="text-align:left;">The date of the file’s most recent check in.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Author</strong> (Developer mode only)</td>
+	<td style="text-align:left;">The user who checked in the change.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Details</strong> (Developer mode only)</td>
+	<td style="text-align:left;">Describes what the update operation will do with the related change.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">
+<strong>Resolution method</strong> (Developer mode only)</td>
+	<td style="text-align:left;">Shows the resolution method the user selected when solving the directory conflicts.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Learn more about the <a href="http://blog.plasticscm.com/2019/10/incoming-changes.html">Incoming Changes</a> feature.</p>
+
+<p><a name="options"></a></p>
+
+<h3>Options window</h3>
+
+<p>Use the <strong>Options</strong> window to control the behavior of the <strong>Plastic SCM</strong> window.
+The table below describes the options for the <strong>Plastic SCM</strong> window.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Field</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<strong>What to find</strong> tab</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show checkouts</strong></td>
+	<td style="text-align:left;">Shows files that:<br>You have explicitly checked out in Plastic<br>You have moved<br>Have a merge in progress</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Find changed files in the workspace</strong></td>
+	<td style="text-align:left;">Checks the workspace directory structure to identify changed files via the timestamp.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Check the content to determine files as changed, not just timestamp</strong></td>
+	<td style="text-align:left;">Calculates the hash of files with updated timestamps to ensure the file content has actually changed.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<strong>What to show</strong> tab</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Auto-refresh</strong></td>
+	<td style="text-align:left;">Plastic automatically refreshes the Pending Changes list as needed to avoid manual refreshing.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show private files</strong></td>
+	<td style="text-align:left;">Show files that are not committed to source control, such as new files or tool-generated content.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show ignored files</strong></td>
+	<td style="text-align:left;">Show files that you’ve added to the ignored list.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show hidden files</strong></td>
+	<td style="text-align:left;">Show files that you’ve added to the hidden list.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Show deleted files and directories</strong></td>
+	<td style="text-align:left;">Show files that you’ve deleted manually in the workspace outside of Plastic control.</td>
+</tr>
+<tr>
+	<td style="text-align:left;" colspan="2">
+<strong>Move detection</strong> tab</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Find moved and renamed files and directories</strong></td>
+	<td style="text-align:left;">Searches the workspace for possible renamed or moved files, for example if one file has been deleted and another file has been added.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Match binary files only when they have the same extension</strong></td>
+	<td style="text-align:left;">Restricts file matching for binary files to files with the same extension.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Match text files only when they have the same extension</strong></td>
+	<td style="text-align:left;">Restricts file matching for text files to files with the same extension.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Similarity percentage</strong></td>
+	<td style="text-align:left;">Defines how similar files need to be to be considered as moved or renamed.<br>For text files, this percentage relates to the content.<br>For binary files, this percentage relates to the file size.<br>For directory structures, this relates to children as a percentage of the total number of directory entries.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Learn more about the <a href="https://www.plasticscm.com/documentation/gui/plastic-scm-version-control-gui-guide#ChangingtheSetofDisplayedRevisions">Options</a> window.</p>
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="plasticSCMIntegration.html"></a></span><div class="tip"> Plastic SCM Integration</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="ExternalVersionControlSystemSupport.html"></a></span><div class="tip">Using external version control systems with Unity</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

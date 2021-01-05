@@ -1,0 +1,435 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual: Upgrading to Unity 2020.1</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide20201.html">English</a></li>
+<li><a href="/cn/current/Manual/UpgradeGuide20201.html">中文</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide20201.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide20201.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide20201.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide20201.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UpgradeGuide20201.html">English</a></li>
+<li><a href="/cn/current/Manual/UpgradeGuide20201.html">中文</a></li>
+<li><a href="/ja/current/Manual/UpgradeGuide20201.html">日本語</a></li>
+<li><a href="/es/current/Manual/UpgradeGuide20201.html">Español</a></li>
+<li><a href="/kr/current/Manual/UpgradeGuide20201.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UpgradeGuide20201.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html"> Working in Unity</a></li>
+<li><a href="UpgradeGuides.html">Upgrading Unity</a></li>
+<li>Upgrading to Unity 2020.1</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20202.html"></a></span><div class="tip">Upgrading to Unity 2020.2</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide2019LTS.html"></a></span><div class="tip">Upgrading to Unity 2019 LTS</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Upgrading to Unity 2020.1</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page lists changes in the Unity 2020.1 version which might affect existing projects when you upgrade from a 2019 version to 2020.1.</p>
+
+<h2>All Mesh vertices are transformed for better UV unwrapping</h2>
+
+<p>Unity might change the <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Mesh">Glossary</a></span></span></span> UVs of <span class="tooltip"><strong>3D objects</strong><span class="tooltiptext">A 3D GameObject such as a cube, terrain or ragdoll. <a href="GameObjects.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#3DObject">Glossary</a></span></span></span> you import to a project.</p>
+
+<p>Unity transforms the positions of all imported Mesh vertices to scale in Unity <a href="BestPracticeMakingBelievableVisuals1.html">units</a> automatically.</p>
+
+<p>From Unity 2020.1, Unity <a class="tooltipMoreInfoLink" href="LightingGiUvs-GeneratingLightmappingUVs.html">generates lightmap UVs</a> using the transformed Mesh vertices, if you’ve enabled <strong>Generate <strong>Lightmap</strong> UVs</strong>. Previous to Unity 2020.1, Unity generated <span class="tooltip"><strong>lightmap</strong><span class="tooltiptext">A pre-rendered texture that contains the effects of light sources on static objects in the scene. Lightmaps are overlaid on top of scene geometry to create the effect of lighting. <a href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmap">Glossary</a></span></span></span> UV maps using the original imported Mesh vertex positions, before the automatic position transformation.</p>
+
+<p>UVs generated after the vertex transformation are more accurate to the original shape and scale of your imported object.</p>
+
+<h2>All Asset bundle hashes are different so all bundles are built</h2>
+
+<p>From Unity 2020.1, Unity generates a different hash for all asset bundles in your project. This ensures all bundles are built, including the ones with the same content but with different loadable paths.</p>
+
+<h2>The multiplayer HLAPI package is not automatically installed in project upgrades</h2>
+
+<p>From Unity 2020.1, install the multiplayer HLAPI package from the Package Manager if the project you’re upgrading has <span class="tooltip"><strong>scripts</strong><span class="tooltiptext">A piece of code that allows you to create your own Components, trigger game events, modify Component properties over time and respond to user input in any way you like. <a class="tooltipMoreInfoLink" href="CreatingAndUsingScripts.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scripts">Glossary</a></span></span></span> that use the multiplayer HLAPI.</p>
+
+<p>From Unity 2019.1 to 2019.4, Unity automatically installed the multiplayer HLAPI package when you upgraded a project created in Unity 2018.4 or earlier.</p>
+
+<h2>Improved LOD baking with the Progressive Lightmapper</h2>
+
+<p>Unity’s Progressive Lightmapper consists of the CPU and GPU <span class="tooltip"><strong>lightmappers</strong><span class="tooltiptext">A tool in Unity that bakes lightmaps according to the arrangement of lights and geometry in your scene. <a class="tooltipMoreInfoLink" href="Lightmapping.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Lightmapper">Glossary</a></span></span></span>.</p>
+
+<p>From Unity 2020.1, the GPU lightmapper supports <a href="LevelOfDetail.html">level of detail (LOD)</a> baking.</p>
+
+<p>The CPU lightmapper uses the same baking algorithm and this allows Unity to fully use all available CPU cores for faster baking times in <span class="tooltip"><strong>Scenes</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span> with <span class="tooltip"><strong>LOD</strong><span class="tooltiptext">The <em>Level Of Detail</em> (LOD) technique is an optimization that reduces the number of triangles that Unity has to render for a GameObject when its distance from the Camera increases. Each LOD level has either a Mesh with a <strong>Mesh Renderer</strong> component (<em>Mesh LOD level</em>) or a <strong>Billboard asset</strong> with a <strong>Billboard Renderer</strong> component (<em>Billboard LOD level</em>). Typically a single GameObject has three or four Mesh LOD levels and one optional Billboard LOD level to represent the same GameObject with decreasing detail in the geometry. <a href="LevelOfDetail.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#LOD">Glossary</a></span></span></span> values above 0.</p>
+
+<p>To upgrade the LOD in your Scene, clear the baked lightmap and then regenerate it. To do this:</p>
+
+<ol>
+<li>In the Unity Editor, Open <strong>Window</strong> &gt; <strong>Rendering</strong> &gt; <strong>Lighting Settings.</strong>
+</li>
+<li>In <strong>Debug Settings</strong>, click the drop-down menu on the <strong>Generate Lighting</strong> button, then click <strong>Clear Baked Data</strong>.<br>
+ <img src="../uploads/Main/upgrade-guide-clear-baked-data.png" alt="">
+</li>
+<li>Click <strong>Generate Lighting</strong>.</li>
+</ol>
+
+<h2>AR/VR Platforms Support</h2>
+
+<p>This document provides a guide for upgrading existing <span class="tooltip"><strong>AR</strong><span class="tooltiptext">Augmented Reality (AR) uses computer graphics or video composited on top of a live video feed to augment the view and create interaction with real and virtual objects.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AR">Glossary</a></span></span></span>/VR projects that are using Unity versions prior to Unity 2020 releases.</p>
+
+<h3>Enable AR/VR in Project Settings</h3>
+
+<p>When upgrading your existing project to Unity 2020 releases and later, you should receive a notification that states the deprecated <span class="tooltip"><strong>XR</strong><span class="tooltiptext">An umbrella term encompassing Virtual Reality (VR), Augmented Reality (AR) and Mixed Reality (MR) applications. Devices supporting these forms of interactive applications can be referred to as XR devices. <a class="tooltipMoreInfoLink" href="XR.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#XR">Glossary</a></span></span></span> integration (previously in Player/XR Settings) has been disabled.</p>
+
+<figure>
+<img src="../uploads/Main/Upgrade2020-xr-image-1.png" alt="During Asset import, before the Unity Editor is launched.">
+<figcaption>During Asset import, before the Unity Editor is launched.</figcaption>
+</figure>
+
+<p>To enable AR/VR, use XR <span class="tooltip"><strong>Plug-in</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plug-ins you can use in Unity: Managed plug-ins (managed .NET assemblies created with tools like Visual Studio) and Native plug-ins (platform-specific native code libraries). <a class="tooltipMoreInfoLink" href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Plug-in">Glossary</a></span></span></span> Management in <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span> and select your target platforms.</p>
+
+<figure>
+<img src="../uploads/Main/Upgrade2020-xr-image-2.png" alt="Note: We recommend fixing any upgrade-related script errors before installing XR Plug-in Management.">
+<figcaption><strong>Note:</strong> We recommend fixing any upgrade-related script errors before installing XR Plug-in Management.</figcaption>
+</figure>
+
+<h4>Virtual reality</h4>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Platform</strong></th>
+	<th style="text-align:left;"><strong>Build target</strong></th>
+	<th style="text-align:left;"><strong>Plug-in provider</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Oculus Quest</td>
+	<td style="text-align:left;">Android</td>
+	<td style="text-align:left;">Oculus</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Oculus Rift &amp; Rift S</td>
+	<td style="text-align:left;">Desktop</td>
+	<td style="text-align:left;">Oculus</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Windows Mixed Reality VR</td>
+	<td style="text-align:left;">UWP</td>
+	<td style="text-align:left;">Windows Mixed Reality</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Augmented reality</h4>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Platform</strong></th>
+	<th style="text-align:left;"><strong>Build target</strong></th>
+	<th style="text-align:left;"><strong>Plug-in provider</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">ARCore devices</td>
+	<td style="text-align:left;">Android</td>
+	<td style="text-align:left;">ARCore</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ARKit devices</td>
+	<td style="text-align:left;"><span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a class="tooltipMoreInfoLink" href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span></td>
+	<td style="text-align:left;">ARKit</td>
+</tr>
+<tr>
+	<td style="text-align:left;">HoloLens</td>
+	<td style="text-align:left;">UWP</td>
+	<td style="text-align:left;">Windows Mixed Reality</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Magic Leap One</td>
+	<td style="text-align:left;">Lumin</td>
+	<td style="text-align:left;">Magic Leap</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Use optimal Player settings</h3>
+
+<p>Make sure your project’s <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a class="tooltipMoreInfoLink" href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> and quality settings are optimal. The tables below detail recommended settings by target platform.</p>
+
+<h4>Virtual reality</h4>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Platform</strong></th>
+	<th style="text-align:left;"><strong>Graphics API</strong></th>
+	<th style="text-align:left;"><strong>Stereo <span class="tooltip"><strong>rendering mode</strong><span class="tooltiptext">A Standard Shader Material parameter that allows you to choose whether the object uses transparency, and if so, which type of blending mode to use. <a class="tooltipMoreInfoLink" href="StandardShaderMaterialParameterRenderingMode.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RenderingMode">Glossary</a></span></span></span></strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Oculus Quest</td>
+	<td style="text-align:left;">OpenGL ES 3.0</td>
+	<td style="text-align:left;">Multiview</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Oculus Rift &amp; Rift S</td>
+	<td style="text-align:left;">DX11</td>
+	<td style="text-align:left;">Single Pass Instanced</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Windows Mixed Reality VR</td>
+	<td style="text-align:left;">DX11</td>
+	<td style="text-align:left;">Single Pass Instanced</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Augmented reality</h4>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Platform</strong></th>
+	<th style="text-align:left;"><strong>Graphics API</strong></th>
+	<th style="text-align:left;"><strong>Stereo rendering mode</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">ARCore devices</td>
+	<td style="text-align:left;">OpenGL ES 3.0</td>
+	<td style="text-align:left;">N/A</td>
+</tr>
+<tr>
+	<td style="text-align:left;">ARKit devices</td>
+	<td style="text-align:left;">Metal</td>
+	<td style="text-align:left;">N/A</td>
+</tr>
+<tr>
+	<td style="text-align:left;">HoloLens</td>
+	<td style="text-align:left;">DX11</td>
+	<td style="text-align:left;">Single Pass Instanced</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Magic Leap One</td>
+	<td style="text-align:left;">OpenGL ES 3.2</td>
+	<td style="text-align:left;">Single Pass Instanced</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<strong>Note:</strong> “Single Pass” is no longer a rendering mode option, as “Single Pass Instanced” is more performant. If you are upgrading from “single pass” to “single pass instanced”, you may have to update custom <span class="tooltip"><strong>shaders</strong><span class="tooltiptext">A small script that contains the mathematical calculations and algorithms for calculating the Color of each pixel rendered, based on the lighting input and the Material configuration. <a class="tooltipMoreInfoLink" href="Shaders.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Shader">Glossary</a></span></span></span> in your project.</p>
+
+<h3>Render Pipeline</h3>
+
+<p>The built-in render pipeline, Universal Render Pipeline, and High-Definition Render Pipeline are all supported in 2020.1. There are benefits to using our latest scriptable render pipelines, but it is not a requirement in this upgrade process.</p>
+
+<p>
+<strong>Note:</strong> If you are using 3rd-party assets and/or custom shaders, you may need to update assets with shaders compatible with “single passed instanced”.</p>
+
+<h3>Camera in Scene</h3>
+
+<p>If you are using the XR Interaction Toolkit, no change is required for <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> tracking.</p>
+
+<p>If you are using a 3rd-party toolkit for camera tracking (OVRCameraRig, etc), make sure you have updated to the latest version. Note that upgrading to latest versions of 3rd-party tools might cause script errors, please reference 3rd-party documentation.</p>
+
+<p>If you are using a Tracked Pose Driver for camera tracking, see our <a href="https://docs.unity3d.com/Manual/configuring-project-for-xr.html">Migration Guide</a>.</p>
+
+<h3>Upgrading 3rd-Party Toolkits</h3>
+
+<p>If you are using any toolkits developed by our supported platforms (Oculus Integration package, MRTK, MLTK), make sure you’re using the latest version. Note that upgrading to the latest versions of 3rd-party tools might cause upgrade-related script errors, and you may need to reference corresponding documentation of those toolkits.</p>
+
+<h3>FAQ</h3>
+
+<h4>Why can’t I install XR Plug-in Management in Project Settings?</h4>
+
+<p>You may have upgrade-related script errors that need to be fixed before installing XR Plug-in Management.</p>
+
+<h4>Why are OpenVR and Google Cardboard missing from XR Plug-in Management?</h4>
+
+<p>The OpenVR and Google Cardboard XR Plug-ins are developed and maintained by Valve and Google, respectively. Links to installation instructions for both platforms can be found in our <a href="https://docs.unity3d.com/Manual/VROverview.html">documentation</a>.</p>
+
+<h4>Is the Unity input system supported?</h4>
+
+<p>Yes, our supported platform integrations are compatible with the Unity input system.</p>
+
+<h4>Are the Universal Render Pipeline and High-Definition Render Pipeline supported?</h4>
+
+<p>Yes, our supported platform integrations are compatible with both the Universal Render Pipeline and High-Definition Render Pipeline.</p>
+
+<h4>Why can’t I view the XR Interaction Toolkit in Package Manager?</h4>
+
+<p>The XR Interaction Toolkit is still in preview. To view <span class="tooltip"><strong>preview packages</strong><span class="tooltiptext">A <em>preview</em> package is in development and not yet ready for production. A package in preview might be at any stage of development, from the initial stages to near completion.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Previewpackage">Glossary</a></span></span></span> in 2020.1, you must enable it using the Package Manager tab in Project Settings. Once enabled, <strong>preview packages</strong> will be displayed in the Unity Registry of the Package Manager.</p>
+
+<h4>Why doesn’t Play in Editor work for my provider?</h4>
+
+<p>Play in editor support only works for providers that have standalone support for their provider. If the provider is not listed in the standalone section of the XR Plug-in Management provider selection <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a class="tooltipMoreInfoLink" href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span> then Play in Editor will not work. Check your provider documentation as they may support some other means of integrating Play in Editor support.</p>
+
+<h4>Why can’t I use “single pass” rendering mode?</h4>
+
+<p>“Single pass” is no longer supported in 2020.1 as “single pass instanced” is most performant. If your project used “single pass” rendering, you may have to update shaders in your project. Third-party libraries that use custom shaders for “single pass” may also need to be updated. You can choose to upgrade from “single pass” to “multipass” and shaders should work, but we recommend targeting “single pass instanced” for maximum performance.</p>
+
+<h4>How do I configure graphics API?</h4>
+
+<p>Graphics API is configured in <span class="tooltip"><strong>Player settings</strong><span class="tooltiptext">Settings that let you set various player-specific options for the final game built by Unity. <a class="tooltipMoreInfoLink" href="class-PlayerSettings.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayerSettings">Glossary</a></span></span></span> (“Edit” → “Project Settings” → “Player”).</p>
+
+<h4>How do I configure stereo rendering mode?</h4>
+
+<p>Rendering mode is configured in provider-specific settings nested under XR Plug-in Management in Project Settings.</p>
+
+<h4>Why am I getting errors with renderScale using the XR Settings API?</h4>
+
+<p>renderScale has been removed and replaced with eyeTextureResolutionScale but that has been a script updater task since 2019.3. If you are upgrading from a Unity version prior to 2019.3, you will have to manually replace renderScale with eyeTextureResolutionScale.</p>
+
+<h4>Why isn’t input from my controllers (e.g. button presses) recognized by the XR Interaction Toolkit?</h4>
+
+<p>The headset needs to be detected before any device inputs can be detected. One common issue when testing, is that many people let their headsets rest on a table while debugging their interactions. The controllers won’t get recognized until you wear the headset (or the proximity sensor inside the headset gets activated). If you don’t get any input from your device, put on your headset after starting the app, or cover the proximity sensor.</p>
+
+<h4>Can I use the wide-angle camera on iPhones in AR Foundation apps?</h4>
+
+<p>ARKit does not provide the option of changing FOV of the camera.</p>
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UpgradeGuide20202.html"></a></span><div class="tip">Upgrading to Unity 2020.2</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UpgradeGuide2019LTS.html"></a></span><div class="tip">Upgrading to Unity 2019 LTS</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

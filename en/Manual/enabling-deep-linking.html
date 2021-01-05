@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Enabling deep linking</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/enabling-deep-linking.html">English</a></li>
+<li><a href="/cn/current/Manual/enabling-deep-linking.html">中文</a></li>
+<li><a href="/ja/current/Manual/enabling-deep-linking.html">日本語</a></li>
+<li><a href="/es/current/Manual/enabling-deep-linking.html">Español</a></li>
+<li><a href="/kr/current/Manual/enabling-deep-linking.html">한국어</a></li>
+<li><a href="/ru/current/Manual/enabling-deep-linking.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/enabling-deep-linking.html">English</a></li>
+<li><a href="/cn/current/Manual/enabling-deep-linking.html">中文</a></li>
+<li><a href="/ja/current/Manual/enabling-deep-linking.html">日本語</a></li>
+<li><a href="/es/current/Manual/enabling-deep-linking.html">Español</a></li>
+<li><a href="/kr/current/Manual/enabling-deep-linking.html">한국어</a></li>
+<li><a href="/ru/current/Manual/enabling-deep-linking.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">Platform development</a></li>
+<li> Enabling deep linking</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityasaLibrary.html"></a></span><div class="tip"> Using Unity as a Library in other applications</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Standalone.html"></a></span><div class="tip">Standalone</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Enabling deep linking</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Deep links are links that point directly to content within your application. Unity uses the <a href="../ScriptReference/Application-absoluteURL.html"><code>Application.absoluteURL</code></a> property and <a href="Application-deepLinkActivated.html"><code>Application.deepLinkActivated</code></a> event to support deep links on the following platforms:</p>
+
+<ul>
+<li>Android</li>
+<li>iOS</li>
+<li><span class="tooltip"><strong>Universal Windows Platform</strong><span class="tooltiptext">An IAP feature that supports Microsoft’s In App Purchase simulator, which allows you to test IAP purchase flows on devices before publishing your application. <a class="tooltipMoreInfoLink" href="UnityIAPUniversalWindows.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UniversalWindowsPlatform">Glossary</a></span></span></span> (UWP)</li>
+</ul>
+
+<p>Unity calls the <a href="Application-deepLinkActivated.html"><code>Application.deepLinkActivated</code></a> event when an application is activated from a deep link URL. To process deep links in this scenario, you can:</p>
+
+<ul>
+<li>Check <a href="../ScriptReference/Application-absoluteURL.html"><code>Application.absoluteURL</code></a> when the application starts.</li>
+<li>Subscribe to the <a href="../ScriptReference/Application-deepLinkActivated.html"><code>Application.deepLinkActivated</code></a> event while the application is running.</li>
+</ul>
+
+<p>For example, you can attach the code below to a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#GameObject">Glossary</a></span></span></span> in your startup <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Scene">Glossary</a></span></span></span>:</p>
+
+<pre><code class="lang-csharp">public class ProcessDeepLinkMngr : MonoBehaviour
+{
+    public static ProcessDeepLinkMngr Instance { get; private set; }
+    public string deeplinkURL;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;                
+            Application.deepLinkActivated += onDeepLinkActivated;
+            if (!String.IsNullOrEmpty(Application.absoluteURL))
+            {
+                // Cold start and Application.absoluteURL not null so process Deep Link.
+                onDeepLinkActivated(Application.absoluteURL);
+            }
+            // Initialize DeepLink Manager global variable.
+            else deeplinkURL = &quot;[none]&quot;;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+ 
+    private void onDeepLinkActivated(string url)
+    {
+        // Update DeepLink Manager global variable, so URL can be accessed from anywhere.
+        deeplinkURL = url;
+        
+// Decode the URL to determine action. 
+// In this example, the app expects a link formatted like this:
+// unitydl://mylink?scene1
+        string sceneName = url.Split(&quot;?&quot;[0])[1];
+        bool validScene;
+        switch (sceneName)
+        {
+            case &quot;scene1&quot;:
+                validScene = true;
+                break;
+            case &quot;scene2&quot;:
+                validScene = true;
+                break;
+            default:
+                validScene = false;
+                break;
+        }
+        if (validScene) SceneManager.LoadScene(sceneName);
+    }
+}
+
+</code></pre>
+
+<p>The process to configure an application to react to specific URLs is platform-specific.</p>
+
+<h2>iOS</h2>
+
+<p>There are two possible ways to make your app react to deep links: URL schemes and universal links.</p>
+
+<h3>URL schemes</h3>
+
+<p>To add a URL scheme, follow these steps:</p>
+
+<ol>
+<li>Open the <a href="class-PlayerSettingsiOS.html">iOS Player Settings</a> window (menu: <strong>Edit &gt; Project Settings &gt; Player Settings</strong>, then select <strong>iOS</strong>).</li>
+<li>Select <strong>Other</strong>, then scroll down to <strong>Configuration</strong>.</li>
+<li>Expand the <strong>Supported URL schemes</strong> section and, in the <strong>Element 0</strong> field, enter the URL scheme associated with your app (for example, <code>unitydl</code>).</li>
+</ol>
+
+<p>This makes your app open any links that start with <code>unitydl://</code> and allows you to process the URL in the <a href="Application-deepLinkActivated.html"><code>Application.deepLinkActivated</code></a> event. </p>
+
+<h3>Universal links</h3>
+
+<p>You can’t set up an app to use universal links from Unity Editor, because this requires an external website. For more information, see Apple documentation on <a href="https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/enabling_universal_links?language=objc">Enabling Universal Links</a>.</p>
+
+<h2>Android</h2>
+
+<p>To enable deep linking, you need to set up an intent filter that overrides the standard <a href="android-manifest.html">app manifest</a> to include a specific <code>intent-filter</code> section for Activity.
+The simplest way is to place the following <code>AndroidManifest.xml</code> file into your Project’s <code>Assets/Plugins/Android</code> folder. Unity automatically processes this file when you build your app:</p>
+
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; xmlns:tools=&quot;http://schemas.android.com/tools&quot;&gt;
+  &lt;application&gt;
+    &lt;activity android:name=&quot;com.unity3d.player.UnityPlayerActivity&quot; android:theme=&quot;@style/UnityThemeSelector&quot; &gt;
+      &lt;intent-filter&gt;
+        &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+        &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+      &lt;/intent-filter&gt;
+      &lt;intent-filter&gt;
+        &lt;action android:name=&quot;android.intent.action.VIEW&quot; /&gt;
+        &lt;category android:name=&quot;android.intent.category.DEFAULT&quot; /&gt;
+        &lt;category android:name=&quot;android.intent.category.BROWSABLE&quot; /&gt;
+        &lt;data android:scheme=&quot;unitydl&quot; android:host=&quot;mylink&quot; /&gt;
+      &lt;/intent-filter&gt;
+    &lt;/activity&gt;
+  &lt;/application&gt;
+&lt;/manifest&gt;
+</code></pre>
+
+<p>This makes your app open any links that start with <code>unitydl://</code> and allows you to process the URL in the <a href="Application-deepLinkActivated.html"><code>Application.deepLinkActivated</code></a> event. </p>
+
+<h2>Universal Windows Platform (UWP)</h2>
+
+<p>To add a custom URI scheme to your app, follow these steps:</p>
+
+<ol>
+<li>Open the <a href="class-PlayerSettingsWSA.html">UWP Player Settings</a> window (menu: <strong>Edit &gt; Project Settings &gt; Player Settings</strong>, then select <strong>UWP</strong>).</li>
+<li>Select <strong>Publishing Settings</strong>, then scroll down to <strong>Protocol</strong>.</li>
+<li>In the <strong>Name</strong> field, enter <code>unitydl</code>.</li>
+</ol>
+
+<p>This makes your app open any links that start with <code>unitydl://</code>.</p>
+
+<h2>Testing deep links</h2>
+
+<p>To test a deep link, you can create an HTML file, host it on a local web server, and access it from a web browser on your device:</p>
+
+<pre><code class="lang-html">&lt;html&gt;
+&lt;head&gt;
+   &lt;meta http-equiv=Content-Type content=&quot;text/html; charset=windows-1252&quot;&gt;
+&lt;/head&gt;
+&lt;body &gt;
+   &lt;h1&gt;My Deep Link Test page&lt;/h1&gt;
+   &lt;p&gt;&lt;a href=&quot;unitydl://mylink&quot;&gt;Launch&lt;/a&gt;&lt;/p&gt;
+   &lt;p&gt;&lt;a href=&quot;unitydl://mylink?parameter&quot;&gt;Launch with Parameter&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<!-- area:platforms -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityasaLibrary.html"></a></span><div class="tip"> Using Unity as a Library in other applications</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="Standalone.html"></a></span><div class="tip">Standalone</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

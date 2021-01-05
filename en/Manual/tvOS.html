@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  tvOS build considerations</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/tvOS.html">English</a></li>
+<li><a href="/cn/current/Manual/tvOS.html">中文</a></li>
+<li><a href="/ja/current/Manual/tvOS.html">日本語</a></li>
+<li><a href="/es/current/Manual/tvOS.html">Español</a></li>
+<li><a href="/kr/current/Manual/tvOS.html">한국어</a></li>
+<li><a href="/ru/current/Manual/tvOS.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/tvOS.html">English</a></li>
+<li><a href="/cn/current/Manual/tvOS.html">中文</a></li>
+<li><a href="/ja/current/Manual/tvOS.html">日本語</a></li>
+<li><a href="/es/current/Manual/tvOS.html">Español</a></li>
+<li><a href="/kr/current/Manual/tvOS.html">한국어</a></li>
+<li><a href="/ru/current/Manual/tvOS.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="PlatformSpecific.html">Platform development</a></li>
+<li><a href="AppleTV.html"> Apple TV</a></li>
+<li> tvOS build considerations</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AppleTV.html"></a></span><div class="tip"> Apple TV</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BuildSettingstvOS.html"></a></span><div class="tip"> tvOS build settings</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>tvOS build considerations</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This manual page is primarily aimed at helping developers transition from <span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a class="tooltipMoreInfoLink" href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span> to tvOS. The Apple TV platform, also known as tvOS, builds on the foundation of the <strong>iOS</strong> platform, but also creates new challenges for app developers. You can easily deploy an existing <strong>iOS</strong> app on tvOS, but often you must adapt your app’s content to work with tvOS input controls and display correctly on a bigger screen.</p>
+
+<h2>Prerequisites</h2>
+
+<p>To develop for tvOS, you need the following:</p>
+
+<ul>
+<li>A fourth-generation Apple TV device (you also need a USB C to USB 3.0 cable, which doesn’t come with the consumer package).</li>
+<li>Xcode 7.1 or later.</li>
+<li>Set up <a href="UnityCloudBuildiOS.html#provisioning">provisioning</a> for this device in the same way as for iOS devices. To test that provisioning works correctly, create an empty tvOS app with Xcode.</li>
+</ul>
+
+<h2>Setup notes</h2>
+
+<p>It’s best practice to create a separate branch or copy of your app and port that to Apple TV. Many iOS <span class="tooltip"><strong>plug-ins</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plug-ins you can use in Unity: Managed plug-ins (managed .NET assemblies created with tools like Visual Studio) and Native plug-ins (platform-specific native code libraries). <a class="tooltipMoreInfoLink" href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plug-in">Glossary</a></span></span></span> aren’t compatible with Apple TV, because Apple TV only supports a subset of the iOS framework. Unity has no control over third-party <strong>plug-ins</strong> and their cross-platform compatibility.</p>
+
+<p>If your app uses more than 4 GB on disk, break it into smaller parts and use On Demand Resources. To learn more, see the <a href="#OnDemandResources">On Demand Resources</a> section below.</p>
+
+<p>
+<strong>Note:</strong> Bitcode is included with tvOS builds, which adds around 130 MB to your executables. App Store servers strip this code, so it doesn’t affect your distribution size. To estimate Bitcode size, analyze the <a href="https://en.wikipedia.org/wiki/LLVM">LLVM</a> sections in your executable from the command line with <code>otool -l</code>.</p>
+
+<h2>Implementing input</h2>
+
+<p>There are two main inputs for tvOS:</p>
+
+<ul>
+<li>The Apple TV Remote (mandatory input)</li>
+<li>Made For iOS (MFi) controllers (optional)</li>
+</ul>
+
+<p>The Apple TV Remote (Siri Remote) is a multi-purpose input device that works as a traditional menu navigation controller, app controller, gyroscope, acceleration sensor, and as a touch gesture device. Unity routes Apple TV Remote input to corresponding Unity APIs, but performs no other processing on that input.</p>
+
+<p>Your app might need some adjustments to its input scheme to leverage the Apple TV Remote’s specific input features. For instance, your app can treat it as a traditional app controller, with one analog axis and an extra action button, or your app can use the accelerometer for interactions such as steering. You can experiment with various schemes when porting an app to tvOS.</p>
+
+<p>Unity offers Made For iOS (MFi), which is standardized controller support for iOS and tvOS. MFi controllers offer out of the box input mappings, and you can set up custom action mappings in the Unity Editor (menu: <strong>Edit &gt; Project Settings…</strong>, then select the <strong>Input</strong> category). For more information, see documentation on <a href="iphone-joystick.html">iOS Game Controller support</a>, and Apple developer documentation on <span class="tooltip"><a href="https://developer.apple.com/design/human-interface-guidelines/tvos/remote-and-controllers/game-controllers/">Game Controllers</a><span class="tooltiptext">A device to control objects and characters in a game.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#gamecontroller">Glossary</a></span></span></span>. </p>
+
+<p>Two further wireless Made For iOS (MFi) app controllers can be connected to an Apple TV device, which effectively turns it into a console. Your app can use the controllers in the same way as iOS MFi controllers, but you must ensure its usability with the Apple TV Remote alone. The tvOS system limits the number of additional controllers to two.</p>
+
+<p>Here are some technical details on accessing specific TV Remote features:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Apple TV Remote button or function</strong></th>
+	<th style="text-align:left;"><strong>Notes</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Touch area</td>
+	<td style="text-align:left;">Maps to both <code>Input.touches</code> (<code>Touch.type</code> is set to <code>Indirect</code> and is ignored by the Unity GUI), and the Joystick Input API (for example, <code>Input.GetAxis(&quot;Horizontal&quot;);</code> ).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Touch area click</td>
+	<td style="text-align:left;">Maps to button A, which then maps to <a href="iphone-joystick.html">joystick button 14</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Gyroscope</td>
+	<td style="text-align:left;">Maps to <code>Input.gyro</code>. <code>Input.gyro.attitude</code> derives from the gravity vector, and as such it doesn’t rotate around the axis parallel to the gravity vector. The same applies for <code>Input.gyro.rotationRate</code>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Acceleration</td>
+	<td style="text-align:left;">Maps to <code>Input.acceleration</code>. <br><br><strong>Note</strong>: <code>Input.acceleration</code> derives from the gyroscope API and might have some instabilities. The tvOS SDK doesn’t have a dedicated accelerometer API.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Pause/Play button</td>
+	<td style="text-align:left;">Maps to button X, which then maps to <a href="iphone-joystick.html">joystick button 15</a>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Menu button</td>
+	<td style="text-align:left;">A long press calls the tvOS task switcher. You can’t override this behavior.<br><br>Your app can process short taps one of two ways:<br><br> <strong>a)</strong> Return to the tvOS system home screen, if <code>UnityEngine.tvOS.Remote.allowExitToHome</code> is true.<br> <strong>b)</strong> Let your app respond to taps (which maps to the Pause button/<a href="iphone-joystick.html">joystick button 0</a>) when <code>UnityEngine.tvOS.Remote.allowExitToHome</code> is false. This the default behavior.<br><br>Your app should switch between <strong>a)</strong> and <strong>b)</strong> based on its current state:<br><br>- If the user is currently interacting with the top menu, enable behavior <strong>a)</strong>.<br>- If they’re interacting with the app in real time, enable behavior <strong>b)</strong> and call the in-app pause menu when they press this button.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Swipe to the edge of the remote</td>
+	<td style="text-align:left;">Generates directional pad (D-pad) up/down/left/right button presses. For a list of mappings, see documentation on <a href="iphone-joystick.html">iOS Game Controller support</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<p>You can control the Apple TV Remote operational modes via a dedicated API as follows:
+ * <a href="../ScriptReference/tvOS.Remote-allowExitToHome.html"><code>UnityEngine.tvOS.Remote.allowExitToHome</code></a>
+ * <a href="../ScriptReference/tvOS.Remote-allowRemoteRotation.html"><code>UnityEngine.tvOS.Remote.allowRemoteRotation</code></a>
+ * <a href="../ScriptReference/tvOS.Remote-reportAbsoluteDpadValues.html"><code>UnityEngine.tvOS.Remote.reportAbsoluteDpadValues</code></a>
+ * <a href="../ScriptReference/tvOS.Remote-touchesEnabled.html"><code>UnityEngine.tvOS.Remote.touchesEnabled</code></a>
+</p>
+
+<p>
+<strong>Note</strong>: When <code>UnityEngine.Apple.TV.Remote.allowExitToHome</code> is false, the Menu button maps to <a class="tooltipMoreInfoLink" href="iphone-joystick.html">joystick button 0</a>. This causes a conflict with the default <a href="class-InputManager.html">Input</a> window, because it also uses <a href="iphone-joystick.html">joystick button 0</a> to map the Submit virtual button. This results in the Menu button triggering actions on UI elements. To fix this issue, remove or modify the Submit virtual button bindings in the <a href="class-InputManager.html">Input</a> window (menu: <strong>Edit</strong> &gt; <span class="tooltip"><strong>Project Settings</strong><span class="tooltiptext">A broad collection of settings which allow you to configure how Physics, Audio, Networking, Graphics, Input and many other areas of your project behave. <a href="comp-ManagerGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ProjectSettings">Glossary</a></span></span></span>, then select the <strong>Input</strong> category).</p>
+
+<h2>Setting up app navigation from the Unity UI</h2>
+
+<p>You must provide custom visual resources to the Apple Game Center for its native leaderboard <span class="tooltip"><strong>UI</strong><span class="tooltiptext">(User Interface) Allows a user to interact with your application. <a class="tooltipMoreInfoLink" href="UISystem.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UI">Glossary</a></span></span></span>. Here’s how to set them up in Xcode:</p>
+
+<ol>
+<li>Open the <a href="class-InputManager.html">Input</a> window in the Unity Editor. Find the first occurrence of the <strong>Submit</strong> virtual input, expand it, and change its <strong>Alt Positive Button</strong> to <strong>joystick button 14</strong>.</li>
+<li>Select the EventSystem appObject in your <span class="tooltip"><strong>Scene</strong><span class="tooltiptext">A Scene contains the environments and menus of your game. Think of each unique Scene file as a unique level. In each Scene, you place your environments, obstacles, and decorations, essentially designing and building your game in pieces. <a class="tooltipMoreInfoLink" href="CreatingScenes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Scene">Glossary</a></span></span></span>. In the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Inspector">Glossary</a></span></span></span>, find the EventSystem component, and set a reference to the UI appObject that should receive initial focus in the <strong>First Selected</strong> property. You might need to enable the <strong>Force input module</strong> property in the <strong>Standalone Input Module</strong> component.</li>
+</ol>
+
+<p>
+<strong>Note</strong>: Apple TV Remote navigation doesn’t work while your app is running in the TV Simulator.</p>
+
+<h2>Adding leaderboard resources to your Xcode project</h2>
+
+<p>The Apple Game Center requires you to provide custom visual resources for its native leaderboard UI. Here’s how to set them up in Xcode:</p>
+
+<ol>
+<li>Open your <a href="StructureOfXcodeProject.html">XCode project</a>.</li>
+<li>Select <em>Images.xcassets</em>.</li>
+<li>Right-click under the listed files, and select <strong>Game Center &gt; New AppleTV Leaderboard</strong> from the menu that appears.</li>
+<li>Add your images.</li>
+<li>Select <strong>Leaderboard</strong>, then select <strong>Edit View</strong> in the right-hand pane.</li>
+<li>Enter your leaderboard ID in the <strong>Identifier</strong> field.</li>
+</ol>
+
+<p>
+<strong>Tip</strong>: If your asset compilation fails after making this chnage, try disabling the <strong>On Demand Resources</strong> option in the in Xcode build settings.</p>
+
+<p><a name="OnDemandResources"></a></p>
+
+<h2>Implementing support for On Demand Resources</h2>
+
+<p>tvOS limits how much disk space your application can reserve. The main application installation bundle size can’t be larger than 4 GB. The limits for additional downloadable content are up to 2GB for in-use assets, and up to 20GB of total downloadable content. Apple recommends On Demand Resources (ODR) for tvOS downloadable content, which is the best disk space management for tvOS. Unity supports <span class="tooltip"><strong>ODR</strong><span class="tooltiptext">On-demand resources (ODR) is a feature available for the iOS and tvOS platforms, from version 9.0 of iOS and tvOS onwards. It allows you to reduce the size of your application by separating the core assets (those that are needed from application startup) from assets which may be optional, or which appear in later levels of your game. <a class="tooltipMoreInfoLink" href="AppThinning.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#ODR">Glossary</a></span></span></span> via Asset Bundles. For more information about <strong>ODR</strong> implementation, see the Unity blog <a href="http://blogs.unity3d.com/2015/11/26/mastering-on-demand-resources-for-apple-platforms/">Mastering on-demand resources for Apple platforms</a>.</p>
+
+<h2>Known limitations</h2>
+
+<ul>
+<li>The on-screen keyboard is limited to single line entries.</li>
+<li>tvOS Simulator doesn’t emulate the Apple TV Remote as an app controller, which means apps can’t access its input.</li>
+</ul>
+<!-- area:platforms -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="AppleTV.html"></a></span><div class="tip"> Apple TV</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="BuildSettingstvOS.html"></a></span><div class="tip"> tvOS build settings</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

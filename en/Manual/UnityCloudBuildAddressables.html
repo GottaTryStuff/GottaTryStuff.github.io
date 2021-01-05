@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Using Addressables in Unity Cloud Build</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityCloudBuildAddressables.html">English</a></li>
+<li><a href="/cn/current/Manual/UnityCloudBuildAddressables.html">中文</a></li>
+<li><a href="/ja/current/Manual/UnityCloudBuildAddressables.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityCloudBuildAddressables.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityCloudBuildAddressables.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityCloudBuildAddressables.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/UnityCloudBuildAddressables.html">English</a></li>
+<li><a href="/cn/current/Manual/UnityCloudBuildAddressables.html">中文</a></li>
+<li><a href="/ja/current/Manual/UnityCloudBuildAddressables.html">日本語</a></li>
+<li><a href="/es/current/Manual/UnityCloudBuildAddressables.html">Español</a></li>
+<li><a href="/kr/current/Manual/UnityCloudBuildAddressables.html">한국어</a></li>
+<li><a href="/ru/current/Manual/UnityCloudBuildAddressables.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity Services</a></li>
+<li><a href="UnityCloudBuild.html">Unity Cloud Build</a></li>
+<li> Using Addressables in Unity Cloud Build</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCloudBuildIncludingSpecificScenes.html"></a></span><div class="tip"> Including specific Scenes</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCloudBuildManifest.html"></a></span><div class="tip"> Build manifest</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Using Addressables in Unity Cloud Build</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>
+<a href="#com.unity.addressables">Addressable Assets</a> are assets that have a unique address which you can call from anywhere.</p>
+
+<h2>Prerequisites</h2>
+
+<p>Before you can build Addressable Assets in <span class="tooltip"><strong>Cloud Build</strong><span class="tooltiptext">A continuous integration service for Unity projects that automates the process of creating builds on Unity’s servers. <a class="tooltipMoreInfoLink" href="UnityCloudBuild.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#CloudBuild">Glossary</a></span></span></span>, you must:</p>
+
+<ul>
+<li>Convert your project to use Addressables locally, that is:</li>
+<li>Install the <a href="https://docs.unity3d.com/Packages/com.unity.addressables@1.8/manual/AddressableAssetsGettingStarted.html">Addressables package</a>
+</li>
+<li>Set the Assets as Addressable</li>
+<li>Commit your updated project to your chosen <span class="tooltip"><strong>version control</strong><span class="tooltiptext">A system for managing file changes. You can use Unity in conjunction with most common version control tools, including Perforce, Git, Mercurial and PlasticSCM. <a class="tooltipMoreInfoLink" href="VersionControl.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#VersionControl">Glossary</a></span></span></span> system (VCS)</li>
+</ul>
+
+<p>Unity recommends that you’re comfortable working with Addressables locally before you build them with Cloud Build.</p>
+
+<h2>Configuring the Build Target</h2>
+
+<p>If you’re starting from a brand new Cloud Build project, you’ll need to create a new Build Target first.</p>
+
+<ol>
+<li>From the Cloud Build Dashboard, navigate to the build target <strong>Config</strong> page for your project.</li>
+<li>On the build target that you’d like to build Addressables for, expand the <strong>Addressable Assets Options</strong> menu.</li>
+<li>Click on <strong>Edit Addressable Asset Options</strong>.</li>
+</ol>
+
+<p>Use the <strong>Addressables Options</strong> page to configure properties that determine how the Addressables build process behaves. Each property is described in more detail with a tooltip.</p>
+
+<p><a name="new-build"></a></p>
+
+<h3>Running a new Addressables build</h3>
+
+<p>To run a new Addressables build:</p>
+
+<ol>
+<li>Click <strong>Edit Addressables Asset Options</strong>.</li>
+<li>Enable <strong>Build Addressables</strong>.</li>
+<li>Save the Target configuration.</li>
+<li>Build the Target.</li>
+</ol>
+
+<p><a name="ccd-cloud-build"></a></p>
+
+<h3>Enable Cloud Content Delivery service</h3>
+
+<p>If you want to upload Addressables to the <a href="https://docs.unity3d.com/Manual/UnityCCD.html">Cloud Content Delivery</a> (CCD) service from Cloud Build:</p>
+
+<ol>
+<li>Click <strong>Edit Addressables Asset Options</strong>.</li>
+<li>Enable <strong>Content Delivery Upload</strong> to upload Addressables to CCD.</li>
+<li>Choose the required CCD bucket in the <strong>Content Delivery Bucket</strong> drop-down.</li>
+<li>Your <strong>Content Delivery API Key</strong> should already be populated in its field. If not, add it.</li>
+<li>Enable <strong>Content Delivery Create Release</strong> if you want to automatically create a CCD release from the selected bucket.</li>
+<li>Save the Target configuration.</li>
+<li>Build the Target.</li>
+</ol>
+
+<p>See <a href="https://docs.unity3d.com/Packages/com.unity.addressables@1.16/manual/AddressablesCCD.html">Addressable Asset system with Cloud Content Delivery</a> for more information about using Addressables with CCD.</p>
+
+<h3>Running a content update build</h3>
+
+<p>Content update builds update a previously built player with new addressable content.</p>
+
+<p>To update the existing player, update builds require a Content State file. This links the content from an Update build to an existing player. The Content State file is generated when you do a <a href="#new-build">new Addressables build</a>.</p>
+
+<p>To update a previously built player with new Addressable assets:</p>
+
+<ol>
+<li>Click <strong>Edit Addressables Asset Options</strong>.</li>
+<li>Enable <strong>Build Addressables</strong> and <strong>Content Update Build</strong>.</li>
+<li>Enable <strong>Content Only Build</strong> (unless you want to produce another Player).</li>
+<li>Set the <strong>Content State Location Method</strong> to define how Cloud Build gets the Content State file.<br>
+ Cloud Build can get this file in the following ways.
+
+<ul>
+<li>From source control; in which case you must specify the path.</li>
+<li>From an existing build target which has previously successfully built Addressables; in which case you must specify the target.</li>
+</ul>
+</li>
+</ol>
+
+<p>Cloud Build can automatically use the most recent Content State file produced by the selected Build Target.</p>
+
+<h2>Starting a build</h2>
+
+<p>When the build target is configured, to start a new Addressables build:</p>
+
+<ol>
+<li>Navigate to the <strong>Build History</strong> page of the dashboard.</li>
+<li>Build the target you’ve configured Addressables for.</li>
+</ol>
+
+<p>When the new build has successfully completed, the More menu (⋮) for the build displays the <strong>Download Addressable Assets</strong> option.</p>
+
+<h2>Copying Addressables content from Cloud Build to your hosting provider</h2>
+
+<p>Once you’ve completed an Addressables build, you can copy the Addressables content from Cloud Build to your hosting provider. You can do this manually, or by using a post-build script.</p>
+
+<h3>Copying Addressables content manually</h3>
+
+<p>Once you’ve completed an Addressables build, select <strong>Download Addressables Assets</strong> from the More menu (⋮). When you’ve downloaded the content, you can upload it to your hosting provider as you normally would when building locally.</p>
+
+<h3>Copying Addressables content with a post-build script</h3>
+
+<p>Cloud Build supports running a custom shell script before or after a build. You can create a post-build script to automatically upload your Addressables content when a build successfully completes.</p>
+
+<p>To enable a post-build script:</p>
+
+<ol>
+<li>Go to the Cloud Build <strong>Config</strong> page.</li>
+<li>On your Build Target, select <strong>Edit Advanced Options</strong>.</li>
+<li>In the <strong>Post-Build Script Path</strong> field, enter the path to your script.</li>
+</ol>
+
+<p>The following tips might be useful to consider when writing your script:
+* The Addressable content for your build is located at <code>$WORKSPACE/.build/last/&amp;lt;BUILD_TARGET_ID&amp;gt;/extra_data/addrs/</code>
+</p>
+
+<h2>* You can set environment variables for secret keys in the Build Target <strong>Config</strong> page</h2>
+
+<ul>
+<li><span class="page-history">[FeatureName] added in <a href="https://docs.unity3d.com/2018.3/Documentation/Manual/30_search.html?q=newin20183">2018.3</a> <span class="search-words">NewIn20183</span></span></li>
+</ul>
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCloudBuildIncludingSpecificScenes.html"></a></span><div class="tip"> Including specific Scenes</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCloudBuildManifest.html"></a></span><div class="tip"> Build manifest</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

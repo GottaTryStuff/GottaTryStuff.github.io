@@ -1,0 +1,666 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  System requirements for Unity 2019.4</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/system-requirements.html">English</a></li>
+<li><a href="/cn/current/Manual/system-requirements.html">中文</a></li>
+<li><a href="/ja/current/Manual/system-requirements.html">日本語</a></li>
+<li><a href="/es/current/Manual/system-requirements.html">Español</a></li>
+<li><a href="/kr/current/Manual/system-requirements.html">한국어</a></li>
+<li><a href="/ru/current/Manual/system-requirements.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/system-requirements.html">English</a></li>
+<li><a href="/cn/current/Manual/system-requirements.html">中文</a></li>
+<li><a href="/ja/current/Manual/system-requirements.html">日本語</a></li>
+<li><a href="/es/current/Manual/system-requirements.html">Español</a></li>
+<li><a href="/kr/current/Manual/system-requirements.html">한국어</a></li>
+<li><a href="/ru/current/Manual/system-requirements.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html"> Working in Unity</a></li>
+<li><a href="GettingStartedInstallingUnity.html"> Installing Unity</a></li>
+<li> System requirements for Unity 2019.4</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GettingStartedInstallingUnity.html"></a></span><div class="tip"> Installing Unity</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GettingStartedUnityHub.html"></a></span><div class="tip"> Unity Hub</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>System requirements for Unity 2019.4</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This page outlines the minimum system requirements you need to run Unity 2019.4 on all supported platforms.</p>
+
+<ol>
+<li><a href="#editor">Unity Editor system requirements</a></li>
+<li>
+<a href="#player">Unity Player system requirements</a>
+
+<ul>
+<li><a href="#mobile">Mobile</a></li>
+<li><span class="tooltip"><a href="#console">Console</a><span class="tooltiptext">Abbreviation of <strong>game console</strong><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#console">Glossary</a></span></span></span></li>
+<li><a href="#desktop">Desktop</a></li>
+<li><a href="#stadia">Stadia</a></li>
+<li><a href="#server">Server platform</a></li>
+<li><a href="#web">Web platforms</a></li>
+<li>
+<a href="#xr">XR plaform</a>
+
+<ul>
+<li><a href="#oculus">Oculus</a></li>
+<li><a href="#wmr">Windows Mixed Reality</a></li>
+<li><a href="#magic">Magic Leap</a></li>
+<li><a href="#arcore">ARCore</a></li>
+<li><a href="#arkit">ARKit</a></li>
+</ul>
+</li>
+<li><a href="#other">Other requirements</a></li>
+</ul>
+</li>
+</ol>
+
+<p><a name="editor"></a></p>
+
+<h2>Unity Editor system requirements</h2>
+
+<p>This section lists the minimum requirements to run the Unity Editor. Actual performance and <span class="tooltip"><strong>rendering</strong><span class="tooltiptext">The process of drawing graphics to the screen (or to a render texture). By default, the main camera in Unity renders its view to the screen. <a class="tooltipMoreInfoLink" href="GraphicsOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Rendering">Glossary</a></span></span></span> quality may vary depending on the complexity of your project.</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Minimum requirements</strong></th>
+	<th style="text-align:left;"><strong>Windows</strong></th>
+	<th style="text-align:left;"><strong>macOS</strong></th>
+	<th style="text-align:left;"><strong>Linux (Support in Preview)</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Operating system version</strong></td>
+	<td style="text-align:left;">Windows 7 (SP1+) and Windows 10, 64-bit versions only.</td>
+	<td style="text-align:left;">Sierra 10.12.6+</td>
+	<td style="text-align:left;">Ubuntu 16.04, Ubuntu 18.04, and CentOS 7</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>CPU</strong></td>
+	<td style="text-align:left;">X64 architecture with SSE2 instruction set support</td>
+	<td style="text-align:left;">X64 architecture with SSE2 instruction set support</td>
+	<td style="text-align:left;">X64 architecture with SSE2 instruction set support</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics API</strong></td>
+	<td style="text-align:left;">DX10, DX11, and DX12-capable GPUs</td>
+	<td style="text-align:left;">Metal-capable Intel and AMD GPUs</td>
+	<td style="text-align:left;">OpenGL 3.2+ or Vulkan-capable, Nvidia and AMD GPUs.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Additional requirements</strong></td>
+	<td style="text-align:left;">Hardware vendor officially supported drivers</td>
+	<td style="text-align:left;">Apple officially supported drivers</td>
+	<td style="text-align:left;">Gnome desktop environment running on top of X11 windowing system, Nvidia official proprietary graphics driver or AMD Mesa graphics driver. Other configuration and user environment as provided stock with the supported distribution (Kernel, Compositor, etc.)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">   </td>
+	<td style="text-align:left;" colspan="3">For all operating systems, the Unity Editor is supported on workstations or laptop form factors, running without emulation, container or compatibility layer.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="player"></a></p>
+
+<h2>Unity Player system requirements</h2>
+
+<p>This section lists the minimum requirements to build and run the Unity Player. Actual performance and rendering quality may vary depending on the complexity of your project.</p>
+
+<p><a name="mobile"></a></p>
+
+<h3>Mobile</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Operating system</strong></th>
+	<th style="text-align:left;"><strong>Android</strong></th>
+	<th style="text-align:left;"><strong><span class="tooltip"><strong>iOS</strong><span class="tooltiptext">Apple’s mobile operating system. <a class="tooltipMoreInfoLink" href="iphone.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#iOS">Glossary</a></span></span></span></strong></th>
+	<th style="text-align:left;"><strong>tvOS</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Version</strong></td>
+	<td style="text-align:left;">4.4 (API 19)+</td>
+	<td style="text-align:left;">10+</td>
+	<td style="text-align:left;">10+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>CPU</strong></td>
+	<td style="text-align:left;">ARMv7 with Neon Support (32-bit) or ARM64</td>
+	<td style="text-align:left;">A6/A6X SoC+</td>
+	<td style="text-align:left;">A8 SoC+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics API</strong></td>
+	<td style="text-align:left;">OpenGL ES 2.0+, OpenGL ES 3.0+, Vulkan</td>
+	<td style="text-align:left;">Metal, <br>OpenGL ES 2.0/3.0 (Deprecated)</td>
+	<td style="text-align:left;">Metal, <br>OpenGL ES 2.0/3.0 (Deprecated)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Additional requirements</strong></td>
+	<td style="text-align:left;">1GB+ RAM. <br> Supported hardware devices must meet or exceed Google’s Android Compatibility Definition (<a href="https://source.android.com/compatibility/9/android-9-cdd.html">Version 9.0</a>) limited to the following Device Types: <br> 1. Handheld (Section 2.2) <br> 2. Television (Section 2.3)<br> 3. Tablets (Section 2.6)<br> Hardware must natively be running Android OS. Android within a Container or Emulator is not supported.<br>For Development: Android SDK (10/API 29), Android NDK (r19) and OpenJDK, which are installed by default with <a href="https://docs.unity3d.com/Manual/android-sdksetup.html">Unity Hub</a>
+</td>
+	<td style="text-align:left;">For development: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.</td>
+	<td style="text-align:left;">Apple TV 4th generation+</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="console"></a></p>
+
+<h3>Console</h3>
+
+<p>For <span class="tooltip"><strong>PlayStation 4</strong><span class="tooltiptext">Sony’s eighth generation video game console.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#PlayStation4">Glossary</a></span></span></span> (including PS VR), <span class="tooltip"><strong>Xbox One</strong><span class="tooltiptext">Microsoft’s eighth generation video game console.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#XboxOne">Glossary</a></span></span></span> and Nintendo Switch, see the <em>Unity for console</em> section on the <a href="https://unity3d.com/unity/features/multiplatform">Unity Multiplatform</a> page.</p>
+
+<p><a name="desktop"></a></p>
+
+<h3>Desktop</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Operating system</strong></th>
+	<th style="text-align:left;"><strong>Windows</strong></th>
+	<th style="text-align:left;"><strong><span class="tooltip"><strong>Universal Windows Platform</strong><span class="tooltiptext">An IAP feature that supports Microsoft’s In App Purchase simulator, which allows you to test IAP purchase flows on devices before publishing your application. <a class="tooltipMoreInfoLink" href="UnityIAPUniversalWindows.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#UniversalWindowsPlatform">Glossary</a></span></span></span></strong></th>
+	<th style="text-align:left;"><strong>macOS</strong></th>
+	<th style="text-align:left;"><strong>Linux</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Operating system version</strong></td>
+	<td style="text-align:left;">Windows 7 (SP1+) and Windows 10</td>
+	<td style="text-align:left;">Xbox One, Hololens</td>
+	<td style="text-align:left;">Sierra 10.12+</td>
+	<td style="text-align:left;">Ubuntu 16.04 and Ubuntu 18.04</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>CPU</strong></td>
+	<td style="text-align:left;">x86, x64 architecture with SSE2 instruction set support.</td>
+	<td style="text-align:left;">x86, x64 architecture with SSE2 instruction set support, ARM, ARM64.</td>
+	<td style="text-align:left;">x64 architecture with SSE2.</td>
+	<td style="text-align:left;">x64 architecture with SSE2 instruction set support.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics API</strong></td>
+	<td style="text-align:left;">DX10, DX11, DX12 capable.</td>
+	<td style="text-align:left;">DX10, DX11, DX12 capable GPUs.</td>
+	<td style="text-align:left;">Metal capable Intel and AMD GPUs</td>
+	<td style="text-align:left;">OpenGL 3.2+, Vulkan capable.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Additional requirements</strong></td>
+	<td style="text-align:left;">Hardware vendor officially supported drivers.</td>
+	<td style="text-align:left;">Hardware vendor officially supported drivers.<br> For development: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK.</td>
+	<td style="text-align:left;">Apple officially supported drivers.</td>
+	<td style="text-align:left;">Gnome desktop environment running on top of X11 windowing system<br>Other configuration and user environment as provided stock with the supported distribution (such as Kernel or Compositor)<br> Nvidia and AMD GPUs using Nvidia official proprietary graphics driver or AMD Mesa graphics driver.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">   </td>
+	<td style="text-align:left;" colspan="4">For all operating systems, the Unity Player is supported on workstations, laptop or tablet form factors, running without emulation, container or compatibility layer.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="stadia"></a></p>
+
+<h3>Stadia</h3>
+
+<p>Unity developers interested in bringing games to the Stadia platform should start by applying for development resources on <a href="https://www.stadia.dev/intl/en_us/apply/">Google’s Stadia developer website</a>.</p>
+
+<p><a name="server"></a></p>
+
+<h3>Server platform</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Operating system</strong></th>
+	<th style="text-align:left;"><strong>Windows</strong></th>
+	<th style="text-align:left;"><strong>macOS</strong></th>
+	<th style="text-align:left;"><strong>Linux</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Operating system version</strong></td>
+	<td style="text-align:left;">Windows 7 (SP1+) and Windows 10, running on workstation and rack form factors, without emulation or compatibility layer.</td>
+	<td style="text-align:left;">Sierra 10.12+ running on workstation and rack form factors, without emulation or compatibility layer.</td>
+	<td style="text-align:left;">Ubuntu 16.04, 18.04, running on workstation and rack form factors, without emulation or compatibility layer.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>CPU</strong></td>
+	<td style="text-align:left;">x86, x64 architecture with SSE2 instruction set support.</td>
+	<td style="text-align:left;">x64 architecture with SSE2 instruction set support.</td>
+	<td style="text-align:left;">x64 architecture with SSE2 instruction set support.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>GPU</strong></td>
+	<td style="text-align:left;" colspan="3">No explicit GPU support.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Additional requirements</strong></td>
+	<td style="text-align:left;" colspan="3">Hardware vendor officially supported drivers.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="web"></a></p>
+
+<h3>WebGL</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Operating system running browsers</strong></th>
+	<th style="text-align:left;"><strong>Windows, macOS, and Linux</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Hardware</strong></td>
+	<td style="text-align:left;">Workstation and laptop form factors.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Additional requirements</strong></td>
+	<td style="text-align:left;">Versions of Chrome, Firefox or Safari that are:<br>- WebGL 1.0 or 2.0 capable<br>- HTML 5 standards compliant<br>- 64-bit<br>- WASM capable</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="xr"></a></p>
+
+<h2>XR platform system requirements</h2>
+
+<p>As part of the migration to the Unity <a href="XRPluginArchitecture.html">XR plugin architecture</a> using the <a href="https://docs.unity3d.com/Packages/com.unity.xr.management@latest">XR Management package</a>, built-in platform packages will be deprecated in Unity 2019.3 and newer versions.</p>
+
+<p>These implementations are still functional and available in the Unity Package Manager, but bugs and issues might not be prioritized and the package will be removed in future releases.</p>
+
+<p>For Google Daydream/Cardboard, OpenVR, and Vuforia support options in Unity 2019.3+, see the <a href="XRPluginArchitecture.html">XR plugin architecture</a> page.</p>
+
+<p><a name="oculus"></a></p>
+
+<h3>Oculus</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Hardware</strong></th>
+	<th style="text-align:left;"><strong>Oculus Rift/Rift S</strong></th>
+	<th style="text-align:left;"><strong>Oculus Go</strong></th>
+	<th style="text-align:left;"><strong>Oculus Quest</strong></th>
+	<th style="text-align:left;"><strong>Oculus Quest 2</strong></th>
+	<th style="text-align:left;"><strong>Samsung Gear VR</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Operating system version</strong></td>
+	<td style="text-align:left;">Windows 10</td>
+	<td style="text-align:left;" colspan="3">Android</td>
+	<td style="text-align:left;">Samsung Android 5.0/Lollipop+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>CPU</strong></td>
+	<td style="text-align:left;"><a href="https://support.oculus.com/248749509016567/?locale=en_US">See Oculus specifications</a></td>
+	<td style="text-align:left;">ARM 64-bit (Snapdragon 821)</td>
+	<td style="text-align:left;">ARM 64-bit (Snapdragon 835)</td>
+	<td style="text-align:left;">ARM 64-bit (Snapdragon XR2)</td>
+	<td style="text-align:left;">ARM 64-bit (Snapdragon 821)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>GPU</strong></td>
+	<td style="text-align:left;"><a href="https://support.oculus.com/248749509016567/?locale=en_US">See Oculus specifications</a></td>
+	<td style="text-align:left;" colspan="4">N/A</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics API</strong></td>
+	<td style="text-align:left;">DX11</td>
+	<td style="text-align:left;">OpenGL ES 3.0+</td>
+	<td style="text-align:left;" colspan="2">OpenGL ES 3.0, Vulkan*</td>
+	<td style="text-align:left;">OpenGL ES</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Additional requirements</strong></td>
+	<td style="text-align:left;" colspan="5">*Vulkan support for Oculus Quest is an experimental feature.<br>More information can be found in the Oculus XR Plugin <a href="https://docs.unity3d.com/Packages/com.unity.xr.oculus@latest">package documentation</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="wmr"></a></p>
+
+<h3>Windows Mixed Reality</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Hardware</strong></th>
+	<th style="text-align:left;"><strong>WMR Immersive (VR)</strong></th>
+	<th style="text-align:left;"><strong>HoloLens</strong></th>
+	<th style="text-align:left;"><strong>HoloLens 2</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Operating system version</strong></td>
+	<td style="text-align:left;">Windows 10 RS4</td>
+	<td style="text-align:left;" colspan="2">Embedded Windows 10</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>CPU</strong></td>
+	<td style="text-align:left;">Intel 64-bit</td>
+	<td style="text-align:left;">Intel Atom</td>
+	<td style="text-align:left;">ARM 64-bit <br>(Snapdragon 850)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics API</strong></td>
+	<td style="text-align:left;" colspan="3">DX11</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Additional requirements</strong></td>
+	<td style="text-align:left;" colspan="3">Supported SDK Version: 10.0.17134.0. <br>Use the <a href="https://docs.unity3d.com/Packages/com.unity.xr.management@latest">XR Management</a> and <a href="https://docs.unity3d.com/Packages/com.unity.xr.windowsmr@latest">Windows XR Plugin</a> packages.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="magic"></a></p>
+
+<h3>Magic Leap</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Operating system</strong></th>
+	<th style="text-align:left;"><strong>Magic Leap One</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Operating system version</strong></td>
+	<td style="text-align:left;">Lumin OS</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>CPU</strong></td>
+	<td style="text-align:left;"><a href="https://developer.magicleap.com/en-us/learn/guides/magic-leap-one-hardware-specifications">See Magic Leap specifications</a></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>GPU</strong></td>
+	<td style="text-align:left;"><a href="https://developer.magicleap.com/en-us/learn/guides/magic-leap-one-hardware-specifications">See Magic Leap specifications</a></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics API</strong></td>
+	<td style="text-align:left;">OpenGL ES 3.2+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Additional requirements</strong></td>
+	<td style="text-align:left;" colspan="2">Latest supported SDK Version: 0.18.0</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="arcore"></a></p>
+
+<h3>ARCore</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Operating system</strong></th>
+	<th style="text-align:left;"><strong>Android phones</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Operating system version</strong></td>
+	<td style="text-align:left;">7</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>CPU</strong></td>
+	<td style="text-align:left;">ARM 64-bit</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics API</strong></td>
+	<td style="text-align:left;">OpenGL ES</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Additional requirements</strong></td>
+	<td style="text-align:left;" colspan="2">Latest supported SDK Version: 1.9</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="arkit"></a></p>
+
+<h3>ARKit</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Operating system</strong></th>
+	<th style="text-align:left;"><strong>iPhone and iPad</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><strong>Operating system version</strong></td>
+	<td style="text-align:left;">iOS 11</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>CPU</strong></td>
+	<td style="text-align:left;">A9+</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Graphics API</strong></td>
+	<td style="text-align:left;">Metal</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>Additional requirements</strong></td>
+	<td style="text-align:left;">Latest supported SDK Version: ARKit 3.5</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="other"></a></p>
+
+<h2>Other system requirements notes</h2>
+
+<p>For any Unity Editor or Player supporting Windows 7, note that Microsoft support for Windows 7 expired after January 14th 2020.</p>
+<!-- area:none -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="GettingStartedInstallingUnity.html"></a></span><div class="tip"> Installing Unity</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="GettingStartedUnityHub.html"></a></span><div class="tip"> Unity Hub</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

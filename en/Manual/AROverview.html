@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Getting started with AR development in Unity</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="platforms" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/AROverview.html">English</a></li>
+<li><a href="/cn/current/Manual/AROverview.html">中文</a></li>
+<li><a href="/ja/current/Manual/AROverview.html">日本語</a></li>
+<li><a href="/es/current/Manual/AROverview.html">Español</a></li>
+<li><a href="/kr/current/Manual/AROverview.html">한국어</a></li>
+<li><a href="/ru/current/Manual/AROverview.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/AROverview.html">English</a></li>
+<li><a href="/cn/current/Manual/AROverview.html">中文</a></li>
+<li><a href="/ja/current/Manual/AROverview.html">日本語</a></li>
+<li><a href="/es/current/Manual/AROverview.html">Español</a></li>
+<li><a href="/kr/current/Manual/AROverview.html">한국어</a></li>
+<li><a href="/ru/current/Manual/AROverview.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="XR.html"> XR</a></li>
+<li> Getting started with AR development in Unity</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="XR.html"></a></span><div class="tip"> XR</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VROverview.html"></a></span><div class="tip"> Getting started with VR development in Unity</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Getting started with AR development in Unity</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>To get started with <span class="tooltip"><strong>AR</strong><span class="tooltiptext">Augmented Reality (AR) uses computer graphics or video composited on top of a live video feed to augment the view and create interaction with real and virtual objects.<br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AR">Glossary</a></span></span></span> development, Unity recommends using <strong>AR</strong> Foundation to create your application for Unity’s supported handheld <strong>AR</strong> and wearable <strong>AR</strong> devices. </p>
+
+<p>AR Foundation allows you to work with augmented reality platforms in a multi-platform way within Unity. This package presents an interface for Unity developers to use, but doesn’t implement any AR features on its own.</p>
+
+<p>To use AR Foundation on a target device, you also need to download and install separate packages for each of the target platforms officially supported by Unity:</p>
+
+<ul>
+<li>
+<a href="https://docs.unity3d.com/Packages/com.unity.xr.arcore@2.1">ARCore XR Plug-in</a> on Android</li>
+<li>
+<a href="https://docs.unity3d.com/Packages/com.unity.xr.arkit@2.1">ARKit XR Plug-in</a> on iOS</li>
+<li>
+<a href="https://docs.unity3d.com/Packages/com.unity.xr.magicleap@4.1">Magic Leap XR Plug-in</a> on Magic Leap</li>
+<li>
+<a href="https://docs.unity3d.com/Packages/com.unity.xr.windowsmr@2.4">Windows XR Plug-in</a> on HoloLens</li>
+</ul>
+
+<p>For instructions on how to configure your Project using the <span class="tooltip"><strong>XR</strong><span class="tooltiptext">An umbrella term encompassing Virtual Reality (VR), Augmented Reality (AR) and Mixed Reality (MR) applications. Devices supporting these forms of interactive applications can be referred to as XR devices. <a class="tooltipMoreInfoLink" href="XR.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#XR">Glossary</a></span></span></span> <span class="tooltip"><strong>Plug-in</strong><span class="tooltiptext">A set of code created outside of Unity that creates functionality in Unity. There are two kinds of plug-ins you can use in Unity: Managed plug-ins (managed .NET assemblies created with tools like Visual Studio) and Native plug-ins (platform-specific native code libraries). <a href="Plugins.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Plug-in">Glossary</a></span></span></span> Management system, see the <a href="configuring-project-for-xr.html">Configuring your unity Project for XR</a> page.</p>
+
+<p>AR Foundation supports the following features:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Feature</strong></th>
+	<th style="text-align:left;"><strong>Description</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Device tracking</td>
+	<td style="text-align:left;">Track the device’s position and orientation in physical space.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Raycast</td>
+	<td style="text-align:left;">Commonly used to determine where virtual content will appear, where a ray (defined by an origin and direction) intersects with a real-world feature detected and/or tracked by the AR device. Unity has built-in functions that allow you to use raycasting in your AR app.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Plane detection</td>
+	<td style="text-align:left;">Detect the size and location of horizontal and vertical surfaces (e.g. coffee table, walls). These surfaces are called “planes”.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Reference points</td>
+	<td style="text-align:left;">Track the positions of planes and feature points over time.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Point cloud detection</td>
+	<td style="text-align:left;">Detect visually distinct features in the captured <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a class="tooltipMoreInfoLink" href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span> image and use these points to understand where the device is relative to the world around it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Gestures</td>
+	<td style="text-align:left;">Recognize gestures as input events based on human hands.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Face tracking</td>
+	<td style="text-align:left;">Access face landmarks, a <span class="tooltip"><strong>mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Mesh">Glossary</a></span></span></span> representation of detected faces, and blend shape information, which can feed into a facial animation rig. The Face Manager configures devices for face tracking and creates <span class="tooltip"><strong>GameObjects</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> for each detected face.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2D image tracking</td>
+	<td style="text-align:left;">Detect specific 2D images in the environment. The Tracked Image Manager automatically creates GameObjects that represent all recognized images. You can change an AR application based on the presence of specific images.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><span class="tooltip"><strong>3D object</strong><span class="tooltiptext">A 3D GameObject such as a cube, terrain or ragdoll. <a class="tooltipMoreInfoLink" href="GameObjects.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#3DObject">Glossary</a></span></span></span> tracking</td>
+	<td style="text-align:left;">Import digital representations of real-world objects into your Unity application and detect them in the environment. The Tracked Object Manager creates GameObjects for each detected physical object to enable applications to change based on the presence of specific real-world objects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Environment probes</td>
+	<td style="text-align:left;">Detect lighting and color information in specific areas of the environment, which helps enable 3D content to blend seamlessly with the surroundings. The Environment Probe Manager uses this information to automatically create <span class="tooltip"><strong>cubemaps</strong><span class="tooltiptext">A collection of six square textures that can represent the reflections in an environment or the skybox drawn behind your geometry. The six squares form the faces of an imaginary cube that surrounds an object; each face represents the view along the directions of the world axes (up, down, left, right, forward and back). <a class="tooltipMoreInfoLink" href="class-Cubemap.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Cubemap">Glossary</a></span></span></span> in Unity.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Meshing</td>
+	<td style="text-align:left;">Generate triangle meshes that correspond to the physical space, expanding the ability to interact with representations of the physical environment and/or visually overlay the details on it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">2D and 3D body tracking</td>
+	<td style="text-align:left;">Provides 2D (screen-space) or 3D (world-space) representations of humans recognized in the camera frame. For 2D detection, humans are represented by a hierarchy of seventeen <span class="tooltip"><strong>joints</strong><span class="tooltiptext">A physics component allowing a dynamic connection between Rigidbody components, usually allowing some degree of movement such as a hinge. <a class="tooltipMoreInfoLink" href="joints.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#joint">Glossary</a></span></span></span> with screen-space coordinates. For 3D detection, humans are represented by a hierarchy of ninety-three <strong>joints</strong> with world-space transforms.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Human segmentation</td>
+	<td style="text-align:left;">The Human Body Subsystem provides apps with human stencil and depth segmentation images. The stencil segmentation image identifies, for each <span class="tooltip"><strong>pixel</strong><span class="tooltiptext">The smallest unit in a computer image. Pixel size depends on your screen resolution. Pixel lighting is calculated at every screen pixel. <a class="tooltipMoreInfoLink" href="LightPerformance">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#pixel">Glossary</a></span></span></span>, whether the <strong>pixel</strong> contains a person. The depth segmentation image consists of an estimated distance from the device for each <strong>pixel</strong> that correlates to a recognized human. Using these segmentation images together allows for rendered 3D content to be realistically occluded by real-world humans.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Occlusion</td>
+	<td style="text-align:left;">Apply distance to objects in the physical world to rendered 3D content, which achieves a realistic blending of physical and virtual objects.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Participant tracking</td>
+	<td style="text-align:left;">Track the position and orientation of other devices in a shared AR session.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>AR platform support</h2>
+
+<p>AR Foundation doesn’t implement any AR features on its own. Instead, it defines a multi-platform API that allows developers to work with functionality common to multiple platforms.</p>
+
+<p>AR Foundation supports the following features across different platforms:</p>
+
+<figure>
+<img src="../uploads/Main/ARFoundationSupportedPlatforms.png" alt="">
+</figure>
+
+<p>For more information on how to download and use AR Foundation, see the <a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@latest">AR Foundation package documentation</a>.</p>
+<!-- area:platforms -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="XR.html"></a></span><div class="tip"> XR</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="VROverview.html"></a></span><div class="tip"> Getting started with VR development in Unity</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

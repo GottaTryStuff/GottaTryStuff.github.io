@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Asset workflow</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/AssetWorkflow.html">English</a></li>
+<li><a href="/cn/current/Manual/AssetWorkflow.html">中文</a></li>
+<li><a href="/ja/current/Manual/AssetWorkflow.html">日本語</a></li>
+<li><a href="/es/current/Manual/AssetWorkflow.html">Español</a></li>
+<li><a href="/kr/current/Manual/AssetWorkflow.html">한국어</a></li>
+<li><a href="/ru/current/Manual/AssetWorkflow.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/AssetWorkflow.html">English</a></li>
+<li><a href="/cn/current/Manual/AssetWorkflow.html">中文</a></li>
+<li><a href="/ja/current/Manual/AssetWorkflow.html">日本語</a></li>
+<li><a href="/es/current/Manual/AssetWorkflow.html">Español</a></li>
+<li><a href="/kr/current/Manual/AssetWorkflow.html">한국어</a></li>
+<li><a href="/ru/current/Manual/AssetWorkflow.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="UnityOverview.html"> Working in Unity</a></li>
+<li> Asset workflow</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityHotkeys.html"></a></span><div class="tip"> Unity shortcuts</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetTypes.html"></a></span><div class="tip"> Common types of assets</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Asset workflow</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>This area of the Unity User Manual provides a general overview of the principles of working with assets in Unity, including the following topics:</p>
+
+<ul>
+<li><a href="AssetTypes.html">Common types of assets</a></li>
+<li><span class="tooltip"><a class="tooltipMoreInfoLink" href="AssetPackages.html">Asset packages</a><span class="tooltiptext">A collection of files and data from Unity projects, or elements of projects, which are compressed and stored in one file, similar to Zip files, with the <code>.unitypackage</code> extension. Asset packages are a handy way of sharing and re-using Unity projects and collections of assets. <a href="AssetPackages.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Assetpackage">Glossary</a></span></span></span></li>
+<li><a href="AssetStore.html">Using the Asset Store</a></li>
+<li><a href="AssetBundlesIntro.html">AssetBundles</a></li>
+<li><a href="AssetDatabase.html">The Asset Database</a></li>
+<li><a href="ScriptingAssets.html">Scripting with assets</a></li>
+</ul>
+
+<p>Also see the following related topics in other sections of the manual:</p>
+
+<ul>
+<li>
+<a href="UnityAccelerator.html">Unity Accelerator</a> under the <em>Unity Services</em> section</li>
+<li>
+<a href="AssetServer.html">Asset Server (Team License)</a> under the <em>Legacy</em> section</li>
+<li><a href="AssetStorePublishing.html">Asset Store Publishing</a></li>
+</ul>
+
+<h2>What assets represent</h2>
+
+<p>An asset is a representation of any item you can use in your project. An asset might come from a file created outside of Unity, such as a 3D Model, an audio file, or an image. You can create some asset types in Unity, such as a ProBuilder <span class="tooltip"><strong>Mesh</strong><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a class="tooltipMoreInfoLink" href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Mesh">Glossary</a></span></span></span>, an <span class="tooltip"><strong>Animator Controller</strong><span class="tooltiptext">Controls animation through Animation Layers with Animation State Machines and Animation Blend Trees, controlled by Animation Parameters. The same Animator Controller can be referenced by multiple models with Animator components. <a href="class-AnimatorController.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#AnimatorController">Glossary</a></span></span></span>, an Audio Mixer, or a <span class="tooltip"><strong>Render Texture</strong><span class="tooltiptext">A special type of Texture that is created and updated at runtime. To use them, first create a new Render Texture and designate one of your Cameras to render into it. Then you can use the Render Texture in a Material just like a regular Texture. <a href="class-RenderTexture.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#RenderTexture">Glossary</a></span></span></span>.</p>
+
+<h2>How Unity imports assets</h2>
+
+<p>Unity automatically imports assets and manages additional data about them for you, such as what import settings should be used to import the asset, and where the asset is used throughout your project. Below is a description of how this process works:</p>
+
+<ol>
+<li>Unity <a href="#uniqueID">assigns the asset a unique ID</a>.</li>
+<li>Unity <a href="#metaFiles">creates a .meta file</a>.</li>
+<li>Unity <a href="#processing">processes the asset</a>.</li>
+</ol>
+
+<p>In some cases, Unity might create multiple assets while importing a single asset file. For more information, see <a href="#multiAssets">Importing complex assets</a>.</p>
+
+<p>
+<a href="ImportingAssets.html">Import settings</a> can affect how Unity processes assets. For more information, see <a href="#importSettings">Assets and their import settings</a>.</p>
+
+<p><a name="uniqueID"></a></p>
+
+<h3>Unique IDs</h3>
+
+<p>When you place an asset such as a Texture in the <code>Assets</code> folder, Unity detects that you have added a new file because the Editor frequently checks the contents of the <code>Assets</code> folder against the list of assets it already knows about.</p>
+
+<p>When Unity finds the new file, it assigns a unique ID to the asset. This is an ID that Unity uses internally to reference the asset, so that Unity can move or rename the asset without breaking anything.</p>
+
+<p><a name="metaFiles"></a></p>
+
+<h3>.meta files</h3>
+
+<figure>
+<img src="../uploads/Main/AssetWorkflowFolderAndProjectWindow.png" alt="The relationship between the Assets folder in your Unity project on your computer, and the Project window in Unity">
+<figcaption>The relationship between the Assets folder in your Unity project on your computer, and the Project window in Unity</figcaption>
+</figure>
+
+<p>This example shows that Unity creates a <code>.meta</code> file for each asset or folder inside the project’s <code>Assets</code> folder, as they appear in a system file browser. However, these <code>.meta</code> files are not visible in the <span class="tooltip"><strong>Project window</strong><span class="tooltiptext">A window that shows the contents of your <code>Assets</code> folder (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span> because they are <a href="https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory">hidden</a> by default. You can make them visible by selecting <strong>Visible Meta Files</strong> from the <a href="class-EditorManager.html#Mode">Mode</a> project setting.</p>
+
+<p>When Unity creates a <code>.meta</code> file for an asset, it writes the asset’s ID inside the <code>.meta</code> file and stores the <code>.meta</code> file in the same location as the asset file. The <code>.meta</code> file must stay in the same location as the asset file it relates to, because it contains the asset’s ID. If you move or rename an asset within the Project window, Unity automatically moves or renames the corresponding <code>.meta</code> file. However, if you move or rename an asset outside of Unity (for example, through your system’s file browser), make sure you move or rename the <code>.meta</code> file to match.</p>
+
+<p>If an asset loses its <code>.meta</code> file (for example, if you moved or renamed the asset outside of Unity’s Project window, without updating its <code>.meta</code> file), any reference to that asset breaks, and Unity generates a new <code>.meta</code> file for the asset as if it were a different asset, deleting the old “orphaned” <code>.meta</code> file.</p>
+
+<p>For example, in the case of a Texture asset losing its <code>.meta</code> file, any Materials that used that Texture no longer have a reference to the Texture. To fix this, you would have to manually re-assign that Texture to any Materials which required it.</p>
+
+<p>Similarly, when a script asset attached to a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> (or Prefab) loses its <code>.meta</code> file, that GameObject loses the script’s functionality, and ends up with an “unassigned script” component. To fix this, you must manually re-assign the script to the GameObject.</p>
+
+<p><a name="processing"></a></p>
+
+<h3>Asset processing</h3>
+
+<p>Unity reads and processes any files that you add to the <code>Assets</code> folder, converting the contents of the file to internal game-ready data. The asset files themselves remain unchanged, and the internal data is stored in the project’s <code>Library</code> folder.</p>
+
+<p>Using internal formats for assets allows Unity to have game-ready versions of your assets ready to use at runtime in the Editor, while keeping your unmodified source files in the <code>Assets</code> folder. Keeping the internal formats separate from the asset files means that you can quickly edit them and have the Editor pick up the changes automatically. For example, the Photoshop file format is convenient and you can save <code>.psd</code> files directly into your <code>Assets</code> folder, but hardware such as mobile devices and PC graphics cards can’t process that format directly in order to render them as Textures.</p>
+
+<p>Unity stores the internal representation of your assets in the <code>Library</code> folder which is like a cache folder. As a user, you should never have to alter the <code>Library</code> folder manually, and attempting to do so may negatively affect your project in the Unity Editor. However, as long as the project is not open in Unity, you can safely delete the <code>Library</code> folder, because Unity can regenerate all of its data from the <code>Assets</code> and <code>ProjectSettings</code> folders. This also means that you should not include the <code>Library</code> folder under <span class="tooltip"><strong>version control</strong><span class="tooltiptext">A system for managing file changes. You can use Unity in conjunction with most common version control tools, including Perforce, Git, Mercurial and PlasticSCM. <a class="tooltipMoreInfoLink" href="VersionControl.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#VersionControl">Glossary</a></span></span></span>.</p>
+
+<p><a name="multiAssets"></a></p>
+
+<h3>Importing complex assets</h3>
+
+<p>Sometimes Unity creates multiple assets when it imports a single asset file. For example, this can occur in the following situations:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Import scenario:</strong></th>
+	<th style="text-align:left;"><strong>How Unity handles the file:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">When a 3D file (such as an FBX file) defines Materials or contains embedded Textures.</td>
+	<td style="text-align:left;">Unity extracts the <a href="FBXImporter-Materials.html">Materials and embedded Textures</a> as separate assets.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">When you want to import an image file as multiple 2D <span class="tooltip"><strong>sprites</strong><span class="tooltiptext">A 2D graphic objects. If you are used to working in 3D, Sprites are essentially just standard textures but there are special techniques for combining and managing sprite textures for efficiency and convenience during development. <a class="tooltipMoreInfoLink" href="Sprites.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Sprite">Glossary</a></span></span></span>.</td>
+	<td style="text-align:left;">Use the 2D <a href="SpriteEditor.html">Sprite Editor</a> to define multiple sprites from a single graphic image. In this case, each sprite defined in the Editor appears as a separate Sprite asset in the Project window.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">When a 3D file contains multiple animation timelines or multiple clips.</td>
+	<td style="text-align:left;">Unity automatically defines separate animation timelines or clips based on its <a class="tooltipMoreInfoLink" href="Splittinganimations.html">animation import settings</a>. The resulting multiple <span class="tooltip"><strong>animation clips</strong><span class="tooltiptext">Animation data that can be used for animated characters or simple animations. It is a simple “unit” piece of motion, such as (one specific instance of) “Idle”, “Walk” or “Run”. <a href="class-AnimationClip.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AnimationClip">Glossary</a></span></span></span> appear as separate Animation Clip assets in the Project window.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a name="importSettings"></a></p>
+
+<h3>Assets and their import settings</h3>
+
+<p>As well as the unique ID assigned to the asset, the <code>.meta</code> files contain values for all the <a class="tooltipMoreInfoLink" href="class-FBXImporter.html">import settings</a> you see in the <span class="tooltip"><strong>Inspector</strong><span class="tooltiptext">A Unity window that displays information about the currently selected GameObject, asset or project settings, alowing you to inspect and edit the values. <a href="UsingTheInspector.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a class="tooltipMoreInfoLink" href="Glossary.html#Inspector">Glossary</a></span></span></span> window when you select an asset in your Project window. For a Texture, this includes the <a href="class-TextureImporter.html#texturetype">Texture Type</a>, <a href="class-TextureImporter.html#WrapMode">Wrap Mode</a>, <a href="class-TextureImporter.html#FilterMode">Filter Mode</a> and <span class="tooltip"><a href="class-TextureImporter.html#AnisoLevel">Aniso Level</a><span class="tooltiptext">The anisotropic filtering (AF) level of a texture. Allows you to increase texture quality when viewing a texture at a steep angle. Good for floor and ground textures. <a href="TextureTypes.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#AnisoLevel">Glossary</a></span></span></span> import settings.</p>
+
+<p>If you change the import settings for an asset, those new settings are saved to the <code>.meta</code> file <a href="#metaFiles">accompanying the asset</a>. Unity then re-imports the asset according to your updated settings, and then updates the corresponding imported “game-ready” data in the project’s <code>Library</code> folder.</p>
+
+<p>When backing up a project, or adding a project to a version control repository, include the main Unity project folder, containing both the <code>Assets</code> and <code>ProjectSettings</code> folders. Unity relies on the information in these folders in order to reimport your assets and reconstruct your game or application. Don’t back up the <code>Library</code> and <code>Temp</code> folders or put them under version control.</p>
+<!-- area:authoring -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityHotkeys.html"></a></span><div class="tip"> Unity shortcuts</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="AssetTypes.html"></a></span><div class="tip"> Common types of assets</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

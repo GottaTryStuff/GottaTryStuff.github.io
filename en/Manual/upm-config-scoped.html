@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Scoped registry authentication</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="authoring" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/upm-config-scoped.html">English</a></li>
+<li><a href="/cn/current/Manual/upm-config-scoped.html">中文</a></li>
+<li><a href="/ja/current/Manual/upm-config-scoped.html">日本語</a></li>
+<li><a href="/es/current/Manual/upm-config-scoped.html">Español</a></li>
+<li><a href="/kr/current/Manual/upm-config-scoped.html">한국어</a></li>
+<li><a href="/ru/current/Manual/upm-config-scoped.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/upm-config-scoped.html">English</a></li>
+<li><a href="/cn/current/Manual/upm-config-scoped.html">中文</a></li>
+<li><a href="/ja/current/Manual/upm-config-scoped.html">日本語</a></li>
+<li><a href="/es/current/Manual/upm-config-scoped.html">Español</a></li>
+<li><a href="/kr/current/Manual/upm-config-scoped.html">한국어</a></li>
+<li><a href="/ru/current/Manual/upm-config-scoped.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="PackagesList.html"> Packages</a></li>
+<li><a href="Packages.html"> Unity's Package Manager</a></li>
+<li><a href="upm-config.html"> Configuration</a></li>
+<li> Scoped registry authentication</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-config-network.html"></a></span><div class="tip"> Solving network issues</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-ui.html"></a></span><div class="tip"> Package Manager window</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Scoped registry authentication</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>Some organizations host their own packages on private package registries that require authentication to access. If you are an employee or customer of one of those organizations, you must configure a scoped registry with npm authentication. To set this up, <a href="#token">get an npm authentication token</a> and then <a href="#configfile">add that token to your user configuration file</a>.</p>
+
+<p><a name="token"></a></p>
+
+<h2>Fetching the npm authentication token</h2>
+
+<p>The process of creating and accessing an npm authentication token is different for each registry provider. For example, JFrog’s <a href="https://bintray.com/">Bintray</a> and <a href="https://www.jfrog.com/confluence/display/JFROG/JFrog+Artifactory">Artifactory</a> repository managers use a different procedure to generate the authentication token from npm. This is an example of a typical procedure, but you need to follow the process recommended by the specific package registry provider for your scoped registry.</p>
+
+<p>To fetch an authentication token from npm:</p>
+
+<ol>
+<li><p>Install <a href="https://www.npmjs.com/get-npm">npm</a> locally on your machine.</p></li>
+<li>
+<p>From a terminal, enter this command to log into the registry:</p>
+
+<p><code>$ npm login --registry &lt;registry url&gt;</code></p>
+</li>
+<li><p>Locate and open the generated <a href="https://docs.npmjs.com/files/npmrc">.npmrc</a> file. </p></li>
+<li>
+<p>Locate either the <code>_authToken</code> or the <code>_auth</code> entry and copy its value (see the example below).</p>
+
+<p>Depending on the registry, the token string can be either a GUID, a token, or a proprietary-formatted string.</p>
+</li>
+</ol>
+
+<h3>Examples of .npmrc files</h3>
+
+<p>This is an example of an <code>.npmrc</code> file containing an <code>_authToken</code> attribute:</p>
+
+<pre><code>registry=https://example.com:1234/mylocation/
+//example.com:1234/mylocation/:_authToken=&lt;AUTH TOKEN&gt;
+</code></pre>
+
+<p>This is an example of an <code>.npmrc</code> file containing an<code>_auth</code> attribute:</p>
+
+<pre><code>registry=https://example.com:1234/mylocation
+_auth=&lt;AUTH TOKEN&gt;
+email=&lt;EMAIL&gt;
+always-auth=true
+</code></pre>
+
+<p><a name="configfile"></a></p>
+
+<h2>Configuring authentication information</h2>
+
+<p>Store your token information for each scoped registry that requires authentication in the <a href="upm-config.html#upmconfigUser"><code>.upmconfig.toml</code> user configuration file</a> using the <code>npmAuth</code> configuration schema. Once you save this information to the configuration file, Package Manager will provide your authentication information on every request made to each registry in the file.</p>
+
+<p>Follow these instructions to add your authentication information to the user configuration file:</p>
+
+<ol>
+<li><p>Locate the <a href="upm-config.html#upmconfigUser"><code>.upmconfig.toml</code> user configuration file</a>. If the file does not already exist, create an empty text file.</p></li>
+<li><p>Format your authentication information using a schema, depending on whether you are using a Bearer (token-based) or Basic (Base64-encrypted) authentication mechanism:</p></li>
+</ol>
+
+<pre><code class="lang-toml">[npmAuth.&quot;&lt;REGISTRY URL&gt;&quot;]
+&lt;TOKEN-PROPERTY&gt; = &quot;&lt;TOKEN-VALUE&gt;&quot;
+email = &quot;&lt;EMAIL&gt;&quot;
+alwaysAuth = &lt;BOOLEAN&gt;
+</code></pre>
+
+<p>This table clarifies how to specify the configuration file values:</p>
+
+<table>
+<colgroup>
+<col style="text-align:left;">
+<col style="text-align:left;">
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;"><strong>Entry:</strong></th>
+	<th style="text-align:left;"><strong>Description:</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>[npmAuth.&quot;&lt;REGISTRY URL&gt;&quot;]</code></td>
+	<td style="text-align:left;">Required. URL for the registry. For example, <code>[npmAuth.&quot;https://example.com:8081/mylocation&quot;]</code>.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>&lt;TOKEN-PROPERTY&gt; = &quot;&lt;TOKEN-VALUE&gt;&quot;</code></td>
+	<td style="text-align:left;">Required. The authentication token <a href="#token">generated from the npm registry</a>. This could be either a GUID, a token, or a proprietary-formatted string. For example, this could be either <code>token = &quot;&lt;AUTH TOKEN&gt;&quot;</code> (Bearer) or <code>_auth = &quot;&lt;BASE64 TOKEN&gt;&quot;</code> (Basic).</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>email</strong></td>
+	<td style="text-align:left;">Optional. Email address for the user matching the user’s email on the registry.</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><strong>alwaysAuth</strong></td>
+	<td style="text-align:left;">Optional. Set to true if the package metadata and tarballs are not located on the same server. Typically, you can copy the value from <a href="#token">the <code>.npmrc</code> file you generated</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Example using Bearer authentication</h3>
+
+<pre><code class="lang-toml">[npmAuth.&quot;http://localhost:8081/myrepository/mylocation&quot;]
+token = &quot;NpmToken.2348c7ea-6f86-3dbe-86b6-f257e86569a8&quot;
+alwaysAuth = true
+
+[npmAuth.&quot;http://localhost:4873&quot;]
+token = &quot;eaJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZWFsX2dyb3VwcyI6WyJwYXNjYWxsIl0sIm5hbWUiOiJwYXNjYWxsIiwiZ3JvdXBzIjpbInBhc2NhbGwiLCIkYWxsIiwiJGF1dGhlbnRpY2F0ZWQiLCJAYWxsIiwiQGF1dGhlbnRpY2F0ZWQiLCJhbGwiLCJwYXNjYWxsIl0sImlhdCI6MTU3NDY4ODQ5MCwibmJmIjoxNTc0Njg4NDkxLCJleHAiOjE1Nzk4NzI0OTB9.qF8_0ue1ppraWLkReT06AMG6R7RZuDiV2XinxMkdSo0&quot;
+
+[npmAuth.&quot;https://api.bintray.example/npm/mycompany/myregistry&quot;]
+token = &quot;aGFzY2FsbDo4ZWIwNTM5NzBjNTI3OTIwYjQ4MDVkYzY2YWEzNmQxOTkyNDYzZjky&quot;
+email = &quot;username@example.com&quot;
+alwaysAuth = true
+</code></pre>
+
+<p><br></p>
+<!-- area:authoring -->
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="upm-config-network.html"></a></span><div class="tip"> Solving network issues</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="upm-ui.html"></a></span><div class="tip"> Package Manager window</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>

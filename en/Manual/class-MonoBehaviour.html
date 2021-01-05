@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+					function OptanonWrapper() { }
+				</script><script>var offline=(location.href.indexOf('docs.unity3d.com')==-1)?true:false;if(!offline){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');}</script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity - Manual:  Important Classes - MonoBehaviour</title>
+<meta property="og:image" content="https://unity3d.com/files/images/ogimg.jpg">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFilesManual/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFilesManual/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFilesManual/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFilesManual/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFilesManual/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFilesManual/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFilesManual/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFilesManual/images/favicons/tileicon-144x144.png">
+<script type="text/javascript" src="https://docs.unity3d.com/StaticFilesConfig/UnityVersionsInfo.js"></script><script type="text/javascript" src="../StaticFilesManual/js/jquery.js?ts=1609815866"></script><script type="text/javascript" src="../StaticFilesManual/js/core.js?ts=1609815866"></script><script type="text/javascript" src="docdata/toc.js?ts=1609815866"></script><script type="text/javascript" src="docdata/global_toc.js?ts=1609815866"></script><link rel="stylesheet" type="text/css" href="../StaticFilesManual/css/core.css?ts=1609815866">
+<link rel="stylesheet" href="../StaticFilesManual/css/prism.css">
+<script src="../StaticFilesManual/js/prism.js"></script><script src="/StaticFilesConfig/feedback/feedback.js"></script><script src="../StaticFilesManual/js/jquery.sidebar.min.js"></script><link rel="stylesheet" href="../StaticFilesManual/css/mobileoptimisation.css">
+<script src="../StaticFilesManual/js/mobileoptimisation.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="DocsAnalyticsData" data-area="none" data-pagetype="manual"></div>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul>
+<li><a href="../Manual/index.html" class="selected">Manual</a></li>
+<li><a href="../ScriptReference/index.html">Scripting API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity.com/">unity3d.com</a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="toggle version-number" id="VersionNumber" data-target=".otherversionscontent">
+                                Version: <b>2019.4</b><div class="otherversionscontent" id="OtherVersionsContent" style="display: none;">
+<ul id="OtherVersionsContentUl"></ul>
+<div id="otherVersionsLegend"><ul>
+<li>
+<div id="supportedColour" class="legendBox"></div>Supported</li>
+<li>
+<div id="notFoundColour" class="legendBox"></div>Legacy</li>
+</ul></div>
+</div>
+<div id="VersionSwitcherArrow" class="arrow versionSwitcherArrow"></div>
+</div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-MonoBehaviour.html">English</a></li>
+<li><a href="/cn/current/Manual/class-MonoBehaviour.html">中文</a></li>
+<li><a href="/ja/current/Manual/class-MonoBehaviour.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-MonoBehaviour.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-MonoBehaviour.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-MonoBehaviour.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div>
+<div class="mobileLogo"><a href="https://docs.unity3d.com"></a></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc" id="customScrollbar">
+<h2>Unity Manual</h2>
+<div class="search-form sidebar-search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="Search manual..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" id="mobileSearchBtn" class="submit" value="Search">
+</form></div>
+<div class="toggle version-number sidebar-version-switcher" id="VersionNumber" data-target=".otherversionscontent"><form id="otherVersionsContentMobileForm"><div class="ui-field-contain">
+<label for="select-native-4">Version: 2019.4</label><select name="select-native-4" id="versionsSelectMobile"><option>Select a different version</option>
+<optgroup id="versionsWithThisPageMobile" label="Versions with this page"></optgroup>
+<optgroup id="versionsWithoutThisPageMobile" label="Versions without this page"></optgroup></select>
+</div></form></div>
+<div class="lang-switcher"><div class="current toggle" data-target=".lang-list">
+<div class="lbl">Language
+:                <span class="b">English</span>
+</div>
+<div class="arrow"></div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a href="/Manual/class-MonoBehaviour.html">English</a></li>
+<li><a href="/cn/current/Manual/class-MonoBehaviour.html">中文</a></li>
+<li><a href="/ja/current/Manual/class-MonoBehaviour.html">日本語</a></li>
+<li><a href="/es/current/Manual/class-MonoBehaviour.html">Español</a></li>
+<li><a href="/kr/current/Manual/class-MonoBehaviour.html">한국어</a></li>
+<li><a href="/ru/current/Manual/class-MonoBehaviour.html">Русский</a></li>
+</ul></div>
+</div></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html"> Unity User Manual (2019.4 LTS)</a></li>
+<li><a href="ScriptingSection.html"> Scripting</a></li>
+<li><a href="ScriptingImportantClasses.html"> Important Classes </a></li>
+<li> Important Classes - MonoBehaviour</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-GameObject.html"></a></span><div class="tip"> Important Classes - GameObject</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Object.html"></a></span><div class="tip"> Important Classes - Object</div>
+</div>
+</div></div>
+<div id="_leavefeedback"></div>
+<h1>Important Classes - MonoBehaviour</h1>
+<!--BeginSwitchLink--><a href='../ScriptReference/MonoBehaviour.html' title='Go to MonoBehaviour page in the Scripting Reference' class='switch-link gray-btn sbtn left'>Switch to Scripting</a><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>The MonoBehaviour class is the base class from which every Unity script derives, by default. When you create a C# script from Unity’s <span class="tooltip"><strong>project window</strong><span class="tooltiptext">A window that shows the contents of your <code>Assets</code> folder (Project tab) <a class="tooltipMoreInfoLink" href="ProjectView.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Projectwindow">Glossary</a></span></span></span>, it automatically inherits from MonoBehaviour, and provides you with a template script. See <a href="CreatingAndUsingScripts.html">Creating and Using scripts</a> for more information on this.</p>
+
+<p>The MonoBehaviour class provides the framework which allows you to attach your script to a <span class="tooltip"><strong>GameObject</strong><span class="tooltiptext">The fundamental object in Unity scenes, which can represent characters, props, scenery, cameras, waypoints, and more. A GameObject’s functionality is defined by the Components attached to it. <a class="tooltipMoreInfoLink" href="class-GameObject.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#GameObject">Glossary</a></span></span></span> in the editor, as well as providing hooks into useful Events such as <a href="../ScriptReference/MonoBehaviour.Start.html">Start</a> and <a href="../ScriptReference/MonoBehaviour.Update.html">Update</a>.</p>
+
+<p>For an complete reference of every member of the MonoBehaviour class, and its technical details, see the <a href="../ScriptReference/MonoBehaviour.html">MonoBehaviour script reference</a>.</p>
+
+<h2>Coroutines</h2>
+
+<p>The MonoBehaviour class allows you to start, stop, and manage Coroutines, which are a way to write asynchronous code which can include waiting for a certain amount of time, or for certain actions to complete, while allowing other code to continue executing.</p>
+
+<p>For more information about coroutines, see the <a href="Coroutines.html">Coroutines manual page</a> and the <a href="../ScriptReference/MonoBehaviour.StartCoroutine.html">StartCoroutine method script reference</a>.</p>
+
+<h2>Events</h2>
+
+<p>The MonoBehaviour class provides access to a large collection of event messages, which allows you to execute your code based on what is currently happening in your project. Here are a few of the more common examples. For a list of them all, see the <strong>Messages</strong> section on the <a href="../ScriptReference/MonoBehaviour.html">MonoBehaviour script reference page</a> </p>
+
+<p>
+<a href="../ScriptReference/MonoBehaviour.Start.html"><code>Start</code></a> - called when the GameObject begins to exist (either when the Scene is loaded, or the GameObject is instantiated).</p>
+
+<p>
+<a href="../ScriptReference/MonoBehaviour.Update.html"><code>Update</code></a> - called every frame.</p>
+
+<p>
+<a href="../ScriptReference/MonoBehaviour.FixedUpdate.html"><code>FixedUpdate</code></a> - called every physics timestep.</p>
+
+<p>
+<a class="tooltipMoreInfoLink" href="../ScriptReference/MonoBehaviour.OnBecameVisible.html"><code>OnBecameVisible</code></a> and <a href="../ScriptReference/MonoBehaviour.OnBecameInvisible.html"><code>OnBecameInvisible</code></a> - called when a GameObject’s renderer enters or leaves a <span class="tooltip"><strong>camera</strong><span class="tooltiptext">A component which creates an image of a particular viewpoint in your scene. The output is either drawn to the screen or captured as a texture. <a href="CamerasOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Camera">Glossary</a></span></span></span>’s view.</p>
+
+<p>
+<a class="tooltipMoreInfoLink" href="../ScriptReference/MonoBehaviour.OnCollisionEnter.html"><code>OnCollisionEnter</code></a> and <a href="../ScriptReference/MonoBehaviour.OnTriggerEnter.html"><code>OnTriggerEnter</code></a> - called when physics <span class="tooltip"><strong>collisions</strong><span class="tooltiptext">A collision occurs when the physics engine detects that the colliders of two GameObjects make contact or overlap, when at least one has a Rigidbody component and is in motion. <a href="CollidersOverview.html">More info</a><br/><span class="tooltipGlossaryLink">See in <a href="Glossary.html#Collision">Glossary</a></span></span></span> or triggers occur.</p>
+
+<p>
+<a href="../ScriptReference/MonoBehaviour.OnDestroy.html"><code>OnDestroy</code></a> - called when the GameObject is destroyed.</p>
+<div id="_content"></div>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="class-GameObject.html"></a></span><div class="tip"> Important Classes - GameObject</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="class-Object.html"></a></span><div class="tip"> Important Classes - Object</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper"><div class="footer clear">
+<div class="copy">Copyright © 2020 Unity Technologies. Publication Date: 2021-01-05.</div>
+<div class="menu">
+<a href="https://learn.unity.com/">Tutorials</a><a href="https://answers.unity3d.com">Community Answers</a><a href="https://support.unity3d.com/hc/en-us">Knowledge Base</a><a href="https://forum.unity3d.com">Forums</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div></div>
+</div></div></div>
+</div>
+</body>
+</html>
